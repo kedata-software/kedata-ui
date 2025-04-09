@@ -1,3 +1,13 @@
+## 0.0.3 (2025-04-09)
+
+### 🩹 Fixes
+
+- **packages:** fix tsup export extension ([4a21a25](https://github.com/kedata-software/kedata-ui/commit/4a21a25))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.0.2 (2025-04-09)
 
 ### 🩹 Fixes
