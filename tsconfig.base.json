@@ -17,7 +17,10 @@
     "paths": {
       "@slots/*": ["packages/slots/src/*"],
       "@tailwind/*": ["packages/tailwind/src/*"],
-      "@kedata-ui/tailwind": ["packages/tailwind/src/index.ts"]
+      "@kedata-ui/tailwind": ["packages/tailwind/src/index.ts"],
+      "@kedata-ui/solid-icons": ["packages/solid-icons/src/index.ts"],
+      "@kedata-ui/slots": ["packages/slots/src/index.ts"],
+      "@kedata-ui/slots/*": ["packages/slots/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp", ".prettierrc.json"]
