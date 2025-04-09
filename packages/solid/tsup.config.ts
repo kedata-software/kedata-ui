@@ -14,10 +14,12 @@ export default defineConfig({
       },
     },
   },
+  outExtension: ({ format }) => ({
+    js: `.${format}.jsx`,
+  }),
   minify: false,
   clean: true,
   splitting: true,
-  sourcemap: true,
   external: ['hex-rgb', 'clsx', '@zag-js', '@kedata-software'],
   treeshake: false,
   target: 'es2021',

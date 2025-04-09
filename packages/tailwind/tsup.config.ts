@@ -1,4 +1,4 @@
-import {defineConfig} from 'tsup';
+import { defineConfig } from 'tsup';
 
 export default defineConfig({
   entry: ['src/index.ts'],
@@ -7,7 +7,6 @@ export default defineConfig({
   minify: false,
   clean: true,
   splitting: true,
-  sourcemap: true,
   external: ['hex-rgb'],
   treeshake: false,
   target: 'es2021',
