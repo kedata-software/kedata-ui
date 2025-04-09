@@ -1,4 +1,4 @@
-import { createMemo, createSignal, type Signal } from 'solid-js';
+import { createMemo, createSignal, type Accessor } from 'solid-js';
 
 const createControlledSignal = <T>(
   value: () => T | undefined,
@@ -13,7 +13,10 @@ const createControlledSignal = <T>(
     $setValue(() => newValue);
   };
 
-  return [controlledValue, setControlledValue] as Signal<T>;
+  return [controlledValue, setControlledValue] as [
+    Accessor<T>,
+    (newValue: T) => void,
+  ];
 };
 
 export default createControlledSignal;
