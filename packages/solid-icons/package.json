@@ -2,6 +2,9 @@
   "name": "@kedata-ui/solid-icons",
   "version": "0.0.1",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build:pre": "rm -rf ./dist",
     "build:tsup": "tsup",

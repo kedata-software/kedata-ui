@@ -2,6 +2,9 @@
   "name": "@kedata-ui/solid",
   "version": "0.0.1",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build:pre": "rm -rf ./dist",

@@ -2,6 +2,9 @@
   "name": "@kedata-ui/svg-icons",
   "version": "0.0.1",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "sync": "tsx bin/sync.ts"
   },
