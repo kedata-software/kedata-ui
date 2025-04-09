@@ -5,26 +5,11 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "sync": {
+    "build": {
       "executor": "nx:run-commands",
       "options": {
-        "cwd": "packages/kedark-solid-icons",
-        "command": "tsx bin/sync.ts"
-      }
-    },
-    "build": {
-      "executor": "@kedata-web/tsup:build",
-      "options": {
-        "tsconfig": "tsconfig.json",
-        "dts": true,
-        "treeshaking": true,
-        "external": ["solid"],
-        "minify": false,
-        "exports": {
-          "require": "./index.cjs.jsx",
-          "import": "./index.esm.jsx"
-        },
-        "isJsx": true
+        "cwd": "packages/solid-icons",
+        "command": "yarn build"
       }
     }
   }

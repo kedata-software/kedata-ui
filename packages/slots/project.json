@@ -5,6 +5,12 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "build": {}
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/slots",
+        "command": "yarn build"
+      }
+    }
   }
 }
