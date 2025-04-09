@@ -5,6 +5,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "src"
+  ],
   "scripts": {
     "sync": "tsx bin/sync.ts"
   },
