@@ -31,13 +31,13 @@
     "@zag-js/tooltip": "^1.3.2",
     "clsx": "^2.1.1",
     "hex-rgb": "^5.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "sweetalert2": "^11.12.4",
     "sweetalert2-react-content": "^5.0.7",
     "tailwind-merge": "^2.3.0",
     "tailwind-variants": "^0.2.1",
-    "tailwindcss-animate": "^1.0.7",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@nx/js": "20.7.2",
@@ -52,6 +52,7 @@
     "@testing-library/jest-dom": "^6.4.8",
     "@types/node": "^20.14.9",
     "@zag-js/types": "^1.3.2",
+    "autoprefixer": "^10.4.19",
     "cssnano": "^7.0.6",
     "nx": "^20.7.2",
     "postcss-cli": "^11.0.0",
@@ -61,13 +62,13 @@
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "storybook": "^8.6.7",
+    "syncpack": "^13.0.3",
     "tailwindcss": "^3.4.4",
     "tslib": "^2.3.0",
     "tsup": "6.5.0",
     "typescript": "^5.7.0",
     "vite": "^5.3.3",
-    "vitest": "^1.6.0",
-    "autoprefixer": "^10.4.19"
+    "vitest": "^1.6.0"
   },
   "volta": {
     "node": "20.14.0",
