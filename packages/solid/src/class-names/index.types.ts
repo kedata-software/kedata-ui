@@ -33,6 +33,7 @@ import type {
   PopoverClassNames,
   ChatBubbleClassNames,
   ErrorMessageClassNames,
+  PinInputClassNames,
 } from '@kedata-ui/slots';
 
 export type ClassNamesContextValue = {
@@ -52,6 +53,7 @@ export type ClassNamesContextValue = {
   TextInput?: TextInputClassNames;
   TextareaInput?: TextareaInputClassNames;
   PasswordInput?: PasswordInputClassNames;
+  PinInput?: PinInputClassNames;
   Tag?: TagClassNames;
   FormField?: FormFieldClassNames;
   Checkbox?: CheckboxClassNames;

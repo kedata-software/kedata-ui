@@ -2141,6 +2141,17 @@
     "@zag-js/types" "1.8.2"
     "@zag-js/utils" "1.8.2"
 
+"@zag-js/pin-input@^1.3.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@zag-js/pin-input/-/pin-input-1.8.2.tgz#0d068b4bf7f716353372fc7874bbca510cc6aa7a"
+  integrity sha512-TME6Maud8Z78ZxFru7WvBGf5EQAuMoPQfdTMpd8os24srtO+HwiFN1wbeBsV/6BmbOeA9gFuB4K8O8rqNn3uqg==
+  dependencies:
+    "@zag-js/anatomy" "1.8.2"
+    "@zag-js/core" "1.8.2"
+    "@zag-js/dom-query" "1.8.2"
+    "@zag-js/types" "1.8.2"
+    "@zag-js/utils" "1.8.2"
+
 "@zag-js/popover@^1.3.2":
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/@zag-js/popover/-/popover-1.8.2.tgz#61e86ab174bd37038ad635bbd0675c12aa1e14be"

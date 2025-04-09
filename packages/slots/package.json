@@ -144,6 +144,11 @@
       "import": "./dist/popover.js",
       "require": "./dist/popover.cjs"
     },
+    "./pin-input": {
+      "types": "./dist/pin-input.d.ts",
+      "import": "./dist/pin-input.js",
+      "require": "./dist/pin-input.cjs"
+    },
     "./radio": {
       "types": "./dist/radio.d.ts",
       "import": "./dist/radio.js",

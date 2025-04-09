@@ -34,10 +34,10 @@ import type { DataTableBaseProps } from '../data-table';
 import type { PopoverBaseProps } from '../popover';
 import type { ChatBubbleBaseProps } from '../chat-bubble';
 import type { ErrorMessageBaseProps } from '../error-message';
+import type { PinInputBaseProps } from '../pin-input';
 
 export type BasePropsContextValue = {
   Avatar?: AvatarBaseProps;
-  Accordion?: AccordionBaseProps;
   ChatBubble?: ChatBubbleBaseProps;
   Label?: LabelBaseProps;
   Badge?: BadgeBaseProps;
@@ -66,6 +66,7 @@ export type BasePropsContextValue = {
   ColorInput?: ColorInputBaseProps;
   ColorPicker?: ColorPickerBaseProps;
   Popover?: PopoverBaseProps;
+  PinInput?: PinInputBaseProps;
 
   SelectPicker?: SelectPickerBaseProps;
 

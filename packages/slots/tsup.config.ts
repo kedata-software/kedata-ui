@@ -29,6 +29,7 @@ export default defineConfig({
     pagination: 'src/pagination/index.ts',
     'password-input': 'src/password-input/index.ts',
     popover: 'src/popover/index.ts',
+    'pin-input': 'src/pin-input/index.ts',
     tooltip: 'src/tooltip/index.ts',
     radio: 'src/radio/index.ts',
     'radio-group': 'src/radio-group/index.ts',

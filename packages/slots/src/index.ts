@@ -36,5 +36,6 @@ export * from './data-table';
 export * from './popover';
 export * from './chat-bubble';
 export * from './error-message';
+export * from './pin-input';
 
 export { default as tw } from './tw';

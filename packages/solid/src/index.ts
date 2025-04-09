@@ -64,6 +64,8 @@ export * from './tooltip';
 
 export * from './password-input';
 
+export * from './pin-input';
+
 export * from './types';
 
 export * from './create-animate-state';
