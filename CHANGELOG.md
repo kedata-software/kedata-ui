@@ -1,3 +1,13 @@
+## 0.0.6 (2025-04-09)
+
+### 🩹 Fixes
+
+- **svg-icons:** add files in package.json ([ac5130d](https://github.com/kedata-software/kedata-ui/commit/ac5130d))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.0.5 (2025-04-09)
 
 ### 🚀 Features
