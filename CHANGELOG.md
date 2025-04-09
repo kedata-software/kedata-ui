@@ -1,3 +1,13 @@
+## 0.0.4 (2025-04-09)
+
+### 🩹 Fixes
+
+- **solid,solid-icons:** fix package.json exports import extension ([21d3728](https://github.com/kedata-software/kedata-ui/commit/21d3728))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.0.3 (2025-04-09)
 
 ### 🩹 Fixes
