@@ -4,6 +4,9 @@
   "main": "index.js",
   "private": true,
   "license": "MIT",
+  "scripts": {
+    "build": "yarn nx run-many --target=build --all"
+  },
   "author": {
     "name": "PT Kedata Indonesia Digital"
   },
