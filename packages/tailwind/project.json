@@ -1,0 +1,10 @@
+{
+  "name": "tailwind",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/tailwind/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {}
+  }
+}

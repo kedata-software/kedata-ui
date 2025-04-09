@@ -1,0 +1,22 @@
+{
+  "name": "@kedata-ui/solid-icons",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build:pre": "rm -rf ./dist",
+    "build:tsup": "tsup",
+    "build": "yarn build:pre && yarn build:tsup"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "solid-js": "^1.9.5"
+  },
+  "resolutions": {
+    "@storybook/builder-vite": "^8.6.7"
+  }
+}

@@ -1,0 +1,26 @@
+import type { Component, JSX } from 'solid-js';
+
+const KiFolderUploadOutline: Component<JSX.SvgSVGAttributes<SVGSVGElement>> = (
+  props,
+) => {
+  return (
+    <svg
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M9 13.0001H15M12 10.0001V16.0001M3 17.0001V7.00006C3 5.89549 3.89543 5.00006 5 5.00006H11L13 7.00006H19C20.1046 7.00006 21 7.89549 21 9.00006V17.0001C21 18.1046 20.1046 19.0001 19 19.0001H5C3.89543 19.0001 3 18.1046 3 17.0001Z"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+
+export default KiFolderUploadOutline;

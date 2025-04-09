@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "forceConsistentCasingInFileNames": true,
+    "emitDecoratorMetadata": false,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "esModuleInterop": true,
+    "isolatedModules": true
+  }
+}

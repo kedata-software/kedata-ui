@@ -1,0 +1,25 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "declaration": true,
+    "composite": true,
+    "types": [
+      "vitest/globals",
+      "vitest/importMeta",
+      "vite/client",
+      "node",
+      "vitest",
+      "@testing-library/jest-dom"
+    ],
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
+  },
+  "include": [
+    "src/**/*.tsx",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.d.ts",
+    "tests/setup.ts"
+  ],
+  "exclude": ["src/**/*.stories.tsx"]
+}

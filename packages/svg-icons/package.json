@@ -1,0 +1,15 @@
+{
+  "name": "@kedata-ui/svg-icons",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "sync": "tsx bin/sync.ts"
+  },
+  "dependencies": {
+    "zx": "^8.1.9"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.3",
+    "dotenv": "^16.4.7"
+  }
+}

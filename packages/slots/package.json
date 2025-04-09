@@ -1,0 +1,213 @@
+{
+  "name": "@kedata-ui/slots",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build:pre": "rm -rf ./dist",
+    "build:tsup": "tsup",
+    "build": "yarn build:pre && yarn build:tsup"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./accordion": {
+      "types": "./dist/accordion.d.ts",
+      "import": "./dist/accordion.js",
+      "require": "./dist/accordion.cjs"
+    },
+    "./avatar": {
+      "types": "./dist/avatar.d.ts",
+      "import": "./dist/avatar.js",
+      "require": "./dist/avatar.cjs"
+    },
+    "./badge": {
+      "types": "./dist/badge.d.ts",
+      "import": "./dist/badge.js",
+      "require": "./dist/badge.cjs"
+    },
+    "./button": {
+      "types": "./dist/button.d.ts",
+      "import": "./dist/button.js",
+      "require": "./dist/button.cjs"
+    },
+    "./chat-bubble": {
+      "types": "./dist/chat-bubble.d.ts",
+      "import": "./dist/chat-bubble.js",
+      "require": "./dist/chat-bubble.cjs"
+    },
+    "./checkbox": {
+      "types": "./dist/checkbox.d.ts",
+      "import": "./dist/checkbox.js",
+      "require": "./dist/checkbox.cjs"
+    },
+    "./color-input": {
+      "types": "./dist/color-input.d.ts",
+      "import": "./dist/color-input.js",
+      "require": "./dist/color-input.cjs"
+    },
+    "./color-picker": {
+      "types": "./dist/color-picker.d.ts",
+      "import": "./dist/color-picker.js",
+      "require": "./dist/color-picker.cjs"
+    },
+    "./data-table": {
+      "types": "./dist/data-table.d.ts",
+      "import": "./dist/data-table.js",
+      "require": "./dist/data-table.cjs"
+    },
+    "./date-picker": {
+      "types": "./dist/date-picker.d.ts",
+      "import": "./dist/date-picker.js",
+      "require": "./dist/date-picker.cjs"
+    },
+    "./dialog-body": {
+      "types": "./dist/dialog-body.d.ts",
+      "import": "./dist/dialog-body.js",
+      "require": "./dist/dialog-body.cjs"
+    },
+    "./dialog-header": {
+      "types": "./dist/dialog-header.d.ts",
+      "import": "./dist/dialog-header.js",
+      "require": "./dist/dialog-header.cjs"
+    },
+    "./dialog-footer": {
+      "types": "./dist/dialog-footer.d.ts",
+      "import": "./dist/dialog-footer.js",
+      "require": "./dist/dialog-footer.cjs"
+    },
+    "./dialog-content": {
+      "types": "./dist/dialog-content.d.ts",
+      "import": "./dist/dialog-content.js",
+      "require": "./dist/dialog-content.cjs"
+    },
+    "./error-message": {
+      "types": "./dist/error-message.d.ts",
+      "import": "./dist/error-message.js",
+      "require": "./dist/error-message.cjs"
+    },
+    "./feedback": {
+      "types": "./dist/feedback.d.ts",
+      "import": "./dist/feedback.js",
+      "require": "./dist/feedback.cjs"
+    },
+    "./form-field": {
+      "types": "./dist/form-field.d.ts",
+      "import": "./dist/form-field.js",
+      "require": "./dist/form-field.cjs"
+    },
+    "./helper-text": {
+      "types": "./dist/helper-text.d.ts",
+      "import": "./dist/helper-text.js",
+      "require": "./dist/helper-text.cjs"
+    },
+    "./icon-button": {
+      "types": "./dist/icon-button.d.ts",
+      "import": "./dist/icon-button.js",
+      "require": "./dist/icon-button.cjs"
+    },
+    "./input": {
+      "types": "./dist/input.d.ts",
+      "import": "./dist/input.js",
+      "require": "./dist/input.cjs"
+    },
+    "./label": {
+      "types": "./dist/label.d.ts",
+      "import": "./dist/label.js",
+      "require": "./dist/label.cjs"
+    },
+    "./menu": {
+      "types": "./dist/menu.d.ts",
+      "import": "./dist/menu.js",
+      "require": "./dist/menu.cjs"
+    },
+    "./pagination": {
+      "types": "./dist/pagination.d.ts",
+      "import": "./dist/pagination.js",
+      "require": "./dist/pagination.cjs"
+    },
+    "./password-input": {
+      "types": "./dist/password-input.d.ts",
+      "import": "./dist/password-input.js",
+      "require": "./dist/password-input.cjs"
+    },
+    "./popover": {
+      "types": "./dist/popover.d.ts",
+      "import": "./dist/popover.js",
+      "require": "./dist/popover.cjs"
+    },
+    "./radio": {
+      "types": "./dist/radio.d.ts",
+      "import": "./dist/radio.js",
+      "require": "./dist/radio.cjs"
+    },
+    "./radio-group": {
+      "types": "./dist/radio-group.d.ts",
+      "import": "./dist/radio-group.js",
+      "require": "./dist/radio-group.cjs"
+    },
+    "./select-input": {
+      "types": "./dist/select-input.d.ts",
+      "import": "./dist/select-input.js",
+      "require": "./dist/select-input.cjs"
+    },
+    "./select-picker": {
+      "types": "./dist/select-picker.d.ts",
+      "import": "./dist/select-picker.js",
+      "require": "./dist/select-picker.cjs"
+    },
+    "./swal-alert": {
+      "types": "./dist/swal-alert.d.ts",
+      "import": "./dist/swal-alert.js",
+      "require": "./dist/swal-alert.cjs"
+    },
+    "./swal-confirmation": {
+      "types": "./dist/swal-confirmation.d.ts",
+      "import": "./dist/swal-confirmation.js",
+      "require": "./dist/swal-confirmation.cjs"
+    },
+    "./switch": {
+      "types": "./dist/switch.d.ts",
+      "import": "./dist/switch.js",
+      "require": "./dist/switch.cjs"
+    },
+    "./tag": {
+      "types": "./dist/tag.d.ts",
+      "import": "./dist/tag.js",
+      "require": "./dist/tag.cjs"
+    },
+    "./text-input": {
+      "types": "./dist/text-input.d.ts",
+      "import": "./dist/text-input.js",
+      "require": "./dist/text-input.cjs"
+    },
+    "./textarea-input": {
+      "types": "./dist/textarea-input.d.ts",
+      "import": "./dist/textarea-input.js",
+      "require": "./dist/textarea-input.cjs"
+    },
+    "./tw": {
+      "types": "./dist/tw.d.ts",
+      "import": "./dist/tw.js",
+      "require": "./dist/tw.cjs"
+    },
+    "./error-list": {
+      "types": "./dist/error-list.d.ts",
+      "import": "./dist/error-list.js",
+      "require": "./dist/error-list.cjs"
+    },
+    "./tooltip": {
+      "types": "./dist/tooltip.d.ts",
+      "import": "./dist/tooltip.js",
+      "require": "./dist/tooltip.cjs"
+    }
+  },
+  "dependencies": {
+    "@kedata-ui/tailwind": "0.0.0"
+  }
+}

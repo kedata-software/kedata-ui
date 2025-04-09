@@ -1,0 +1,37 @@
+{
+  "name": "@kedata-ui/solid",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build:pre": "rm -rf ./dist",
+    "build:tsup": "tsup",
+    "build": "yarn build:pre && yarn build:tsup"
+  },
+  "files": [
+    "dist"
+  ],
+  "resolutions": {
+    "@storybook/builder-vite": "8.6.7"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "dependencies": {
+    "@kedata-ui/slots": "0.0.0",
+    "@kedata-ui/solid-icons": "0.0.0",
+    "@kedata-ui/tailwind": "0.0.0",
+    "solid-js": "^1.9.5"
+  },
+  "devDependencies": {
+    "@solid-primitives/presence": "^0.1.0",
+    "@solidjs/testing-library": "^0.8.10",
+    "storybook-solidjs": "1.0.0-beta.6",
+    "storybook-solidjs-vite": "1.0.0-beta.6",
+    "vite-plugin-solid": "^2.11.6"
+  }
+}
