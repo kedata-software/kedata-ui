@@ -4,5 +4,11 @@
   "type": "module",
   "scripts": {
     "build": "tsup"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "hex-rgb": "^5.0.0"
   }
 }
