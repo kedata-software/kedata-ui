@@ -1,3 +1,18 @@
+## 0.0.5 (2025-04-09)
+
+### 🚀 Features
+
+- **slots,solid:** add component pin-input ([dc9fad5](https://github.com/kedata-software/kedata-ui/commit/dc9fad5))
+
+### 🩹 Fixes
+
+- **solid:** remove @zag-js/react ([72ba7d8](https://github.com/kedata-software/kedata-ui/commit/72ba7d8))
+- **solid:** fix return type from createControlledSignal ([62ee148](https://github.com/kedata-software/kedata-ui/commit/62ee148))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.0.4 (2025-04-09)
 
 ### 🩹 Fixes
