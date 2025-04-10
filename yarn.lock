@@ -1489,15 +1489,46 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/merge-streams/-/merge-streams-2.3.0.tgz#719df7fb41766bc143369eaa0dd56d8dc87c9958"
   integrity sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==
 
+"@solid-primitives/event-listener@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@solid-primitives/event-listener/-/event-listener-2.4.0.tgz#bf35a73111d22b91b3d12d37b953fc9aa86e7bd3"
+  integrity sha512-TSfR1PNTfojFEYGSxSMCnUhXsaYWBo4p+cm73QmWODa9YnaQAk6PB7VjzG2bOT2D817VlvuOqTj0Qdq+MZrdGg==
+  dependencies:
+    "@solid-primitives/utils" "^6.3.0"
+
 "@solid-primitives/keyed@^1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@solid-primitives/keyed/-/keyed-1.5.0.tgz#3669110f665396fe99a6f33ee1ab2012276990f1"
   integrity sha512-g04CXywgWG/7L4sTxQP6q1gdiirItVBq6ZO9YuLTqPFlkX3uD4IEjeL9cLHP6waahrnO8yL3OZl64pcKGYN5Qw==
 
+"@solid-primitives/media@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@solid-primitives/media/-/media-2.3.0.tgz#89608a61d048ffa27882a63182f31725bf551553"
+  integrity sha512-7+C3wfbWnGE/WPoNsqcp/EeOP2aNNB92RCpsWhBth8E5lZo/J+rK6jMb7umVsK0zguT8HBpeXp1pFyFbcsHStA==
+  dependencies:
+    "@solid-primitives/event-listener" "^2.4.0"
+    "@solid-primitives/rootless" "^1.5.0"
+    "@solid-primitives/static-store" "^0.1.0"
+    "@solid-primitives/utils" "^6.3.0"
+
 "@solid-primitives/presence@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@solid-primitives/presence/-/presence-0.1.0.tgz#de1c8b98c7936845c012b64a373c0aaf6fb577d7"
   integrity sha512-eWSQ67GA4DYrgoGeSKYdnkDaMVzJGCLCmhl3+0Lm1iY0U5onr32lxiu1HrQAvCikmI5nJhNEOQtnM39lB7Is+A==
+  dependencies:
+    "@solid-primitives/utils" "^6.3.0"
+
+"@solid-primitives/rootless@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@solid-primitives/rootless/-/rootless-1.5.0.tgz#8011c94a7510f544af6c9e526a2c01b4a7c12ecd"
+  integrity sha512-YJ+EveQeDv9DLqfDKfsPAAGy2x3vBruoD23yn+nD2dT84QjoBxWT1T0qA0TMFjek6/xuN3flqnHtQ4r++4zdjg==
+  dependencies:
+    "@solid-primitives/utils" "^6.3.0"
+
+"@solid-primitives/static-store@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@solid-primitives/static-store/-/static-store-0.1.0.tgz#34588f47310d333109127b2ed49c14b3b0bbe2c6"
+  integrity sha512-6Coau0Kv/dF83UQpbBzc+gnJafOQAPe2jCbB4jmTK5UocsR5cWmFBVRm3kin+nZFVaO4WkuELw0cKANWgTVh8Q==
   dependencies:
     "@solid-primitives/utils" "^6.3.0"
 

@@ -68,6 +68,8 @@ export * from './pin-input';
 
 export * from './types';
 
+export * from './create-responsive';
+
 export * from './create-animate-state';
 
 export * from './use-color-palette';
