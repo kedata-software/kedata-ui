@@ -1,10 +1,14 @@
 import { DialogProvider } from './dialog-context';
+import createResponsive from '../create-responsive';
 import { useTwMerge } from '../tw-merge';
-import { createAnimateState } from '../create-animate-state';
 import * as dialog from '@zag-js/dialog';
 import { normalizeProps, useMachine } from '@zag-js/solid';
 import clsx from 'clsx';
 import { Portal } from 'solid-js/web';
+import {
+  animateStatePreset,
+  createAnimateState,
+} from '../create-animate-state';
 import type { WithDialogProps } from './index.types';
 import { createMemo, createUniqueId, type Component } from 'solid-js';
 
@@ -13,6 +17,7 @@ function withDialog<P>(
 ): Component<WithDialogProps & P> {
   return (props) => {
     const twMerge = useTwMerge();
+    const responsive = createResponsive();
     const { store } = props;
     const { isPresence, animateState } = createAnimateState(
       () => !!store?.isOpen(),
@@ -55,12 +60,25 @@ function withDialog<P>(
       }, 0);
     };
 
+    const responsiveBottom = () => props.responsiveBottom ?? true;
+
     return (
       <DialogProvider
         value={{
           ...store,
           close: closeModal,
-          position: props.position ?? 'top-center',
+          get position() {
+            if (responsiveBottom()) {
+              return responsive.sm ? 'top-center' : 'bottom-center';
+            }
+            return props.position ?? 'top-center';
+          },
+          get paddingless() {
+            if (responsiveBottom()) {
+              return responsive.sm ? false : true;
+            }
+            return props.paddingless ?? false;
+          },
         }}
       >
         {isPresence() && (
@@ -74,12 +92,8 @@ function withDialog<P>(
               class={twMerge(
                 clsx(
                   'bg-black/50 absolute inset-0 transition-opacity',
-                  animateState() === 'enter-from' && 'opacity-0',
-                  animateState() === 'enter-active' && 'opacity-100',
-                  animateState() === 'enter-to' && 'opacity-100',
-                  animateState() === 'leave-from' && 'opacity-100',
-                  animateState() === 'leave-active' && 'opacity-0',
-                  animateState() === 'leave-to' && 'opacity-0',
+                  animateStatePreset.fade.base,
+                  animateStatePreset.fade[animateState()],
                 ),
               )}
             />
@@ -93,7 +107,7 @@ function withDialog<P>(
               }}
               class={twMerge(
                 clsx(
-                  'fixed w-full top-0 left-1/2 h-[100dvh] overflow-auto -translate-x-1/2 transition-[opacity,top]',
+                  'fixed w-full top-0 left-1/2 h-full overflow-hidden -translate-x-1/2 transition-[opacity,top]',
                   animateState() === 'enter-from' && 'opacity-0 top-28',
                   animateState() === 'enter-active' && 'opacity-100 top-0',
                   animateState() === 'enter-to' && 'opacity-100 top-0',

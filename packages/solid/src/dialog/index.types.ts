@@ -5,12 +5,12 @@ import type {
   DialogContentClassNames,
   DialogFooterClassNames,
   DialogHeaderClassNames,
+  DialogPosition,
 } from '@kedata-ui/slots';
-
-export type DialogPosition = 'top-center' | 'bottom-center';
 
 export type DialogContextValue = CreateDialogStoreReturn & {
   position: DialogPosition;
+  paddingless?: boolean;
 };
 
 export type DialogBodyBaseProps = {
@@ -43,7 +43,22 @@ export type DialogContentProps = ComponentProps<'div'> & DialogContentBaseProps;
 export type DialogHeaderProps = ComponentProps<'div'> & DialogHeaderBaseProps;
 
 export type WithDialogProps = {
+  /**
+   * @default "top-center"
+   */
   position?: DialogPosition;
+  /**
+   * @default false
+   * @description
+   * If `true`, the dialog will remove the paddings
+   */
+  paddingless?: boolean;
+  /**
+   * @default true
+   * @description
+   * If `true`, the dialog will be positioned at the bottom of the screen or set `position` to `"bottom-center"` and `paddingless` to `true`
+   */
+  responsiveBottom?: boolean;
   store: CreateDialogStoreReturn;
 };
 

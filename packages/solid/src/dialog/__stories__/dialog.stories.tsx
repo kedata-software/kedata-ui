@@ -9,16 +9,17 @@ import DialogFooter from '../dialog-footer';
 import { useDialogContext } from '../dialog-context';
 import { TextInput } from '../../text-input';
 import { SelectField } from '../../select-input';
+import { FormField } from '../../form-field';
+import { PasswordInput } from '../../password-input';
 
 const MainDialog = () => {
   const dialogContext = useDialogContext();
 
   return (
-    <DialogContent class="w-[500px]">
+    <DialogContent class="max-w-[500px] w-full">
       <DialogHeader title="Login" />
-      <DialogBody class="gap-4 flex flex-col">
-        <div>Hello</div>
-        {/* <FormField label="Email">
+      <DialogBody class="gap-4 flex flex-col overflow-y-auto h-[1000px] max-h-[100vh] flex-1">
+        <FormField label="Email">
           <TextInput placeholder="Please insert your email" autoFocus />
         </FormField>
         <FormField label="Password">
@@ -34,7 +35,7 @@ const MainDialog = () => {
               },
             ]}
           />
-        </FormField> */}
+        </FormField>
       </DialogBody>
       <DialogFooter>
         <Button variant="outline" onClick={() => dialogContext?.close()}>

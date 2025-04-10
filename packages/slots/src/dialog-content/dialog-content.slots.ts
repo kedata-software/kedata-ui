@@ -5,18 +5,31 @@ import clsx from 'clsx';
 const dialogContentSlots = tv(
   {
     slots: {
-      root: clsx(
-        'flex flex-col rounded-md fixed',
-        'data-[position="top-center"]:my-24 data-[position="top-center"]:left-1/2 data-[position="top-center"]:-translate-x-1/2',
-      ),
+      root: clsx('rounded-md relative max-h-[100vh] flex flex-col p-6'),
     },
     variants: {
       withParts: {
         true: dialogContentParts,
       },
+      position: {
+        'top-center': {
+          root: clsx('max-h-[calc(100vh)] left-1/2 -translate-x-1/2 pt-12'),
+        },
+        'bottom-center': {
+          root: clsx(
+            'top-[100%] left-1/2 -translate-x-1/2 -translate-y-[100%] pb-12',
+          ),
+        },
+      },
+      paddingless: {
+        true: {
+          root: clsx('!p-0'),
+        },
+      },
     },
     defaultVariants: {
       withParts: true,
+      position: 'top-center',
     },
   },
   { twMerge: false },

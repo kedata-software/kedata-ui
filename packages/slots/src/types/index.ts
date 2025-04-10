@@ -6,3 +6,5 @@ export type ColorPalette =
   | 'neutral'
   | 'info'
   | 'warning';
+
+export type DialogPosition = 'top-center' | 'bottom-center';
