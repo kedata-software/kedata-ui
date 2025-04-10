@@ -1,3 +1,13 @@
+## 0.0.8 (2025-04-10)
+
+### 🩹 Fixes
+
+- **slots,solid:** fix dialog position and responsive ([32ae9b0](https://github.com/kedata-software/kedata-ui/commit/32ae9b0))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.0.7 (2025-04-10)
 
 ### 🚀 Features
