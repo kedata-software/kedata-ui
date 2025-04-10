@@ -1,3 +1,13 @@
+## 0.0.7 (2025-04-10)
+
+### 🚀 Features
+
+- **solid:** add signal createResponsive ([1a04052](https://github.com/kedata-software/kedata-ui/commit/1a04052))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.0.6 (2025-04-09)
 
 ### 🩹 Fixes
