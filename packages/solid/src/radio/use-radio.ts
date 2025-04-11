@@ -63,7 +63,7 @@ const useRadio = (inProps: RadioProps) => {
   const [, rootProps] = splitProps(props, omittedProps);
 
   const getRootProps = <T extends ValidComponent = 'label'>(
-    params?: PropsGetterParams,
+    params: PropsGetterParams = {},
   ) => {
     return {
       onClick: clickHandler,
@@ -75,14 +75,14 @@ const useRadio = (inProps: RadioProps) => {
           classNames()?.root,
           colorPaletteClassName(),
           props.class,
-          params?.className,
+          params.className,
         ),
       ),
     } as ComponentProps<T>;
   };
 
   const getControlProps = <T extends ValidComponent = 'div'>(
-    params?: PropsGetterParams,
+    params: PropsGetterParams = {},
   ) => {
     return {
       ...dataAttrs(),
@@ -91,36 +91,36 @@ const useRadio = (inProps: RadioProps) => {
           slots().control(),
           classNames()?.control,
           colorPaletteClassName(),
-          params?.className,
+          params.className,
         ),
       ),
     } as ComponentProps<T>;
   };
 
   const getContentProps = <T extends ValidComponent = 'div'>(
-    params?: PropsGetterParams,
+    params: PropsGetterParams = {},
   ) => {
     return {
       ...dataAttrs(),
       class: twMerge(
-        clsx(slots().content(), classNames()?.content, params?.className),
+        clsx(slots().content(), classNames()?.content, params.className),
       ),
     } as ComponentProps<T>;
   };
 
   const getLabelProps = <T extends ValidComponent = 'span'>(
-    params?: PropsGetterParams,
+    params: PropsGetterParams = {},
   ) => {
     return {
       ...dataAttrs(),
       class: twMerge(
-        clsx(slots().label(), classNames()?.label, params?.className),
+        clsx(slots().label(), classNames()?.label, params.className),
       ),
     } as ComponentProps<T>;
   };
 
   const getDescriptionProps = <T extends ValidComponent = 'span'>(
-    params?: PropsGetterParams,
+    params: PropsGetterParams = {},
   ) => {
     return {
       ...dataAttrs(),
@@ -128,29 +128,32 @@ const useRadio = (inProps: RadioProps) => {
         clsx(
           slots().description(),
           classNames()?.description,
-          params?.className,
+          params.className,
         ),
       ),
     } as ComponentProps<T>;
   };
 
   const getIndicatorProps = <T extends ValidComponent = 'div'>(
-    params?: PropsGetterParams,
+    params: PropsGetterParams = {},
   ) => {
     return {
       ...dataAttrs(),
       class: twMerge(
-        clsx(slots().indicator(), classNames()?.indicator, params?.className),
+        clsx(slots().indicator(), classNames()?.indicator, params.className),
       ),
     } as ComponentProps<T>;
   };
 
   const getHiddenInputProps = <T extends ValidComponent = 'input'>(
-    params?: PropsGetterParams,
+    params: PropsGetterParams = {},
   ) => {
     return mergeProps(
       () => dataAttrs(),
       () => ({
+        get name() {
+          return props.name;
+        },
         type: 'radio' as const,
         get value() {
           return props.value;
@@ -158,13 +161,19 @@ const useRadio = (inProps: RadioProps) => {
         get checked() {
           return checked();
         },
+        get disabled() {
+          return props.disabled;
+        },
+        get readOnly() {
+          return props.readOnly;
+        },
       }),
       () => ({
         class: twMerge(
           clsx(
             slots().hiddenInput(),
             classNames()?.hiddenInput,
-            params?.className,
+            params.className,
           ),
         ),
       }),
