@@ -1,3 +1,14 @@
+## 0.0.9 (2025-04-11)
+
+### 🚀 Features
+
+- **slots,solid:** add component swal-toast ([55c2f12](https://github.com/kedata-software/kedata-ui/commit/55c2f12))
+- **solid:** setup test ([91162f6](https://github.com/kedata-software/kedata-ui/commit/91162f6))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.0.8 (2025-04-10)
 
 ### 🩹 Fixes
