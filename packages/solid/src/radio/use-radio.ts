@@ -31,6 +31,7 @@ const useRadio = (inProps: RadioProps) => {
   const slots = createMemo(() => {
     return radioSlots({
       withParts: props.withParts,
+      darkable: props.darkable,
     });
   });
 

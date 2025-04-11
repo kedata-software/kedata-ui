@@ -12,11 +12,11 @@ const radioSlots = tv({
     control: clsx(
       'flex justify-center items-center',
       'size-5 rounded-full border-2 border-dark-300 transition-colors',
-      'group-hover/radio:border-palette-500 group-data-[disabled]/radio:group-hover/radio:border-dark-300',
-      'group-data-[checked]/radio:border-palette-500',
+      'group-hover/radio:border-palette-500 data-[disabled]:group-hover/radio:border-dark-300',
+      'data-[checked]:border-palette-500',
     ),
     indicator: clsx(
-      'size-0 group-data-[checked]/radio:size-2.5 rounded-full group-data-[checked]/radio:bg-palette-500 transition-all',
+      'size-0 data-[checked]:size-2.5 rounded-full data-[checked]:bg-palette-500 transition-all',
     ),
     content: 'flex flex-col gap-1',
     label: clsx('leading-5'),
@@ -27,9 +27,21 @@ const radioSlots = tv({
     withParts: {
       true: radioParts,
     },
+    darkable: {
+      true: {
+        root: clsx(
+          'dark:bg-dark-800 dark:border-dark-600',
+          'data-[checked]:dark:border-palette-700 data-[checked]:dark:bg-dark-900',
+          'group-data-[disabled]/radio:dark:bg-dark-700',
+        ),
+        description: 'dark:text-dark-400',
+        label: clsx('dark:text-white', 'data-[checked]:dark:text-palette-600'),
+      },
+    },
   },
   defaultVariants: {
     withParts: true,
+    darkable: true,
   },
 });
 
