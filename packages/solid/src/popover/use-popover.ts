@@ -20,7 +20,6 @@ import type { PropsGetterParams } from '../types';
 
 const defaultPopoverProps: Partial<PopoverProps> = {
   placement: 'bottom',
-  initialIsOpen: false,
 };
 
 const usePopover = (inProps: PopoverProps) => {
@@ -62,17 +61,17 @@ const usePopover = (inProps: PopoverProps) => {
   const slots = createMemo(() => popoverSlots());
 
   const getTriggerProps = <T extends ValidComponent = 'button'>(
-    params?: PropsGetterParams,
+    params: PropsGetterParams = {},
   ) => {
     return mergeProps(() => popoverApi().getTriggerProps(), {
       className: twMerge(
-        clsx(slots().trigger(), classNames()?.trigger, params?.className),
+        clsx(slots().trigger(), classNames()?.trigger, params.className),
       ),
     }) as ComponentProps<T>;
   };
 
   const getPositionerProps = <T extends ValidComponent = 'div'>(
-    params?: PropsGetterParams,
+    params: PropsGetterParams = {},
   ) => {
     return mergeProps(() => popoverApi().getPositionerProps(), {
       className: twMerge(
@@ -81,14 +80,14 @@ const usePopover = (inProps: PopoverProps) => {
           animateStatePreset.fadeUp.base,
           animateStatePreset.fadeUp[animateState()],
           classNames()?.positioner,
-          params?.className,
+          params.className,
         ),
       ),
     }) as ComponentProps<T>;
   };
 
   const getContentProps = <T extends ValidComponent = 'div'>(
-    params?: PropsGetterParams,
+    params: PropsGetterParams = {},
   ) => {
     return mergeProps(
       () => ({
@@ -97,7 +96,7 @@ const usePopover = (inProps: PopoverProps) => {
       }),
       {
         className: twMerge(
-          clsx(slots().content(), classNames()?.content, params?.className),
+          clsx(slots().content(), classNames()?.content, params.className),
         ),
       },
     ) as ComponentProps<T>;
