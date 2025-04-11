@@ -37,6 +37,7 @@ export default defineConfig({
     'select-picker': 'src/select-picker/index.ts',
     'swal-alert': 'src/swal-alert/index.ts',
     'swal-confirmation': 'src/swal-confirmation/index.ts',
+    'swal-toast': 'src/swal-toast/index.ts',
     switch: 'src/switch/index.ts',
     tag: 'src/tag/index.ts',
     'text-input': 'src/text-input/index.ts',

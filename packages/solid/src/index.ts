@@ -50,6 +50,8 @@ export * from './swal-alert';
 
 export * from './swal-confirmation';
 
+export * from './swal-toast';
+
 export * from './switch';
 
 export * from './tag';

@@ -11,6 +11,7 @@ export * from './password-input';
 export * from './select-input';
 export * from './swal-alert';
 export * from './swal-confirmation';
+export * from './swal-toast';
 export * from './label';
 export * from './input';
 export * from './form-field';

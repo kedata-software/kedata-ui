@@ -179,6 +179,11 @@
       "import": "./dist/swal-confirmation.js",
       "require": "./dist/swal-confirmation.cjs"
     },
+    "./swal-toast": {
+      "types": "./dist/swal-toast.d.ts",
+      "import": "./dist/swal-toast.js",
+      "require": "./dist/swal-toast.cjs"
+    },
     "./switch": {
       "types": "./dist/switch.d.ts",
       "import": "./dist/switch.js",
