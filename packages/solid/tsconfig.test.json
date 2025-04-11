@@ -12,7 +12,8 @@
       "@testing-library/jest-dom"
     ],
     "jsx": "preserve",
-    "jsxImportSource": "solid-js"
+    "jsxImportSource": "solid-js",
+    "moduleResolution": "bundler"
   },
   "include": [
     "src/**/*.tsx",
