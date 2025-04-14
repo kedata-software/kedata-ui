@@ -1,3 +1,13 @@
+## 0.0.12 (2025-04-14)
+
+### 🩹 Fixes
+
+- **slots:** fix dark mode on dialog-body and dialog-header ([8f92783](https://github.com/kedata-software/kedata-ui/commit/8f92783))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.0.11 (2025-04-14)
 
 ### 🚀 Features

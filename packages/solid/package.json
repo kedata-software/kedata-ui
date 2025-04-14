@@ -1,6 +1,6 @@
 {
   "name": "@kedata-ui/solid",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "type": "module",
   "publishConfig": {
     "access": "public"
@@ -26,9 +26,9 @@
   },
   "dependencies": {
     "@kedata-software/toolkit-js": "^0.1.0",
-    "@kedata-ui/slots": "0.0.11",
-    "@kedata-ui/solid-icons": "0.0.11",
-    "@kedata-ui/tailwind": "0.0.11",
+    "@kedata-ui/slots": "0.0.12",
+    "@kedata-ui/solid-icons": "0.0.12",
+    "@kedata-ui/tailwind": "0.0.12",
     "@solid-primitives/media": "^2.3.0",
     "@zag-js/accordion": "^1.3.2",
     "@zag-js/avatar": "^1.3.2",
