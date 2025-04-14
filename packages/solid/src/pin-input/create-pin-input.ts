@@ -73,7 +73,7 @@ const createPinInput = (inProps: PinInputProps) => {
 
   const slots = createMemo(() => pinInputSlots());
 
-  const getRootProps = (params?: PropsGetterParams) => {
+  const getRootProps = (params: PropsGetterParams = {}) => {
     return mergeProps(
       () => api().getRootProps(),
       () => dataAttrs(),
@@ -83,7 +83,7 @@ const createPinInput = (inProps: PinInputProps) => {
           slots().root(),
           classes()?.root,
           props.class,
-          params?.className,
+          params.className,
         ),
       }),
     );
