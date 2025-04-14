@@ -4,7 +4,7 @@ import dialogBodyParts from './dialog-body.parts';
 const dialogBodySlots = tv(
   {
     slots: {
-      root: 'p-5 bg-white overflow-y-auto max-h-[100vh] flex-1',
+      root: 'p-5 bg-white overflow-y-auto max-h-[100vh] flex-1 dark:bg-dark-800',
     },
     variants: {
       withParts: {
