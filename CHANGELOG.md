@@ -1,3 +1,14 @@
+## 0.0.11 (2025-04-14)
+
+### 🚀 Features
+
+- **slots:** support dark mode for data-table and fix button outline dark mode ([2859fe8](https://github.com/kedata-software/kedata-ui/commit/2859fe8))
+- **slots,solid:** move args and add dark mode for label placement left ([4180b4b](https://github.com/kedata-software/kedata-ui/commit/4180b4b))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.0.10 (2025-04-14)
 
 ### 🚀 Features
