@@ -1,13 +1,14 @@
 import { inputSlots } from '../input';
 import { tv } from 'tailwind-variants';
 import textInputParts from './text-input.parts';
+import clsx from 'clsx';
 
 const textInputSlots = tv(
   {
     slots: {
-      root: inputSlots.slots.root,
+      root: clsx(inputSlots.slots.root, 'group/text-input'),
       input:
-        'w-full px-3 text-black focus:outline-none bg-transparent group-data-[disabled]:cursor-not-allowed h-full',
+        'w-full px-3 text-black focus:outline-none bg-transparent group-[disabled]:cursor-not-allowed h-full',
       startIcon: inputSlots.slots.startIcon,
       endIcon: inputSlots.slots.endIcon,
       startAddon: inputSlots.slots.startAddon,
