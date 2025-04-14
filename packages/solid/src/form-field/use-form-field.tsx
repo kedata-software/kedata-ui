@@ -13,7 +13,11 @@ const useFormField = (inProps: FormFieldProps) => {
   const classNames = useClassNames('FormField', inProps);
   const twMerge = useTwMerge();
 
-  const slots = createMemo(() => formFieldSlots());
+  const slots = createMemo(() => {
+    return formFieldSlots({
+      labelPlacement: props.labelPlacement,
+    });
+  });
 
   const Component = 'div' as const;
 

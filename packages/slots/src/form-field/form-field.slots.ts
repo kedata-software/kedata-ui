@@ -9,22 +9,29 @@ import type { ErrorListClassNames } from '../error-list';
 const formFieldSlots = tv(
   {
     slots: {
-      root: 'flex flex-col data-[label-placement="left"]:flex-row data-[label-placement="left"]:gap-4',
+      root: 'flex flex-col',
       body: 'data-[label-placement="left"]:w-full',
       footer: 'mt-1 flex',
-
-      label: clsx(
-        'data-[label-placement="left"]:h-12 data-[label-placement="left"]:flex data-[label-placement="left"]:items-center data-[label-placement="left"]:justify-end',
-        'data-[label-placement="left"]:text-base data-[label-placement="left"]:text-dark-800',
-      ),
+      label: '',
     },
     variants: {
       withParts: {
         true: formFieldParts,
       },
+      labelPlacement: {
+        left: {
+          root: 'flex-row gap-4',
+          label: clsx(
+            'h-12 flex items-center justify-end',
+            'text-base text-dark-800 dark:text-dark-400',
+          ),
+        },
+        top: {},
+      },
     },
     defaultVariants: {
       withParts: true,
+      labelPlacement: 'top',
     },
   },
   { twMerge: false },
