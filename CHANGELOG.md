@@ -1,3 +1,18 @@
+## 0.0.10 (2025-04-14)
+
+### 🚀 Features
+
+- **slots:** add dark theme in radio ([ac9567d](https://github.com/kedata-software/kedata-ui/commit/ac9567d))
+- **slots:** support dark mode for input and text-input ([d263a07](https://github.com/kedata-software/kedata-ui/commit/d263a07))
+
+### 🩹 Fixes
+
+- **solid:** fix tsconfig.test.json moduleResolution ([3181e44](https://github.com/kedata-software/kedata-ui/commit/3181e44))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.0.9 (2025-04-11)
 
 ### 🚀 Features
