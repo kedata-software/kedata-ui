@@ -63,7 +63,7 @@ const buttonSlots = tv(
             'text-palette-500 text-palette-500 border border-gray-300 bg-white',
             'disabled:text-palette-300 disabled:bg-palette-50',
             'hover:bg-palette-50',
-            'dark:text-white dark:border-dark-600 dark:hover:bg-dark-600',
+            'dark:text-white dark:border-dark-600 dark:hover:bg-dark-600 dark:bg-dark-800 data-[expanded]:dark:bg-dark-600',
             'focus-visible:outline-palette-300 focus-visible:outline-2 focus-visible:outline-offset-2',
           ],
         },
