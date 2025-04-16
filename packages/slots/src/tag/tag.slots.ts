@@ -40,7 +40,7 @@ const tagSlots = tv(
 );
 
 type TagSlots = typeof tagSlots;
-export type TagVariant = VariantProps<TagSlots>['variant'];
+export type TagVariant = NonNullable<VariantProps<TagSlots>['variant']>;
 export type TagClassNames = Partial<TagSlots['slots']>;
 export type TagIds = Partial<TagSlots['slots']>;
 

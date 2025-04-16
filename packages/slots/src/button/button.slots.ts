@@ -98,8 +98,8 @@ const buttonSlots = tv(
 );
 
 type ButtonSlots = typeof buttonSlots;
-export type ButtonVariant = VariantProps<ButtonSlots>['variant'];
-export type ButtonSize = VariantProps<ButtonSlots>['size'];
+export type ButtonVariant = NonNullable<VariantProps<ButtonSlots>['variant']>;
+export type ButtonSize = NonNullable<VariantProps<ButtonSlots>['size']>;
 export type ButtonClassNames = Partial<ButtonSlots['slots']>;
 export type ButtonIds = Partial<ButtonSlots['slots']>;
 

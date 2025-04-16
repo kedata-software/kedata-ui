@@ -24,7 +24,7 @@ const badgeSlots = tv(
 );
 
 type BadgeSlots = typeof badgeSlots;
-export type BadgeVariant = VariantProps<BadgeSlots>['variant'];
+export type BadgeVariant = NonNullable<VariantProps<BadgeSlots>['variant']>;
 export type BadgeClassNames = Partial<BadgeSlots['slots']>;
 export type BadgeIds = Partial<BadgeSlots['slots']>;
 

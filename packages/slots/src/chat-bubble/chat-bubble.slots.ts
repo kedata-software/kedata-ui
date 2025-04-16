@@ -25,5 +25,8 @@ const chatBubbleSlots = tv({
 
 type ChatBubbleSlots = typeof chatBubbleSlots;
 export type ChatBubbleClassNames = Partial<ChatBubbleSlots['slots']>;
+export type ChatBubbleVariant = NonNullable<
+  VariantProps<ChatBubbleSlots>['variant']
+>;
 
 export default chatBubbleSlots;
