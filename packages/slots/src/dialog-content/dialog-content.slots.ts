@@ -36,6 +36,9 @@ const dialogContentSlots = tv(
 );
 
 export type DialogContentSlots = typeof dialogContentSlots;
+export type DialogPosition = NonNullable<
+  VariantProps<DialogContentSlots>['position']
+>;
 export type DialogContentClassNames = Partial<DialogContentSlots['slots']>;
 export type DialogContentIds = Partial<DialogContentSlots['slots']>;
 
