@@ -23,6 +23,7 @@ export type ButtonBaseProps = {
   idAsRoot?: boolean;
 
   withParts?: boolean;
+  darkable?: boolean;
   disabled?: boolean;
 };
 

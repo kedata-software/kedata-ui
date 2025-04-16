@@ -16,11 +16,13 @@ export type DialogContextValue = CreateDialogStoreReturn & {
 export type DialogBodyBaseProps = {
   classNames?: DialogBodyClassNames;
   withParts?: boolean;
+  darkable?: boolean;
 };
 
 export type DialogFooterBaseProps = {
   classNames?: DialogFooterClassNames;
   withParts?: boolean;
+  darkable?: boolean;
 };
 
 export type DialogContentBaseProps = {
@@ -35,6 +37,7 @@ export type DialogHeaderBaseProps = {
   showCloseIcon?: boolean;
   onClose?: () => void;
   withParts?: boolean;
+  darkable?: boolean;
 };
 
 export type DialogBodyProps = ComponentProps<'div'> & DialogBodyBaseProps;

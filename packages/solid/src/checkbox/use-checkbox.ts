@@ -1,13 +1,13 @@
-import { useBaseProps } from "../base-props";
-import { useClassNames } from "../class-names";
-import { useTwMerge } from "../tw-merge";
-import { useColorPalette } from "../use-color-palette";
-import { createControlledSignal } from "../create-controlled-signal";
-import { checkboxSlots } from "@kedata-ui/slots/checkbox";
-import { dataAttrBoolean } from "@kedata-software/toolkit-js";
-import * as checkbox from "@zag-js/checkbox";
-import { normalizeProps, useMachine } from "@zag-js/solid";
-import clsx from "clsx";
+import { useBaseProps } from '../base-props';
+import { useClassNames } from '../class-names';
+import { useTwMerge } from '../tw-merge';
+import { useColorPalette } from '../use-color-palette';
+import { createControlledSignal } from '../create-controlled-signal';
+import { checkboxSlots } from '@kedata-ui/slots/checkbox';
+import { dataAttrBoolean } from '@kedata-software/toolkit-js';
+import * as checkbox from '@zag-js/checkbox';
+import { normalizeProps, useMachine } from '@zag-js/solid';
+import clsx from 'clsx';
 import {
   createMemo,
   createUniqueId,
@@ -15,13 +15,13 @@ import {
   splitProps,
   type ComponentProps,
   type ValidComponent,
-} from "solid-js";
-import type { CheckboxProps } from "./index.types";
-import type { PropsGetterParams } from "../types";
+} from 'solid-js';
+import type { CheckboxProps } from './index.types';
+import type { PropsGetterParams } from '../types';
 
 const useCheckbox = (inProps: CheckboxProps) => {
-  const props = useBaseProps("Checkbox", inProps);
-  const classNames = useClassNames("Checkbox", inProps);
+  const props = useBaseProps('Checkbox', inProps);
+  const classNames = useClassNames('Checkbox', inProps);
   const twMerge = useTwMerge();
   const colorPaletteClassName = useColorPalette(() => props.colorPalette);
   let inputRef: HTMLInputElement | undefined;
@@ -33,7 +33,7 @@ const useCheckbox = (inProps: CheckboxProps) => {
   );
 
   const handleCheckedChange = (details: checkbox.CheckedChangeDetails) => {
-    if (typeof details.checked === "boolean") {
+    if (typeof details.checked === 'boolean') {
       setChecked(details.checked);
     }
   };
@@ -43,8 +43,8 @@ const useCheckbox = (inProps: CheckboxProps) => {
     get checked() {
       return checked();
     },
-    value: "on",
-    name: "checkbox",
+    value: 'on',
+    name: 'checkbox',
     onCheckedChange: handleCheckedChange,
     ids: {
       root: props.rootId,
@@ -61,23 +61,23 @@ const useCheckbox = (inProps: CheckboxProps) => {
   });
 
   const dataAttrs = createMemo(() => ({
-    get ["data-checked"]() {
+    get ['data-checked']() {
       return dataAttrBoolean(checked());
     },
-    get ["data-invalid"]() {
+    get ['data-invalid']() {
       return dataAttrBoolean(props.invalid);
     },
-    get ["data-disabled"]() {
+    get ['data-disabled']() {
       return dataAttrBoolean(props.disabled);
     },
-    get ["data-read-only"]() {
+    get ['data-read-only']() {
       return dataAttrBoolean(props.readOnly);
     },
   }));
 
   const [, rootProps] = splitProps(props, omittedProps);
 
-  const getRootProps = <T extends ValidComponent = "label">(
+  const getRootProps = <T extends ValidComponent = 'label'>(
     params: PropsGetterParams = {},
   ) => {
     return mergeProps(
@@ -98,11 +98,11 @@ const useCheckbox = (inProps: CheckboxProps) => {
     ) as ComponentProps<T>;
   };
 
-  const getControlProps = <T extends ValidComponent = "div">(
+  const getControlProps = <T extends ValidComponent = 'div'>(
     params: PropsGetterParams = {},
   ) => {
     return mergeProps(
-      dataAttrs(),
+      () => dataAttrs(),
       () => api().getControlProps(),
       () => ({
         class: twMerge(
@@ -112,11 +112,11 @@ const useCheckbox = (inProps: CheckboxProps) => {
     ) as ComponentProps<T>;
   };
 
-  const getIndicatorProps = <T extends ValidComponent = "div">(
+  const getIndicatorProps = <T extends ValidComponent = 'div'>(
     params: PropsGetterParams = {},
   ) => {
     return mergeProps(
-      dataAttrs(),
+      () => dataAttrs(),
       () => api().getIndicatorProps(),
       () => ({
         class: twMerge(
@@ -126,11 +126,11 @@ const useCheckbox = (inProps: CheckboxProps) => {
     ) as ComponentProps<T>;
   };
 
-  const getLabelProps = <T extends ValidComponent = "span">(
+  const getLabelProps = <T extends ValidComponent = 'span'>(
     params: PropsGetterParams = {},
   ) => {
     return mergeProps(
-      dataAttrs(),
+      () => dataAttrs(),
       () => api().getLabelProps(),
       () => ({
         class: twMerge(
@@ -140,11 +140,11 @@ const useCheckbox = (inProps: CheckboxProps) => {
     ) as ComponentProps<T>;
   };
 
-  const getHiddenInputProps = <T extends ValidComponent = "input">(
+  const getHiddenInputProps = <T extends ValidComponent = 'input'>(
     params: PropsGetterParams = {},
   ) => {
     return mergeProps(
-      dataAttrs(),
+      () => dataAttrs(),
       () => api().getHiddenInputProps(),
       () => ({
         class: twMerge(
@@ -164,7 +164,7 @@ const useCheckbox = (inProps: CheckboxProps) => {
     },
     set inputRef(ref: HTMLInputElement | undefined) {
       inputRef = ref;
-      if (typeof inProps.ref === "function") {
+      if (typeof inProps.ref === 'function') {
         inProps.ref({
           focus() {
             ref?.focus();
@@ -188,15 +188,15 @@ const useCheckbox = (inProps: CheckboxProps) => {
 export default useCheckbox;
 
 const omittedProps: Array<keyof CheckboxProps> = [
-  "withParts",
-  "classNames",
-  "colorPalette",
-  "checked",
-  "disabled",
-  "id",
-  "rootId",
-  "readOnly",
-  "invalid",
-  "onCheckedChange",
-  "ref",
+  'withParts',
+  'classNames',
+  'colorPalette',
+  'checked',
+  'disabled',
+  'id',
+  'rootId',
+  'readOnly',
+  'invalid',
+  'onCheckedChange',
+  'ref',
 ];

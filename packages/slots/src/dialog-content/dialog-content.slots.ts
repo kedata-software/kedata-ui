@@ -1,4 +1,4 @@
-import { tv } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
 import dialogContentParts from './dialog-content.parts';
 import clsx from 'clsx';
 

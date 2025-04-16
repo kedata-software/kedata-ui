@@ -1,6 +1,6 @@
 import type { HelperTextClassNames } from '../helper-text';
 import type { LabelClassNames } from '../label';
-import { tv } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
 import formFieldParts from './form-field.parts';
 import clsx from 'clsx';
 import type { ErrorMessageClassNames } from '../error-message';
@@ -38,6 +38,9 @@ const formFieldSlots = tv(
 );
 
 type FormFieldSlots = typeof formFieldSlots;
+export type FormFieldLabelPlacement = NonNullable<
+  VariantProps<FormFieldSlots>['labelPlacement']
+>;
 export type FormFieldIds = Partial<FormFieldSlots['slots']>;
 export type FormFieldClassNames = Omit<
   Partial<FormFieldSlots['slots']>,

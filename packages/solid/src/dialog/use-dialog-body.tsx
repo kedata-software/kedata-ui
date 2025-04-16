@@ -19,6 +19,7 @@ const useDialogBody = (inProps: DialogBodyProps) => {
   const slots = createMemo(() => {
     return dialogBodySlots({
       withParts: props.withParts,
+      darkable: props.darkable,
     });
   });
 

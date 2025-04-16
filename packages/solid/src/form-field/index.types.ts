@@ -3,6 +3,7 @@ import type { ComponentProps, JSX } from 'solid-js';
 import type {
   FormFieldClassNames,
   FormFieldIds,
+  FormFieldLabelPlacement,
 } from '@kedata-ui/slots';
 import type { WithErrorMessageProps } from '../error-message';
 
@@ -11,7 +12,7 @@ export type FormFieldBaseProps = {
   helperText?: JSX.Element;
   ids?: FormFieldIds;
   classNames?: FormFieldClassNames;
-  labelPlacement?: 'top' | 'left';
+  labelPlacement?: FormFieldLabelPlacement;
   for?: string;
 };
 

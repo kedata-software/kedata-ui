@@ -48,40 +48,42 @@ const buttonSlots = tv(
       },
       variant: {
         solid: {
-          root: [
+          root: clsx(
             'bg-palette-500 text-white',
             'hover:bg-palette-800',
             'aria-expanded:bg-palette-800',
             'disabled:bg-palette-400 disabled:text-palette-50',
             'aria-busy:disabled:bg-palette-900 aria-busy:disabled:text-white',
             'focus-visible:outline-palette-300 focus-visible:outline-2 focus-visible:outline-offset-2',
-            'dark:focus-visible:outline-palette-300 dark:focus-visible:outline-3 dark:focus-visible:outline-offset-2',
-          ],
+          ),
         },
         outline: {
-          root: [
-            'text-palette-500 text-palette-500 border border-gray-300 bg-white',
+          root: clsx(
+            'text-palette-500 border border-gray-300 bg-white',
             'disabled:text-palette-300 disabled:bg-palette-50',
             'hover:bg-palette-50',
-            'dark:text-white dark:border-dark-600 dark:hover:bg-dark-600 dark:bg-dark-800 data-[expanded]:dark:bg-dark-600',
             'focus-visible:outline-palette-300 focus-visible:outline-2 focus-visible:outline-offset-2',
-          ],
+          ),
         },
         text: {
-          root: [
+          root: clsx(
             'text-palette-500 bg-transparent',
             'hover:bg-palette-50',
             'disabled:bg-palette-50 disabled:text-palette-300',
             'aria-busy:disabled:text-palette-500',
-            'dark:text-white',
-          ],
+          ),
         },
+      },
+      darkable: {
+        true: {},
+        false: {},
       },
     },
     defaultVariants: {
       variant: 'solid',
       size: 'medium',
       withParts: true,
+      darkable: true,
     },
     compoundSlots: [
       {
@@ -89,6 +91,26 @@ const buttonSlots = tv(
         variant: 'solid',
         className: 'bg-palette-600 hover:bg-palette-700',
         slots: ['root'],
+      },
+      {
+        darkable: true,
+        variant: 'solid',
+        slots: ['root'],
+        className:
+          'dark:focus-visible:outline-palette-300 dark:focus-visible:outline-3 dark:focus-visible:outline-offset-2',
+      },
+      {
+        darkable: true,
+        variant: 'outline',
+        slots: ['root'],
+        className:
+          'dark:text-white dark:border-dark-600 dark:hover:bg-dark-600 dark:bg-dark-800 data-[expanded]:dark:bg-dark-600',
+      },
+      {
+        darkable: true,
+        variant: 'text',
+        slots: ['root'],
+        className: 'dark:text-white',
       },
     ],
   },

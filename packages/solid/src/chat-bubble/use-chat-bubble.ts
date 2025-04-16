@@ -1,40 +1,41 @@
-import { useBaseProps } from "../base-props";
-import { useClassNames } from "../class-names";
-import { useTwMerge } from "../tw-merge";
-import { chatBubbleSlots } from "@kedata-ui/slots/chat-bubble";
-import clsx from "clsx";
-import type { ChatBubbleProps } from "./index.types";
-import type { PropsGetterParams } from "../types";
+import { useBaseProps } from '../base-props';
+import { useClassNames } from '../class-names';
+import { useTwMerge } from '../tw-merge';
+import { chatBubbleSlots } from '@kedata-ui/slots/chat-bubble';
+import clsx from 'clsx';
+import type { ChatBubbleProps } from './index.types';
+import type { PropsGetterParams } from '../types';
 import {
   createMemo,
   splitProps,
   type ComponentProps,
   type ValidComponent,
-} from "solid-js";
+} from 'solid-js';
 
 const defaultChatBubbleProps: ChatBubbleProps = {
-  variant: "question",
+  variant: 'question',
 };
 
 const useChatBubble = (inProps: ChatBubbleProps) => {
-  const props = useBaseProps("ChatBubble", inProps, defaultChatBubbleProps);
-  const classNames = useClassNames("ChatBubble", props);
+  const props = useBaseProps('ChatBubble', inProps, defaultChatBubbleProps);
+  const classNames = useClassNames('ChatBubble', props);
   const twMerge = useTwMerge();
   const [, rootProps] = splitProps(props, omittedProps);
 
   const slots = createMemo(() => {
     return chatBubbleSlots({
       withParts: props.withParts,
+      variant: props.variant,
     });
   });
 
-  const isFooterVisible = !!props.time;
+  const isFooterVisible = () => !!props.time;
 
   const baseDataAttrs = createMemo(() => ({
-    "data-variant": props.variant,
+    'data-variant': props.variant,
   }));
 
-  const getRootProps = <T extends ValidComponent = "div">(
+  const getRootProps = <T extends ValidComponent = 'div'>(
     params: PropsGetterParams = {},
   ) => {
     return {
@@ -88,9 +89,9 @@ const useChatBubble = (inProps: ChatBubbleProps) => {
 
 export default useChatBubble;
 
-const omittedProps: Array<keyof Omit<ChatBubbleProps, "ref">> = [
-  "variant",
-  "time",
-  "classNames",
-  "role",
+const omittedProps: Array<keyof Omit<ChatBubbleProps, 'ref'>> = [
+  'variant',
+  'time',
+  'classNames',
+  'role',
 ];

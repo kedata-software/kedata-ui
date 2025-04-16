@@ -6,11 +6,11 @@ const dialogHeaderSlots = tv(
   {
     slots: {
       root: clsx(
-        'border-b border-b-dark-300 dark:border-b-dark-600 rounded-t-md bg-white dark:bg-dark-800 p-5 flex items-center',
+        'border-b border-b-dark-300 rounded-t-md bg-white p-5 flex items-center',
       ),
-      title: clsx('font-bold text-dark-900 dark:dark-50 dark:text-white'),
+      title: clsx('font-bold text-dark-900'),
       closeIcon: clsx(
-        'text-dark-400 ml-auto cursor-pointer p-1 box-content rounded-full',
+        'ml-auto cursor-pointer p-1 box-content rounded-full',
         'focus:outline-none focus-visible:outline-danger-300 focus-visible:text-danger-500 hover:text-danger-500',
       ),
     },
@@ -18,9 +18,17 @@ const dialogHeaderSlots = tv(
       withParts: {
         true: dialogHeaderParts,
       },
+      darkable: {
+        true: {
+          root: 'dark:border-b-dark-600 dark:bg-dark-800',
+          title: 'dark:dark-50 dark:text-white',
+          closeIcon: 'text-dark-400',
+        },
+      },
     },
     defaultVariants: {
       withParts: true,
+      darkable: true,
     },
   },
   { twMerge: false },

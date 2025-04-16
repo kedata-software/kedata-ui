@@ -19,6 +19,7 @@ const useDialogFooter = (inProps: DialogFooterProps) => {
   const slots = createMemo(() => {
     return dialogFooterSlots({
       withParts: props.withParts,
+      darkable: props.darkable,
     });
   });
 

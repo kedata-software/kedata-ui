@@ -6,17 +6,22 @@ const dialogFooterSlots = tv(
   {
     slots: {
       root: clsx(
-        'flex flex-row justify-end gap-2 rounded-b-md border-t border-t-dark-300 dark:border-t-dark-600 p-5',
-        'bg-white dark:bg-dark-800',
+        'flex flex-row justify-end gap-2 rounded-b-md border-t border-t-dark-300 p-5 bg-white',
       ),
     },
     variants: {
       withParts: {
         true: dialogFooterParts,
       },
+      darkable: {
+        true: {
+          root: 'dark:border-t-dark-600 dark:bg-dark-800',
+        },
+      },
     },
     defaultVariants: {
       withParts: true,
+      darkable: true,
     },
   },
   { twMerge: false },

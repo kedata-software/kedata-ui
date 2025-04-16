@@ -12,13 +12,13 @@ const switchSlots = tv(
       ),
       control: clsx(
         'inline-flex w-10 rounded-full bg-gray-300 p-1 transition-colors',
-        'group-data-[checked]/switch:bg-palette-500',
-        'group-data-[checked]/switch:group-data-[disabled]:bg-palette-300',
+        'data-[checked]:bg-palette-500',
+        'data-[checked]:data-[disabled]:bg-palette-300',
         'group-focus-within/switch:outline-palette-300 group-focus-within/switch:outline group-focus-within/switch:outline-2 group-focus-within/switch:outline-offset-2',
       ),
       thumb: clsx(
         'size-4 rounded-full bg-white transition-all',
-        'group-data-[checked]/switch:translate-x-4',
+        'data-[checked]:translate-x-4',
       ),
       label: clsx('ml-2'),
       hiddenInput: clsx(''),

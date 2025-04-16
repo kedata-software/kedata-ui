@@ -1,5 +1,4 @@
-import type { ChatBubbleClassNames } from '@kedata-ui/slots';
-export type ChatBubbleVariant = 'question' | 'answer';
+import type { ChatBubbleClassNames, ChatBubbleVariant } from '@kedata-ui/slots';
 import type { ComponentProps, JSX } from 'solid-js';
 
 export type ChatBubbleBaseProps = {

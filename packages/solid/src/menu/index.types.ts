@@ -1,8 +1,4 @@
-import type {
-  ColorPalette,
-  MenuClassNames,
-  MenuIds,
-} from '@kedata-ui/slots';
+import type { ColorPalette, MenuClassNames, MenuIds } from '@kedata-ui/slots';
 import type { Component } from 'solid-js';
 
 export type MenuSeparatorOption = {
@@ -36,6 +32,7 @@ export type MenuBaseProps = {
   osIsOpenChange?: (status: boolean) => void;
   ids?: MenuIds;
   withParts?: boolean;
+  darkable?: boolean;
 };
 
 export type MenuProps = MenuBaseProps;

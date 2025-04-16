@@ -11,13 +11,13 @@ const checkboxSlots = tv(
       control: clsx(
         'size-5 border-2 transition-colors overflow-hidden',
         'group-hover/checkbox:border-palette-600',
-        'group-data-[checked]/checkbox:border-palette-500 group-data-[checked]/checkbox:bg-palette-500',
         'group-focus-within/checkbox:outline-palette-300 group-focus-within/checkbox:outline group-focus-within/checkbox:outline-2 group-focus-within/checkbox:outline-offset-2',
+        'data-[checked]:border-palette-500 data-[checked]:bg-palette-500',
       ),
       label: 'ml-2',
       hiddenInput: clsx(''),
       indicator: clsx(
-        'text-white translate-y-5 group-data-[checked]/checkbox:translate-y-0 transition-transform block',
+        'text-white translate-y-5 data-[checked]:translate-y-0 transition-transform block',
       ),
     },
     variants: {

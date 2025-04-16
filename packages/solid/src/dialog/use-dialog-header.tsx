@@ -15,7 +15,10 @@ const useDialogHeader = (inProps: DialogHeaderProps) => {
   const twMerge = useTwMerge();
 
   const slots = createMemo(() => {
-    return dialogHeaderSlots({ withParts: props.withParts });
+    return dialogHeaderSlots({
+      withParts: props.withParts,
+      darkable: props.darkable,
+    });
   });
 
   const Component = 'header' as const;

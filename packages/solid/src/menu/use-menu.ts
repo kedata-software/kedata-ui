@@ -56,6 +56,7 @@ const useMenu = (inProps: MenuProps) => {
   const slots = createMemo(() => {
     return menuSlots({
       withParts: props.withParts,
+      darkable: props.darkable,
     });
   });
 
