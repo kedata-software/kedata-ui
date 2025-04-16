@@ -2,8 +2,8 @@ import { useBaseProps } from '../base-props';
 import { useClassNames } from '../class-names';
 import { useTwMerge } from '../tw-merge';
 import { useColorPalette } from '../use-color-palette';
-import { buttonSlots } from '@kedata-ui/slots/button';
 import { dataAttrBoolean } from '@kedata-software/toolkit-js';
+import { buttonSlots } from '@kedata-ui/slots/button';
 import clsx from 'clsx';
 import {
   createMemo,
@@ -28,6 +28,7 @@ const useButton = (inProps: ButtonProps) => {
       withParts: props.withParts,
       size: props.size,
       variant: props.variant,
+      darkable: props.darkable,
     });
   });
 
@@ -125,7 +126,7 @@ const useButton = (inProps: ButtonProps) => {
     children: props.children,
     startIcon: props.startIcon,
     endIcon: props.endIcon,
-    loading: createMemo(() => props.loading),
+    loading: () => props.loading,
 
     getRootProps,
     getStartIconProps,
