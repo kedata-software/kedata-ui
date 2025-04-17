@@ -1,3 +1,22 @@
+## 0.0.13 (2025-04-17)
+
+### 🚀 Features
+
+- **slots,solid:** add darkable variant ([2e9b329](https://github.com/kedata-software/kedata-ui/commit/2e9b329))
+
+### 🩹 Fixes
+
+- **package.json:** lock version for scope zag-js ([469915d](https://github.com/kedata-software/kedata-ui/commit/469915d))
+- **slots:** fix variance types ([a956f09](https://github.com/kedata-software/kedata-ui/commit/a956f09))
+- **slots:** fix variant dialog position ([048c5c3](https://github.com/kedata-software/kedata-ui/commit/048c5c3))
+- **slots,solid:** fix color palette swal alert ([4acea74](https://github.com/kedata-software/kedata-ui/commit/4acea74))
+- **solid:** using derivied function instead of memo ([8dc751e](https://github.com/kedata-software/kedata-ui/commit/8dc751e))
+- **solid:** fix password input data attrs ([94b9be6](https://github.com/kedata-software/kedata-ui/commit/94b9be6))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.0.12 (2025-04-14)
 
 ### 🩹 Fixes

@@ -1,6 +1,6 @@
 {
   "name": "@kedata-ui/solid-icons",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "type": "module",
   "publishConfig": {
     "access": "public"
