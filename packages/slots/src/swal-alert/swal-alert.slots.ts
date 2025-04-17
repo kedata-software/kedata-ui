@@ -4,7 +4,7 @@ import swalAlertParts from './swal-alert.parts';
 const swalAlertSlots = tv(
   {
     slots: {
-      root: 'p-12 color-palette-primary',
+      root: 'p-12',
       footer: 'mt-6 flex items-center justify-center gap-2',
       title: 'text-palette-500 text-2xl font-bold',
       content: 'flex flex-col gap-2',

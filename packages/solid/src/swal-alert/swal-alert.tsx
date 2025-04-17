@@ -7,6 +7,7 @@ import { createMemo, createSignal } from 'solid-js';
 import { render } from 'solid-js/web';
 import Swal from 'sweetalert2';
 import type { SwalAlertFireProps } from './index.types';
+import useColorPalette from '../use-color-palette';
 
 const SwalAlert = {
   fire<D = unknown>(props: SwalAlertFireProps<D>) {
@@ -66,6 +67,7 @@ export default SwalAlert;
 function Alert<D>(inProps: SwalAlertFireProps<D>) {
   const props = inProps;
   const classNames = createMemo(() => inProps.classNames);
+  const colorPaletteClass = useColorPalette(() => props.colorPalette);
   const { twMerge } = props;
   const [isConfirmLoading, setIsConfirmLoading] = createSignal(false);
   const [isDenyLoading, setIsDenyLoading] = createSignal(false);
@@ -82,7 +84,9 @@ function Alert<D>(inProps: SwalAlertFireProps<D>) {
   return (
     <div
       data-loading={dataAttrBoolean(isLoading)}
-      class={twMerge?.(clsx(getRootClassName(), classNames()?.root))}
+      class={twMerge?.(
+        clsx(colorPaletteClass(), getRootClassName(), classNames()?.root),
+      )}
     >
       <div
         class={twMerge?.(clsx(getContentClassName(), classNames()?.content))}
@@ -104,6 +108,7 @@ function Alert<D>(inProps: SwalAlertFireProps<D>) {
               variant="outline"
               disabled={isConfirmLoading()}
               loading={isDenyLoading()}
+              colorPalette={props.colorPalette}
               onClick={async () => {
                 try {
                   let result: D | undefined = undefined;
@@ -133,6 +138,7 @@ function Alert<D>(inProps: SwalAlertFireProps<D>) {
             <Button
               loading={isConfirmLoading()}
               disabled={isConfirmLoading()}
+              colorPalette={props.colorPalette}
               onClick={async () => {
                 try {
                   let result: D | undefined = undefined;
