@@ -1,6 +1,6 @@
 import type { PasswordInputClassNames } from '@kedata-ui/slots';
 import type { TextInputBaseProps } from '../text-input';
-import type { ComponentProps } from 'solid-js';
+import type { ComponentProps, Ref } from 'solid-js';
 
 export type PasswordInputRef = {
   focus: () => void;
@@ -21,7 +21,7 @@ export type PasswordInputBaseProps = Omit<
 
   classNames?: PasswordInputClassNames;
 
-  ref?: PasswordInputRef;
+  ref?: Ref<PasswordInputRef>;
 };
 
 export type PasswordInputProps = Omit<ComponentProps<'div'>, 'ref'> &

@@ -6,9 +6,10 @@ import { createControlledSignal } from '../create-controlled-signal';
 import { passwordInputSlots } from '@kedata-ui/slots/password-input';
 import { KiEyesOffSolid, KiEyeSolid } from '@kedata-ui/solid-icons';
 import clsx from 'clsx';
-import { createMemo, splitProps } from 'solid-js';
+import { createMemo, mergeProps, splitProps } from 'solid-js';
 import type { PasswordInputProps } from './index.types';
 import type { PropsGetterParams } from '../types';
+import { dataAttrBoolean } from '@kedata-software/toolkit-js';
 
 const usePasswordInput = (inProps: PasswordInputProps) => {
   const props = useBaseProps('PasswordInput', inProps);
@@ -41,6 +42,32 @@ const usePasswordInput = (inProps: PasswordInputProps) => {
   const changeValueHandler = (e: any) => {
     setValue(e.target.value);
   };
+
+  const dataAttrs = createMemo(() => {
+    return {
+      get 'data-invalid'() {
+        return dataAttrBoolean(props.invalid);
+      },
+      get 'data-disabled'() {
+        return dataAttrBoolean(props.disabled);
+      },
+      get 'data-read-only'() {
+        return dataAttrBoolean(props.readOnly);
+      },
+      get 'data-required'() {
+        return dataAttrBoolean(props.required);
+      },
+      get 'data-has-start-addon'() {
+        return dataAttrBoolean(props.startAddon);
+      },
+      get 'data-has-end-addon'() {
+        return dataAttrBoolean(props.endAddon);
+      },
+      get 'data-has-start-icon'() {
+        return dataAttrBoolean(props.startIcon);
+      },
+    };
+  });
 
   const Component = 'div' as const;
 
@@ -78,65 +105,95 @@ const usePasswordInput = (inProps: PasswordInputProps) => {
   const [, rootProps] = splitProps(props, omittedProps);
 
   const getRootProps = (params?: PropsGetterParams) => {
-    return {
-      ...rootProps,
-      class: twMerge(
-        clsx(
-          colorPaletteClassName(),
-          slots().root(),
-          params?.className,
-          classNames()?.root,
+    return mergeProps(
+      () => dataAttrs(),
+      () => rootProps,
+      () => ({
+        class: twMerge(
+          clsx(
+            colorPaletteClassName(),
+            slots().root(),
+            params?.className,
+            classNames()?.root,
+          ),
         ),
-      ),
-    };
+        get id() {
+          return props.rootId;
+        },
+      }),
+    );
   };
 
   const getStartAddonProps = (params?: PropsGetterParams) => {
-    return {
-      class: twMerge(
-        clsx(slots().startAddon(), params?.className, classNames()?.startAddon),
-      ),
-    };
+    return mergeProps(
+      () => dataAttrs(),
+      () => ({
+        class: twMerge(
+          clsx(
+            slots().startAddon(),
+            params?.className,
+            classNames()?.startAddon,
+          ),
+        ),
+      }),
+    );
   };
 
   const getEndAddonProps = (params?: PropsGetterParams) => {
-    return {
-      class: twMerge(
-        clsx(slots().endAddon(), params?.className, classNames()?.endAddon),
-      ),
-    };
+    return mergeProps(
+      () => dataAttrs(),
+      () => ({
+        class: twMerge(
+          clsx(slots().endAddon(), params?.className, classNames()?.endAddon),
+        ),
+      }),
+    );
   };
 
   const getStartIconProps = (params?: PropsGetterParams) => {
-    return {
-      class: twMerge(
-        clsx(slots().startIcon(), classNames()?.startIcon, params?.className),
-      ),
-    };
+    return mergeProps(
+      () => dataAttrs(),
+      () => ({
+        class: twMerge(
+          clsx(slots().startIcon(), classNames()?.startIcon, params?.className),
+        ),
+      }),
+    );
   };
 
   const getInputWrapperProps = (params?: PropsGetterParams) => {
-    return {
-      class: twMerge(
-        clsx(
-          slots().inputWrapper(),
-          params?.className,
-          classNames()?.inputWrapper,
+    return mergeProps(
+      () => dataAttrs(),
+      () => ({
+        class: twMerge(
+          clsx(
+            slots().inputWrapper(),
+            params?.className,
+            classNames()?.inputWrapper,
+          ),
         ),
-      ),
-    };
+      }),
+    );
   };
 
   const getInputProps = (params?: PropsGetterParams) => {
-    return {
-      value: value(),
-      placeholder: props.placeholder,
-      onInput: changeValueHandler,
-      type: inputType(),
-      class: twMerge(
-        clsx(slots().input(), params?.className, classNames()?.input),
-      ),
-    };
+    return mergeProps(
+      () => dataAttrs(),
+      () => ({
+        value: value(),
+      }),
+      () => ({
+        value: value(),
+        placeholder: props.placeholder,
+        onInput: changeValueHandler,
+        type: inputType(),
+      }),
+      () => ({
+        class: twMerge(
+          clsx(slots().input(), params?.className, classNames()?.input),
+        ),
+      }),
+    );
   };
 
   return {
