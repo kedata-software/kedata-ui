@@ -5,6 +5,7 @@ export * from './icon-button';
 export * from './switch';
 export * from './checkbox';
 export * from './badge';
+export * from './date-picker';
 export * from './tag';
 export * from './text-input';
 export * from './password-input';

@@ -34,6 +34,7 @@ import type {
   ChatBubbleClassNames,
   ErrorMessageClassNames,
   PinInputClassNames,
+  DatePickerClassNames,
 } from '@kedata-ui/slots';
 
 export type ClassNamesContextValue = {
@@ -44,6 +45,7 @@ export type ClassNamesContextValue = {
   RadioGroup?: RadioGroupClassNames;
   Label?: LabelClassNames;
   Badge?: BadgeClassNames;
+  DatePicker?: DatePickerClassNames;
   ErrorList?: ErrorListClassNames;
   ErrorMessage?: ErrorMessageClassNames;
   DataTable?: DataTableClassNames;

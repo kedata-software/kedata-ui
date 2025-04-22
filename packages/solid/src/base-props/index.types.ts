@@ -35,12 +35,14 @@ import type { PopoverBaseProps } from '../popover';
 import type { ChatBubbleBaseProps } from '../chat-bubble';
 import type { ErrorMessageBaseProps } from '../error-message';
 import type { PinInputBaseProps } from '../pin-input';
+import type { DatePickerBaseProps } from '../date-picker';
 
 export type BasePropsContextValue = {
   Avatar?: AvatarBaseProps;
   ChatBubble?: ChatBubbleBaseProps;
   Label?: LabelBaseProps;
   Badge?: BadgeBaseProps;
+  DatePicker?: DatePickerBaseProps;
   ErrorList?: ErrorListBaseProps;
   ErroMessage?: ErrorMessageBaseProps;
   DataTable?: DataTableBaseProps;
