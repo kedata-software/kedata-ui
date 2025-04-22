@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@kedata-software/toolkit-js": "^0.1.0",
+    "@internationalized/date": "^3.8.0",
     "@kedata-ui/slots": "0.0.13",
     "@kedata-ui/solid-icons": "0.0.13",
     "@kedata-ui/tailwind": "0.0.13",
