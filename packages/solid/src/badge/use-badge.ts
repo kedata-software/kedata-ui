@@ -1,24 +1,25 @@
-import { useBaseProps } from "../base-props";
-import { useClassNames } from "../class-names";
-import { useTwMerge } from "../tw-merge";
-import { badgeSlots } from "@kedata-ui/slots/badge";
-import clsx from "clsx";
+import { useBaseProps } from '../base-props';
+import { useClassNames } from '../class-names';
+import { useTwMerge } from '../tw-merge';
+import useColorPalette from '../use-color-palette';
+import { badgeSlots } from '@kedata-ui/slots/badge';
+import clsx from 'clsx';
 import {
   createMemo,
   mergeProps,
+  splitProps,
   type ComponentProps,
   type ValidComponent,
-} from "solid-js";
-import type { BadgeProps } from "./index.types";
-import useColorPalette from "../use-color-palette";
+} from 'solid-js';
+import type { BadgeProps } from './index.types';
 
 const defaultBadgeProps: BadgeProps = {
-  variant: "subtle",
+  variant: 'subtle',
 };
 
 const useBadge = (inProps: BadgeProps) => {
-  const props = useBaseProps("Badge", inProps, defaultBadgeProps);
-  const classNames = useClassNames("Badge", props);
+  const props = useBaseProps('Badge', inProps, defaultBadgeProps);
+  const classNames = useClassNames('Badge', props);
   const colorPaletteClassName = useColorPalette(() => props.colorPalette);
   const twMerge = useTwMerge();
 
@@ -30,12 +31,15 @@ const useBadge = (inProps: BadgeProps) => {
   });
 
   const dataAttrs = createMemo(() => ({
-    "data-variant": props.variant,
+    'data-variant': props.variant,
   }));
 
-  const getRootProps = <T extends ValidComponent = "div">() => {
+  const [, rootProps] = splitProps(props, omittedProps);
+
+  const getRootProps = <T extends ValidComponent = 'div'>() => {
     return mergeProps(
       () => dataAttrs(),
+      () => rootProps,
       () => ({
         class: twMerge(
           clsx(
@@ -57,3 +61,10 @@ const useBadge = (inProps: BadgeProps) => {
 };
 
 export default useBadge;
+
+const omittedProps: Array<keyof BadgeProps> = [
+  'withParts',
+  'variant',
+  'classNames',
+  'colorPalette',
+];

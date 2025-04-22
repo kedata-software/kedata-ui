@@ -3,7 +3,7 @@ import type {
   BadgeVariant,
   ColorPalette,
 } from '@kedata-ui/slots';
-import type { JSXElement } from 'solid-js';
+import type { ComponentProps, JSXElement } from 'solid-js';
 
 export type BadgeBaseProps = {
   withParts?: boolean;
@@ -15,4 +15,4 @@ export type BadgeBaseProps = {
   colorPalette?: ColorPalette;
 };
 
-export type BadgeProps = BadgeBaseProps;
+export type BadgeProps = ComponentProps<'div'> & BadgeBaseProps;
