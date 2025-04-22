@@ -7,6 +7,7 @@ import type { ChatBubbleProps } from './index.types';
 import type { PropsGetterParams } from '../types';
 import {
   createMemo,
+  mergeProps,
   splitProps,
   type ComponentProps,
   type ValidComponent,
@@ -18,7 +19,7 @@ const defaultChatBubbleProps: ChatBubbleProps = {
 
 const useChatBubble = (inProps: ChatBubbleProps) => {
   const props = useBaseProps('ChatBubble', inProps, defaultChatBubbleProps);
-  const classNames = useClassNames('ChatBubble', props);
+  const classes = useClassNames('ChatBubble', props);
   const twMerge = useTwMerge();
   const [, rootProps] = splitProps(props, omittedProps);
 
@@ -31,53 +32,65 @@ const useChatBubble = (inProps: ChatBubbleProps) => {
 
   const isFooterVisible = () => !!props.time;
 
-  const baseDataAttrs = createMemo(() => ({
+  const dataAttrs = createMemo(() => ({
     'data-variant': props.variant,
   }));
 
   const getRootProps = <T extends ValidComponent = 'div'>(
     params: PropsGetterParams = {},
   ) => {
-    return {
-      ...baseDataAttrs(),
-      ...rootProps,
-      class: twMerge(
-        clsx(slots().root(), classNames()?.root, props.class, params.className),
-      ),
-    } as ComponentProps<T>;
+    return mergeProps(
+      () => dataAttrs(),
+      () => rootProps,
+      () => ({
+        class: twMerge(
+          clsx(slots().root(), classes()?.root, props.class, params.className),
+        ),
+      }),
+    ) as ComponentProps<T>;
   };
 
-  const getBubbleProps = (params: PropsGetterParams = {}) => {
-    return {
-      ...baseDataAttrs(),
-      class: twMerge(
-        clsx(slots().bubble(), classNames()?.bubble, params.className),
-      ),
-      children: props.children,
-    };
+  const getBubbleProps = <T extends ValidComponent = 'div'>(
+    params: PropsGetterParams = {},
+  ) => {
+    return mergeProps(
+      () => dataAttrs(),
+      () => ({
+        class: twMerge(
+          clsx(slots().bubble(), classes()?.bubble, params.className),
+        ),
+        children: props.children,
+      }),
+    ) as ComponentProps<T>;
   };
 
-  const getTimeProps = (params: PropsGetterParams = {}) => {
-    return {
-      ...baseDataAttrs(),
-      class: twMerge(
-        clsx(slots().time(), classNames()?.time, params.className),
-      ),
-    };
+  const getTimeProps = <T extends ValidComponent = 'div'>(
+    params: PropsGetterParams = {},
+  ) => {
+    return mergeProps(
+      () => dataAttrs(),
+      () => ({
+        class: twMerge(clsx(slots().time(), classes()?.time, params.className)),
+      }),
+    ) as ComponentProps<T>;
   };
 
-  const getFooterProps = (params: PropsGetterParams = {}) => {
-    return {
-      ...baseDataAttrs(),
-      class: twMerge(
-        clsx(slots().footer(), classNames()?.footer, params.className),
-      ),
-    };
+  const getFooterProps = <T extends ValidComponent = 'div'>(
+    params: PropsGetterParams = {},
+  ) => {
+    return mergeProps(
+      () => dataAttrs(),
+      () => ({
+        class: twMerge(
+          clsx(slots().footer(), classes()?.footer, params.className),
+        ),
+      }),
+    ) as ComponentProps<T>;
   };
 
   return {
-    time: props.time,
-    variant: props.variant,
+    time: () => props.time,
+    variant: () => props.variant,
     isFooterVisible,
 
     getRootProps,

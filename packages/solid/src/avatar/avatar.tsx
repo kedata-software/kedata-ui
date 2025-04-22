@@ -7,11 +7,11 @@ const Avatar: Component<AvatarProps> = (props) => {
 
   return (
     <div {...api.getRootProps()}>
-      {api.fallback && !api.src && (
-        <span {...api.getFallbackProps()}>{api.fallback}</span>
+      {api.fallback() && !api.src() && (
+        <span {...api.getFallbackProps()}>{api.fallback()}</span>
       )}
 
-      {api.src && <img {...api.getImageProps()} />}
+      {api.src() && <img {...api.getImageProps()} />}
     </div>
   );
 };

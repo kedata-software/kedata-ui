@@ -11,7 +11,7 @@ const ChatBubble: Component<ChatBubbleProps> = (props) => {
 
       {api.isFooterVisible() && (
         <div {...api.getFooterProps()}>
-          {api.time && <div {...api.getTimeProps()}>{props.time}</div>}
+          {api.time() && <div {...api.getTimeProps()}>{api.time()}</div>}
         </div>
       )}
     </div>
