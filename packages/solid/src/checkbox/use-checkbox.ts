@@ -61,18 +61,11 @@ const useCheckbox = (inProps: CheckboxProps) => {
   });
 
   const dataAttrs = createMemo(() => ({
-    get ['data-checked']() {
-      return dataAttrBoolean(checked());
-    },
-    get ['data-invalid']() {
-      return dataAttrBoolean(props.invalid);
-    },
-    get ['data-disabled']() {
-      return dataAttrBoolean(props.disabled);
-    },
-    get ['data-read-only']() {
-      return dataAttrBoolean(props.readOnly);
-    },
+    'data-checked': dataAttrBoolean(checked()),
+    'data-invalid': dataAttrBoolean(props.invalid),
+    'data-disabled': dataAttrBoolean(props.disabled),
+    'data-read-only': dataAttrBoolean(props.readOnly),
+    'data-indeterminate': dataAttrBoolean(props.indeterminate),
   }));
 
   const [, rootProps] = splitProps(props, omittedProps);
@@ -175,7 +168,8 @@ const useCheckbox = (inProps: CheckboxProps) => {
         });
       }
     },
-    checked: checked,
+    checked: () => checked,
+    indeterminate: () => props.indeterminate,
 
     getRootProps,
     getControlProps,

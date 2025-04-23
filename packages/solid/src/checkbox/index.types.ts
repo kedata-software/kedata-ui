@@ -10,10 +10,12 @@ export type CheckboxBaseProps = WithFieldProps & {
   id?: string;
   rootId?: string;
 
+  indeterminate?: boolean;
   checked?: boolean;
   initialChecked?: boolean;
-  children?: JSX.Element;
   onCheckedChange?: (checked: boolean) => void;
+
+  children?: JSX.Element;
   ids?: CheckboxIds;
   colorPalette?: ColorPalette;
   withParts?: boolean;

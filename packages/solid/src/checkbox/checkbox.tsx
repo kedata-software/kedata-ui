@@ -1,5 +1,5 @@
 import useCheckbox from './use-checkbox';
-import { KiCheckOutline } from '@kedata-ui/solid-icons';
+import { KiCheckOutline, KiMinusOutline } from '@kedata-ui/solid-icons';
 import type { CheckboxProps } from './index.types';
 import type { Component } from 'solid-js';
 
@@ -12,7 +12,8 @@ const Checkbox: Component<CheckboxProps> = (props) => {
 
       <div {...api.getControlProps()}>
         <div {...api.getIndicatorProps()}>
-          <KiCheckOutline />
+          {props.indeterminate && <KiMinusOutline />}
+          {!props.indeterminate && <KiCheckOutline />}
         </div>
       </div>
 
