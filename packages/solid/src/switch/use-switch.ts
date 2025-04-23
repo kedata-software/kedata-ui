@@ -103,7 +103,7 @@ const useSwitch = (inProps: SwitchProps) => {
             slots().root(),
             classNames()?.root,
             props.class,
-            params.className,
+            params.class,
           ),
         ),
       }),
@@ -118,7 +118,7 @@ const useSwitch = (inProps: SwitchProps) => {
       () => api().getControlProps(),
       () => ({
         class: twMerge(
-          clsx(slots().control(), classNames()?.control, params.className),
+          clsx(slots().control(), classNames()?.control, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -132,7 +132,7 @@ const useSwitch = (inProps: SwitchProps) => {
       () => api().getThumbProps(),
       () => ({
         class: twMerge(
-          clsx(slots().thumb(), classNames()?.thumb, params.className),
+          clsx(slots().thumb(), classNames()?.thumb, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -146,7 +146,7 @@ const useSwitch = (inProps: SwitchProps) => {
       () => api().getLabelProps(),
       () => ({
         class: twMerge(
-          clsx(slots().label(), classNames()?.label, params.className),
+          clsx(slots().label(), classNames()?.label, params.class),
         ),
         children: props.label,
       }),
@@ -161,7 +161,7 @@ const useSwitch = (inProps: SwitchProps) => {
       () => api().getHiddenInputProps(),
       () => ({
         class: twMerge(
-          clsx(slots().hiddenInput(), classNames()?.label, params.className),
+          clsx(slots().hiddenInput(), classNames()?.label, params.class),
         ),
       }),
     ) as ComponentProps<T>;

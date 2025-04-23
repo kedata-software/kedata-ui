@@ -66,7 +66,7 @@ const useRadio = (inProps: RadioProps) => {
             classes()?.root,
             colorPaletteClassName(),
             props.class,
-            params.className,
+            params.class,
           ),
         ),
       }),
@@ -84,7 +84,7 @@ const useRadio = (inProps: RadioProps) => {
             slots().control(),
             classes()?.control,
             colorPaletteClassName(),
-            params.className,
+            params.class,
           ),
         ),
       }),
@@ -98,7 +98,7 @@ const useRadio = (inProps: RadioProps) => {
       () => dataAttrs(),
       () => ({
         class: twMerge(
-          clsx(slots().content(), classes()?.content, params.className),
+          clsx(slots().content(), classes()?.content, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -110,9 +110,7 @@ const useRadio = (inProps: RadioProps) => {
     return mergeProps(
       () => dataAttrs(),
       () => ({
-        class: twMerge(
-          clsx(slots().label(), classes()?.label, params.className),
-        ),
+        class: twMerge(clsx(slots().label(), classes()?.label, params.class)),
       }),
     ) as ComponentProps<T>;
   };
@@ -124,7 +122,7 @@ const useRadio = (inProps: RadioProps) => {
       () => dataAttrs(),
       () => ({
         class: twMerge(
-          clsx(slots().description(), classes()?.description, params.className),
+          clsx(slots().description(), classes()?.description, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -137,7 +135,7 @@ const useRadio = (inProps: RadioProps) => {
       () => dataAttrs(),
       () => ({
         class: twMerge(
-          clsx(slots().indicator(), classes()?.indicator, params.className),
+          clsx(slots().indicator(), classes()?.indicator, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -168,7 +166,7 @@ const useRadio = (inProps: RadioProps) => {
       }),
       () => ({
         class: twMerge(
-          clsx(slots().hiddenInput(), classes()?.hiddenInput, params.className),
+          clsx(slots().hiddenInput(), classes()?.hiddenInput, params.class),
         ),
       }),
     ) as ComponentProps<T>;

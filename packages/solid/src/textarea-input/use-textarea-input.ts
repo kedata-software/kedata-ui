@@ -82,7 +82,7 @@ const useTextareaInput = (inProps: TextareaInputProps) => {
           slots().root(),
           props.class,
           classNames()?.root,
-          params.className,
+          params.class,
         ),
       ),
     } as ComponentProps<T>;
@@ -121,7 +121,7 @@ const useTextareaInput = (inProps: TextareaInputProps) => {
       },
       () => ({
         class: twMerge(
-          clsx(slots().input(), classNames()?.input, params.className),
+          clsx(slots().input(), classNames()?.input, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -133,7 +133,7 @@ const useTextareaInput = (inProps: TextareaInputProps) => {
     return {
       ...dataAttrs(),
       class: twMerge(
-        clsx(slots().counter(), classNames()?.counter, params.className),
+        clsx(slots().counter(), classNames()?.counter, params.class),
       ),
     } as ComponentProps<T>;
   };

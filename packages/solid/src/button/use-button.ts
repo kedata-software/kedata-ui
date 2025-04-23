@@ -78,7 +78,7 @@ const useButton = (inProps: ButtonProps) => {
             colorPaletteClassName(),
             classNames()?.root,
             props.class,
-            params.className,
+            params.class,
           ),
         ),
       }),
@@ -90,11 +90,7 @@ const useButton = (inProps: ButtonProps) => {
       () => baseDataAttrs(),
       () => ({
         class: twMerge(
-          clsx(
-            slots().loadingIcon(),
-            classNames()?.loadingIcon,
-            params.className,
-          ),
+          clsx(slots().loadingIcon(), classNames()?.loadingIcon, params.class),
         ),
       }),
     );
@@ -105,7 +101,7 @@ const useButton = (inProps: ButtonProps) => {
       () => baseDataAttrs(),
       () => ({
         class: twMerge(
-          clsx(slots().endIcon(), classNames()?.endIcon, params.className),
+          clsx(slots().endIcon(), classNames()?.endIcon, params.class),
         ),
       }),
     );
@@ -116,7 +112,7 @@ const useButton = (inProps: ButtonProps) => {
       () => baseDataAttrs(),
       () => ({
         class: twMerge(
-          clsx(slots().startIcon(), classNames()?.startIcon, params.className),
+          clsx(slots().startIcon(), classNames()?.startIcon, params.class),
         ),
       }),
     );

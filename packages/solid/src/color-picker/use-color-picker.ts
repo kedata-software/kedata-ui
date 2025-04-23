@@ -1,14 +1,14 @@
-import { useBaseProps } from "../base-props";
-import { useClassNames } from "../class-names";
-import { useTwMerge } from "../tw-merge";
-import { colorPickerSlots } from "@kedata-ui/slots/color-picker";
-import { omitProps } from "@kedata-software/toolkit-js";
-import * as colorPicker from "@zag-js/color-picker";
-import { normalizeProps, useMachine } from "@zag-js/solid";
-import type { ColorPickerProps } from "./index.types";
-import type { PropsGetterParams } from "../types";
-import { createControlledSignal } from "../create-controlled-signal";
-import { createMemo, mergeProps } from "solid-js";
+import { useBaseProps } from '../base-props';
+import { useClassNames } from '../class-names';
+import { useTwMerge } from '../tw-merge';
+import { colorPickerSlots } from '@kedata-ui/slots/color-picker';
+import { omitProps } from '@kedata-software/toolkit-js';
+import * as colorPicker from '@zag-js/color-picker';
+import { normalizeProps, useMachine } from '@zag-js/solid';
+import type { ColorPickerProps } from './index.types';
+import type { PropsGetterParams } from '../types';
+import { createControlledSignal } from '../create-controlled-signal';
+import { createMemo, mergeProps } from 'solid-js';
 
 const {
   root: getRootClassName,
@@ -35,20 +35,20 @@ const {
 } = colorPickerSlots();
 
 const useColorPicker = (inProps: ColorPickerProps) => {
-  const props = useBaseProps("ColorPicker", inProps);
-  const classNames = useClassNames("ColorPicker", inProps);
+  const props = useBaseProps('ColorPicker', inProps);
+  const classNames = useClassNames('ColorPicker', inProps);
   const twMerge = useTwMerge();
 
   const [value, setValue] = createControlledSignal(
     () => props.value,
     props.onValueChange,
-    props.initialValue ?? "#000000FF",
+    props.initialValue ?? '#000000FF',
   );
 
   const valueColor = createMemo(() => colorPicker.parse(value()!));
-  const valueHex = createMemo(() => valueColor().toString("hex"));
+  const valueHex = createMemo(() => valueColor().toString('hex'));
 
-  const Component = "div" as const;
+  const Component = 'div' as const;
 
   const service = useMachine(colorPicker.machine, {
     get id() {
@@ -63,11 +63,11 @@ const useColorPicker = (inProps: ColorPickerProps) => {
       e.stopImmediatePropagation();
     },
     onValueChange: (details) => {
-      const newValue = details.value.toString("hexa");
+      const newValue = details.value.toString('hexa');
       setValue(newValue);
     },
     onValueChangeEnd: (details) => {
-      const newValue = details.value.toString("hexa");
+      const newValue = details.value.toString('hexa');
       props.onValueChangeEnd?.(newValue);
     },
   });
@@ -83,8 +83,8 @@ const useColorPicker = (inProps: ColorPickerProps) => {
       () => api().getContentProps(),
       () => omitProps(props, omittedProps),
       {
-        "data-state": undefined,
-        "data-placement": undefined,
+        'data-state': undefined,
+        'data-placement': undefined,
         class: twMerge(getRootClassName(), classNames()?.root, props.class),
       },
     );
@@ -208,7 +208,7 @@ const useColorPicker = (inProps: ColorPickerProps) => {
         class: twMerge(
           getChannelInputClassName(),
           classNames()?.channelInput,
-          params.className,
+          params.class,
         ),
       }),
     );
@@ -225,7 +225,7 @@ const useColorPicker = (inProps: ColorPickerProps) => {
 
   const getSwatchLabelProps = () => {
     return {
-      children: "Recent colors",
+      children: 'Recent colors',
       class: twMerge(getSwatchLabelClassName(), classNames()?.swatchLabel),
     };
   };
@@ -295,10 +295,10 @@ const useColorPicker = (inProps: ColorPickerProps) => {
 export default useColorPicker;
 
 const omittedProps: Array<keyof ColorPickerProps> = [
-  "value",
-  "onValueChange",
-  "onValueChangeEnd",
-  "onRequestClose",
-  "swatches",
-  "classNames",
+  'value',
+  'onValueChange',
+  'onValueChangeEnd',
+  'onRequestClose',
+  'swatches',
+  'classNames',
 ];

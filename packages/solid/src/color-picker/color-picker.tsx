@@ -33,13 +33,13 @@ const ColorPicker: Component<ColorPickerProps> = (props) => {
         <input
           {...api.getChannelInputProps({
             channel: 'hex',
-            className: 'w-[70%]',
+            class: 'w-[70%]',
           })}
         />
         <input
           {...api.getChannelInputProps({
             channel: 'alpha',
-            className: 'w-[30%]',
+            class: 'w-[30%]',
           })}
         />
       </div>

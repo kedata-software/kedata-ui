@@ -76,7 +76,7 @@ const useMenu = (inProps: MenuProps) => {
     return mergeProps(() => menuApi().getContentProps(), {
       hidden: false,
       className: twMerge(
-        clsx(slots().content(), classNames()?.content, params?.className),
+        clsx(slots().content(), classNames()?.content, params?.class),
       ),
     }) as ComponentProps<T>;
   };
@@ -86,7 +86,7 @@ const useMenu = (inProps: MenuProps) => {
   ) => {
     return mergeProps(() => menuApi().getSeparatorProps(), {
       className: twMerge(
-        clsx(slots().separator(), classNames()?.separator, params?.className),
+        clsx(slots().separator(), classNames()?.separator, params?.class),
       ),
     }) as ComponentProps<T>;
   };
@@ -115,7 +115,7 @@ const useMenu = (inProps: MenuProps) => {
           classNames()?.positioner,
           animateStatePreset.fadeUp.base,
           animateStatePreset.fadeUp[animateState()],
-          params?.className,
+          params?.class,
         ),
       ),
     }) as ComponentProps<T>;

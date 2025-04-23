@@ -57,7 +57,7 @@ const useTag = (inProps: TagProps) => {
             slots().root(),
             classNames()?.root,
             props.class,
-            params.className,
+            params.class,
           ),
         ),
       }),
@@ -71,7 +71,7 @@ const useTag = (inProps: TagProps) => {
       () => baseDataAttrs(),
       () => ({
         class: twMerge(
-          clsx(slots().closeIcon(), classNames()?.closeIcon, params.className),
+          clsx(slots().closeIcon(), classNames()?.closeIcon, params.class),
         ),
       }),
     ) as ComponentProps<T>;

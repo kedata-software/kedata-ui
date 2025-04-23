@@ -16,7 +16,7 @@ const Tooltip: Component<TooltipProps> = (props) => {
       <div {...api.getPositionerProps()}>
         <div
           {...api.getContentProps({
-            className: clsx(
+            class: clsx(
               'relative duration-150',
               'transition-[opacity,top]',
               animateState() === 'enter-from' && 'opacity-0 !top-2',

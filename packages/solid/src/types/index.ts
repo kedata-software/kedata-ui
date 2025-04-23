@@ -1,7 +1,7 @@
 import type { JSX } from 'solid-js';
 
 export type PropsGetterParams = {
-  className?: string;
+  class?: string;
   style?: JSX.CSSProperties;
 };
 

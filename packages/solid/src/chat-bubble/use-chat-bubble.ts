@@ -44,7 +44,7 @@ const useChatBubble = (inProps: ChatBubbleProps) => {
       () => rootProps,
       () => ({
         class: twMerge(
-          clsx(slots().root(), classes()?.root, props.class, params.className),
+          clsx(slots().root(), classes()?.root, props.class, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -56,9 +56,7 @@ const useChatBubble = (inProps: ChatBubbleProps) => {
     return mergeProps(
       () => dataAttrs(),
       () => ({
-        class: twMerge(
-          clsx(slots().bubble(), classes()?.bubble, params.className),
-        ),
+        class: twMerge(clsx(slots().bubble(), classes()?.bubble, params.class)),
         children: props.children,
       }),
     ) as ComponentProps<T>;
@@ -70,7 +68,7 @@ const useChatBubble = (inProps: ChatBubbleProps) => {
     return mergeProps(
       () => dataAttrs(),
       () => ({
-        class: twMerge(clsx(slots().time(), classes()?.time, params.className)),
+        class: twMerge(clsx(slots().time(), classes()?.time, params.class)),
       }),
     ) as ComponentProps<T>;
   };
@@ -81,9 +79,7 @@ const useChatBubble = (inProps: ChatBubbleProps) => {
     return mergeProps(
       () => dataAttrs(),
       () => ({
-        class: twMerge(
-          clsx(slots().footer(), classes()?.footer, params.className),
-        ),
+        class: twMerge(clsx(slots().footer(), classes()?.footer, params.class)),
       }),
     ) as ComponentProps<T>;
   };

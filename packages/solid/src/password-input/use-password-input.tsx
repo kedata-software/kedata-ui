@@ -113,7 +113,7 @@ const usePasswordInput = (inProps: PasswordInputProps) => {
           clsx(
             colorPaletteClassName(),
             slots().root(),
-            params?.className,
+            params?.class,
             classNames()?.root,
           ),
         ),
@@ -129,11 +129,7 @@ const usePasswordInput = (inProps: PasswordInputProps) => {
       () => dataAttrs(),
       () => ({
         class: twMerge(
-          clsx(
-            slots().startAddon(),
-            params?.className,
-            classNames()?.startAddon,
-          ),
+          clsx(slots().startAddon(), params?.class, classNames()?.startAddon),
         ),
       }),
     );
@@ -144,7 +140,7 @@ const usePasswordInput = (inProps: PasswordInputProps) => {
       () => dataAttrs(),
       () => ({
         class: twMerge(
-          clsx(slots().endAddon(), params?.className, classNames()?.endAddon),
+          clsx(slots().endAddon(), params?.class, classNames()?.endAddon),
         ),
       }),
     );
@@ -155,7 +151,7 @@ const usePasswordInput = (inProps: PasswordInputProps) => {
       () => dataAttrs(),
       () => ({
         class: twMerge(
-          clsx(slots().startIcon(), classNames()?.startIcon, params?.className),
+          clsx(slots().startIcon(), classNames()?.startIcon, params?.class),
         ),
       }),
     );
@@ -168,7 +164,7 @@ const usePasswordInput = (inProps: PasswordInputProps) => {
         class: twMerge(
           clsx(
             slots().inputWrapper(),
-            params?.className,
+            params?.class,
             classNames()?.inputWrapper,
           ),
         ),
@@ -190,7 +186,7 @@ const usePasswordInput = (inProps: PasswordInputProps) => {
       }),
       () => ({
         class: twMerge(
-          clsx(slots().input(), params?.className, classNames()?.input),
+          clsx(slots().input(), params?.class, classNames()?.input),
         ),
       }),
     );

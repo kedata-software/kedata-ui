@@ -65,7 +65,7 @@ const usePopover = (inProps: PopoverProps) => {
   ) => {
     return mergeProps(() => popoverApi().getTriggerProps(), {
       className: twMerge(
-        clsx(slots().trigger(), classNames()?.trigger, params.className),
+        clsx(slots().trigger(), classNames()?.trigger, params.class),
       ),
     }) as ComponentProps<T>;
   };
@@ -80,7 +80,7 @@ const usePopover = (inProps: PopoverProps) => {
           animateStatePreset.fadeUp.base,
           animateStatePreset.fadeUp[animateState()],
           classNames()?.positioner,
-          params.className,
+          params.class,
         ),
       ),
     }) as ComponentProps<T>;
@@ -96,7 +96,7 @@ const usePopover = (inProps: PopoverProps) => {
       }),
       {
         className: twMerge(
-          clsx(slots().content(), classNames()?.content, params.className),
+          clsx(slots().content(), classNames()?.content, params.class),
         ),
       },
     ) as ComponentProps<T>;

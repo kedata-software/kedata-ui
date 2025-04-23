@@ -50,7 +50,7 @@ const useAvatar = (inProps: AvatarProps) => {
             slots().root(),
             props.class,
             classes()?.root,
-            params?.className,
+            params?.class,
           ),
         ),
       }),
@@ -64,7 +64,7 @@ const useAvatar = (inProps: AvatarProps) => {
       () => avatarApi().getFallbackProps(),
       () => ({
         class: twMerge(
-          clsx(slots().fallback(), classes()?.fallback, params?.className),
+          clsx(slots().fallback(), classes()?.fallback, params?.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -80,9 +80,7 @@ const useAvatar = (inProps: AvatarProps) => {
         alt: props.alt,
       }),
       () => ({
-        class: twMerge(
-          clsx(slots().image(), classes()?.image, params?.className),
-        ),
+        class: twMerge(clsx(slots().image(), classes()?.image, params?.class)),
       }),
     ) as ComponentProps<T>;
   };

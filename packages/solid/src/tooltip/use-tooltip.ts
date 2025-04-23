@@ -64,7 +64,7 @@ const useTooltip = (inProps: TooltipProps) => {
       () => tooltipApi().getContentProps(),
       () => ({
         class: twMerge(
-          clsx(slots().content(), classNames()?.content, params?.['className']),
+          clsx(slots().content(), classNames()?.content, params?.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -77,11 +77,7 @@ const useTooltip = (inProps: TooltipProps) => {
       () => tooltipApi().getPositionerProps(),
       () => ({
         class: twMerge(
-          clsx(
-            slots().positioner(),
-            classNames()?.positioner,
-            params?.className,
-          ),
+          clsx(slots().positioner(), classNames()?.positioner, params?.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -103,7 +99,7 @@ const useTooltip = (inProps: TooltipProps) => {
       },
       () => ({
         class: twMerge(
-          clsx(slots().arrow(), classNames()?.arrow, params?.className),
+          clsx(slots().arrow(), classNames()?.arrow, params?.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -116,7 +112,7 @@ const useTooltip = (inProps: TooltipProps) => {
       () => tooltipApi().getArrowTipProps(),
       () => ({
         class: twMerge(
-          clsx(slots().arrowTip(), classNames()?.arrowTip, params?.className),
+          clsx(slots().arrowTip(), classNames()?.arrowTip, params?.class),
         ),
       }),
     ) as ComponentProps<T>;

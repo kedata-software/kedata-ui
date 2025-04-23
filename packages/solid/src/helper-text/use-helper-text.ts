@@ -36,7 +36,7 @@ const useHelperText = (inProps: HelperTextProps) => {
           slots().root(),
           classNames()?.root,
           props.class,
-          params.className,
+          params.class,
         ),
       }),
     ) as ComponentProps<T>;

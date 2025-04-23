@@ -32,7 +32,7 @@ const useLabel = (inProps: LabelProps) => {
     return {
       ...rootProps,
       class: twMerge(
-        clsx(slots().root(), classNames()?.root, props.class, params.className),
+        clsx(slots().root(), classNames()?.root, props.class, params.class),
       ),
     } as ComponentProps<T>;
   };
@@ -42,7 +42,7 @@ const useLabel = (inProps: LabelProps) => {
   ) => {
     return {
       class: twMerge(
-        clsx(slots().asterisk(), classNames()?.asterisk, params.className),
+        clsx(slots().asterisk(), classNames()?.asterisk, params.class),
       ),
       children: '*',
     } as ComponentProps<T>;

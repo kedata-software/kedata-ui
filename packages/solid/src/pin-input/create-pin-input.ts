@@ -83,7 +83,7 @@ const createPinInput = (inProps: PinInputProps) => {
           slots().root(),
           classes()?.root,
           props.class,
-          params.className,
+          params.class,
         ),
       }),
     );
@@ -96,7 +96,7 @@ const createPinInput = (inProps: PinInputProps) => {
       () => api().getInputProps(params),
       () => dataAttrs(),
       () => ({
-        class: twMerge(slots().input(), classes()?.input, params?.className),
+        class: twMerge(slots().input(), classes()?.input, params?.class),
         inputmode: props.inputmode ?? 'numeric',
       }),
     );

@@ -113,7 +113,7 @@ const useSelectPicker = (inProps: SelectPickerProps) => {
             getRootClassName(),
             classNames()?.root,
             props.class,
-            params?.className,
+            params?.class,
           ),
         ),
       }),
@@ -133,7 +133,7 @@ const useSelectPicker = (inProps: SelectPickerProps) => {
       },
       () => ({
         class: twMerge(
-          clsx(getItemClassName(), classNames()?.item, params?.className),
+          clsx(getItemClassName(), classNames()?.item, params?.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -144,7 +144,7 @@ const useSelectPicker = (inProps: SelectPickerProps) => {
   ) => {
     return mergeProps(() => api().getItemTextProps(params), {
       class: twMerge(
-        clsx(getItemTextClassName(), classNames()?.itemText, params?.className),
+        clsx(getItemTextClassName(), classNames()?.itemText, params?.class),
       ),
     }) as ComponentProps<T>;
   };
@@ -156,11 +156,7 @@ const useSelectPicker = (inProps: SelectPickerProps) => {
       () => api().getItemGroupProps(props),
       () => ({
         class: twMerge(
-          clsx(
-            getItemGroupClassName(),
-            classNames()?.itemGroup,
-            params?.className,
-          ),
+          clsx(getItemGroupClassName(), classNames()?.itemGroup, params?.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -176,7 +172,7 @@ const useSelectPicker = (inProps: SelectPickerProps) => {
           clsx(
             getItemGroupLabelClassName(),
             classNames()?.itemGroupLabel,
-            params?.className,
+            params?.class,
           ),
         ),
       }),

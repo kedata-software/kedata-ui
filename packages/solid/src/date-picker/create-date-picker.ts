@@ -61,7 +61,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
       () => api().getControlProps(),
       () => ({
         class: twMerge(
-          clsx(slots().control(), classes()?.control, params.className),
+          clsx(slots().control(), classes()?.control, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -74,7 +74,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
       () => api().getTriggerProps(),
       () => ({
         class: twMerge(
-          clsx(slots().trigger(), classes()?.trigger, params.className),
+          clsx(slots().trigger(), classes()?.trigger, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -87,7 +87,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
       () => api().getRootProps(),
       () => ({
         class: twMerge(
-          clsx(slots().root(), classes()?.root, props.class, params.className),
+          clsx(slots().root(), classes()?.root, props.class, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -100,7 +100,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
       () => api().getPositionerProps(),
       () => ({
         class: twMerge(
-          clsx(slots().positioner(), classes()?.positioner, params.className),
+          clsx(slots().positioner(), classes()?.positioner, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -113,7 +113,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
       () => api().getContentProps(),
       () => ({
         class: twMerge(
-          clsx(slots().content(), classes()?.content, params.className),
+          clsx(slots().content(), classes()?.content, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -126,7 +126,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
       () => api().getViewControlProps(params),
       () => ({
         class: twMerge(
-          clsx(slots().viewControl(), classes()?.viewControl, params.className),
+          clsx(slots().viewControl(), classes()?.viewControl, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -139,7 +139,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
       () => api().getPrevTriggerProps(params),
       () => ({
         class: twMerge(
-          clsx(slots().prevTrigger(), classes()?.prevTrigger, params.className),
+          clsx(slots().prevTrigger(), classes()?.prevTrigger, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -153,7 +153,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
 
       () => ({
         class: twMerge(
-          clsx(slots().viewTrigger(), classes()?.viewTrigger, params.className),
+          clsx(slots().viewTrigger(), classes()?.viewTrigger, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -166,7 +166,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
       () => api().getNextTriggerProps(params),
       () => ({
         class: twMerge(
-          clsx(slots().nextTrigger(), classes()?.nextTrigger, params.className),
+          clsx(slots().nextTrigger(), classes()?.nextTrigger, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -178,9 +178,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
     return mergeProps(
       () => api().getTableProps(params),
       () => ({
-        class: twMerge(
-          clsx(slots().table(), classes()?.table, params.className),
-        ),
+        class: twMerge(clsx(slots().table(), classes()?.table, params.class)),
       }),
     ) as ComponentProps<T>;
   };
@@ -192,7 +190,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
       () => api().getTableHeaderProps(params),
       () => ({
         class: twMerge(
-          clsx(slots().tableHeader(), classes()?.tableHeader, params.className),
+          clsx(slots().tableHeader(), classes()?.tableHeader, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -205,7 +203,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
       () => api().getTableBodyProps(params),
       () => ({
         class: twMerge(
-          clsx(slots().tableBody(), classes()?.tableBody, params.className),
+          clsx(slots().tableBody(), classes()?.tableBody, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -218,7 +216,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
       () => api().getTableRowProps(params),
       () => ({
         class: twMerge(
-          clsx(slots().tableRow(), classes()?.tableRow, params.className),
+          clsx(slots().tableRow(), classes()?.tableRow, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -231,7 +229,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
       () => api().getDayTableCellProps(params),
       () => ({
         class: twMerge(
-          clsx(slots().tableCell(), classes()?.tableCell, params.className),
+          clsx(slots().tableCell(), classes()?.tableCell, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -247,7 +245,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
           clsx(
             slots().tableCellTrigger(),
             classes()?.tableCellTrigger,
-            params.className,
+            params.class,
           ),
         ),
       }),
@@ -261,7 +259,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
       () => api().getMonthTableCellProps(params),
       () => ({
         class: twMerge(
-          clsx(slots().tableCell(), classes()?.tableCell, params.className),
+          clsx(slots().tableCell(), classes()?.tableCell, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -277,7 +275,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
           clsx(
             slots().tableCellTrigger(),
             classes()?.tableCellTrigger,
-            params.className,
+            params.class,
           ),
         ),
       }),
@@ -291,7 +289,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
       () => api().getYearTableCellProps(params),
       () => ({
         class: twMerge(
-          clsx(slots().tableCell(), classes()?.tableCell, params.className),
+          clsx(slots().tableCell(), classes()?.tableCell, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -307,7 +305,7 @@ const createDatePicker = (inProps: DatePickerProps) => {
           clsx(
             slots().tableCellTrigger(),
             classes()?.tableCellTrigger,
-            params.className,
+            params.class,
           ),
         ),
       }),

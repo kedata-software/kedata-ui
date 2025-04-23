@@ -122,7 +122,7 @@ const useSelectInput = (inProps: SelectInputProps) => {
             colorPaletteClassName(),
             slots().root(),
             props.class,
-            params?.className,
+            params?.class,
           ),
         ),
       }),
@@ -140,9 +140,7 @@ const useSelectInput = (inProps: SelectInputProps) => {
     params?: PropsGetterParams,
   ) => {
     return {
-      class: twMerge(
-        clsx(slots().value(), classNames?.value, params?.className),
-      ),
+      class: twMerge(clsx(slots().value(), classNames?.value, params?.class)),
     } as ComponentProps<T>;
   };
 
@@ -168,7 +166,7 @@ const useSelectInput = (inProps: SelectInputProps) => {
             classNames?.positioner,
             animateStatePreset.fadeUp.base,
             animateStatePreset.fadeUp[animateState()],
-            params?.className,
+            params?.class,
           ),
         ),
       },
@@ -182,7 +180,7 @@ const useSelectInput = (inProps: SelectInputProps) => {
       class: twMerge(
         slots().inputWrapper(),
         classNames?.inputWrapper,
-        params?.className,
+        params?.class,
       ),
     } as ComponentProps<T>;
   };
@@ -191,11 +189,7 @@ const useSelectInput = (inProps: SelectInputProps) => {
     params?: PropsGetterParams,
   ) => {
     return {
-      class: twMerge(
-        slots().indicator(),
-        classNames?.indicator,
-        params?.className,
-      ),
+      class: twMerge(slots().indicator(), classNames?.indicator, params?.class),
     } as ComponentProps<T>;
   };
 

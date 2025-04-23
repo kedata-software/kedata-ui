@@ -57,9 +57,7 @@ const usePagination = (inProps: PaginationProps) => {
     return mergeProps(
       () => paginationApi().getRootProps(),
       () => ({
-        class: twMerge(
-          clsx(slots().root(), classNames()?.root, params?.className),
-        ),
+        class: twMerge(clsx(slots().root(), classNames()?.root, params?.class)),
       }),
     );
   };
@@ -76,7 +74,7 @@ const usePagination = (inProps: PaginationProps) => {
               variant: 'solid',
             }),
             classNames()?.prevTrigger,
-            params?.className,
+            params?.class,
           ),
         ),
       }),
@@ -95,7 +93,7 @@ const usePagination = (inProps: PaginationProps) => {
               variant: 'solid',
             }),
             classNames()?.nextTrigger,
-            params?.className,
+            params?.class,
           ),
         ),
       }),
@@ -115,7 +113,7 @@ const usePagination = (inProps: PaginationProps) => {
             colorPaletteClassName(),
             slots().ellipsis(),
             classNames()?.ellipsis,
-            params.className,
+            params.class,
           ),
         ),
       }),
@@ -131,7 +129,7 @@ const usePagination = (inProps: PaginationProps) => {
             colorPaletteClassName,
             slots().item(),
             classNames()?.item,
-            params.className,
+            params.class,
           ),
         ),
         get children() {

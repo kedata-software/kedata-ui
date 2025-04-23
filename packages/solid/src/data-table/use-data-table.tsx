@@ -1,22 +1,22 @@
-import createDataTableStore from "./create-data-table-store";
-import { useBaseProps } from "../base-props";
-import { useClassNames } from "../class-names";
-import { useTwMerge } from "../tw-merge";
-import { dataTableSlots } from "@kedata-ui/slots/data-table";
-import { dataAttrBoolean } from "@kedata-software/toolkit-js";
-import clsx from "clsx";
-import { createMemo, type ComponentProps, type ValidComponent } from "solid-js";
-import type { DataTableProps } from "./index.types";
-import type { PaginationProps } from "../pagination";
-import type { PropsGetterParams } from "../types";
+import createDataTableStore from './create-data-table-store';
+import { useBaseProps } from '../base-props';
+import { useClassNames } from '../class-names';
+import { useTwMerge } from '../tw-merge';
+import { dataTableSlots } from '@kedata-ui/slots/data-table';
+import { dataAttrBoolean } from '@kedata-software/toolkit-js';
+import clsx from 'clsx';
+import { createMemo, type ComponentProps, type ValidComponent } from 'solid-js';
+import type { DataTableProps } from './index.types';
+import type { PaginationProps } from '../pagination';
+import type { PropsGetterParams } from '../types';
 
 const useDataTable = (inProps: DataTableProps) => {
-  const props = useBaseProps("DataTable", inProps, {
+  const props = useBaseProps('DataTable', inProps, {
     fixedHeader: true,
     pagination: true,
-    rowKey: "id",
+    rowKey: 'id',
   });
-  const classNames = useClassNames("DataTable", props);
+  const classNames = useClassNames('DataTable', props);
   const twMerge = useTwMerge();
 
   const tableState = createDataTableStore({
@@ -41,104 +41,91 @@ const useDataTable = (inProps: DataTableProps) => {
 
   const slots = createMemo(() => dataTableSlots());
 
-  const Component = "div" as const;
+  const Component = 'div' as const;
 
-  const getRootProps = <T extends ValidComponent = "div">(
+  const getRootProps = <T extends ValidComponent = 'div'>(
     params?: PropsGetterParams,
   ) => {
     return {
-      "data-fixed-header": dataAttrBoolean(props.fixedHeader),
+      'data-fixed-header': dataAttrBoolean(props.fixedHeader),
       class: twMerge(
-        clsx(
-          slots().root(),
-          classNames()?.root,
-          props.class,
-          params?.className,
-        ),
+        clsx(slots().root(), classNames()?.root, props.class, params?.class),
       ),
     } as ComponentProps<T>;
   };
 
-  const getTableProps = <T extends ValidComponent = "table">(
+  const getTableProps = <T extends ValidComponent = 'table'>(
+    params?: PropsGetterParams,
+  ) => {
+    return {
+      class: twMerge(clsx(slots().table(), classNames()?.table, params?.class)),
+    } as ComponentProps<T>;
+  };
+
+  const getBodyProps = <T extends ValidComponent = 'div'>(
+    params?: PropsGetterParams,
+  ) => {
+    return {
+      class: twMerge(clsx(slots().body(), classNames()?.body, params?.class)),
+    } as ComponentProps<T>;
+  };
+
+  const getTableHeaderProps = <T extends ValidComponent = 'thead'>(
     params?: PropsGetterParams,
   ) => {
     return {
       class: twMerge(
-        clsx(slots().table(), classNames()?.table, params?.className),
+        clsx(slots().tableHeader(), classNames()?.tableHeader, params?.class),
       ),
     } as ComponentProps<T>;
   };
 
-  const getBodyProps = <T extends ValidComponent = "div">(
+  const getTableHeadProps = <T extends ValidComponent = 'th'>(
     params?: PropsGetterParams,
   ) => {
     return {
       class: twMerge(
-        clsx(slots().body(), classNames()?.body, params?.className),
+        clsx(slots().tableHead(), classNames()?.tableHead, params?.class),
       ),
     } as ComponentProps<T>;
   };
 
-  const getTableHeaderProps = <T extends ValidComponent = "thead">(
+  const getTableBodyProps = <T extends ValidComponent = 'tbody'>(
     params?: PropsGetterParams,
   ) => {
     return {
       class: twMerge(
-        clsx(
-          slots().tableHeader(),
-          classNames()?.tableHeader,
-          params?.className,
-        ),
+        clsx(slots().tableBody(), classNames()?.tableBody, params?.class),
       ),
     } as ComponentProps<T>;
   };
 
-  const getTableHeadProps = <T extends ValidComponent = "th">(
+  const getTableRowProps = <T extends ValidComponent = 'tr'>(
     params?: PropsGetterParams,
   ) => {
     return {
       class: twMerge(
-        clsx(slots().tableHead(), classNames()?.tableHead, params?.className),
+        clsx(slots().tableRow(), classNames()?.tableRow, params?.class),
       ),
     } as ComponentProps<T>;
   };
 
-  const getTableBodyProps = <T extends ValidComponent = "tbody">(
+  const getTableCellProps = <T extends ValidComponent = 'td'>(
     params?: PropsGetterParams,
   ) => {
     return {
       class: twMerge(
-        clsx(slots().tableBody(), classNames()?.tableBody, params?.className),
+        clsx(slots().tableCell(), classNames()?.tableCell, params?.class),
       ),
     } as ComponentProps<T>;
   };
 
-  const getTableRowProps = <T extends ValidComponent = "tr">(
+  const getFooterProps = <T extends ValidComponent = 'div'>(
     params?: PropsGetterParams,
   ) => {
     return {
       class: twMerge(
-        clsx(slots().tableRow(), classNames()?.tableRow, params?.className),
-      ),
-    } as ComponentProps<T>;
-  };
-
-  const getTableCellProps = <T extends ValidComponent = "td">(
-    params?: PropsGetterParams,
-  ) => {
-    return {
-      class: twMerge(
-        clsx(slots().tableCell(), classNames()?.tableCell, params?.className),
-      ),
-    } as ComponentProps<T>;
-  };
-
-  const getFooterProps = <T extends ValidComponent = "div">(
-    params?: PropsGetterParams,
-  ) => {
-    return {
-      class: twMerge(
-        clsx(slots().footer(), classNames()?.footer, params?.className),
+        clsx(slots().footer(), classNames()?.footer, params?.class),
       ),
     } as ComponentProps<T>;
   };

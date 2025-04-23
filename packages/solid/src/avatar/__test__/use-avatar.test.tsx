@@ -5,13 +5,13 @@ import { createRoot } from 'solid-js';
 
 const classes = {
   root: {
-    className: 'root',
+    class: 'root',
   },
   fallback: {
-    className: 'fallback',
+    class: 'fallback',
   },
   image: {
-    className: 'image',
+    class: 'image',
   },
 };
 

@@ -84,7 +84,7 @@ const useCheckbox = (inProps: CheckboxProps) => {
             slots().root(),
             classNames()?.root,
             props.class,
-            params.className,
+            params.class,
           ),
         ),
       }),
@@ -99,7 +99,7 @@ const useCheckbox = (inProps: CheckboxProps) => {
       () => api().getControlProps(),
       () => ({
         class: twMerge(
-          clsx(slots().control(), classNames()?.control, params.className),
+          clsx(slots().control(), classNames()?.control, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -113,7 +113,7 @@ const useCheckbox = (inProps: CheckboxProps) => {
       () => api().getIndicatorProps(),
       () => ({
         class: twMerge(
-          clsx(slots().indicator(), classNames()?.indicator, params.className),
+          clsx(slots().indicator(), classNames()?.indicator, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -127,7 +127,7 @@ const useCheckbox = (inProps: CheckboxProps) => {
       () => api().getLabelProps(),
       () => ({
         class: twMerge(
-          clsx(slots().label(), classNames()?.label, params.className),
+          clsx(slots().label(), classNames()?.label, params.class),
         ),
       }),
     ) as ComponentProps<T>;
@@ -141,11 +141,7 @@ const useCheckbox = (inProps: CheckboxProps) => {
       () => api().getHiddenInputProps(),
       () => ({
         class: twMerge(
-          clsx(
-            slots().hiddenInput(),
-            classNames()?.hiddenInput,
-            params.className,
-          ),
+          clsx(slots().hiddenInput(), classNames()?.hiddenInput, params.class),
         ),
       }),
     ) as ComponentProps<T>;

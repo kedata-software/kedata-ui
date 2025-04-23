@@ -82,7 +82,7 @@ const useTextInput = (inProps: TextInputProps) => {
           slots().root(),
           props?.class,
           classNames()?.root,
-          params.className,
+          params.class,
         ),
       ),
     } as ComponentProps<T>;
@@ -120,9 +120,7 @@ const useTextInput = (inProps: TextInputProps) => {
       get type() {
         return props.type;
       },
-      class: twMerge(
-        clsx(slots().input(), classNames()?.input, params.className),
-      ),
+      class: twMerge(clsx(slots().input(), classNames()?.input, params.class)),
     } as ComponentProps<T>;
   };
 
@@ -132,11 +130,7 @@ const useTextInput = (inProps: TextInputProps) => {
     return {
       ...dataAttrs(),
       class: twMerge(
-        clsx(
-          slots().inputWrapper(),
-          classNames()?.inputWrapper,
-          params.className,
-        ),
+        clsx(slots().inputWrapper(), classNames()?.inputWrapper, params.class),
       ),
     } as ComponentProps<T>;
   };
@@ -147,7 +141,7 @@ const useTextInput = (inProps: TextInputProps) => {
     return {
       ...dataAttrs(),
       class: twMerge(
-        clsx(slots().startAddon(), classNames()?.startAddon, params.className),
+        clsx(slots().startAddon(), classNames()?.startAddon, params.class),
       ),
     } as ComponentProps<T>;
   };
@@ -158,7 +152,7 @@ const useTextInput = (inProps: TextInputProps) => {
     return {
       ...dataAttrs(),
       class: twMerge(
-        clsx(slots().startIcon(), classNames()?.startIcon, params.className),
+        clsx(slots().startIcon(), classNames()?.startIcon, params.class),
       ),
     } as ComponentProps<T>;
   };
@@ -169,7 +163,7 @@ const useTextInput = (inProps: TextInputProps) => {
     return {
       ...dataAttrs(),
       class: twMerge(
-        clsx(slots().endAddon(), classNames()?.endAddon, params.className),
+        clsx(slots().endAddon(), classNames()?.endAddon, params.class),
       ),
     } as ComponentProps<T>;
   };
@@ -178,7 +172,7 @@ const useTextInput = (inProps: TextInputProps) => {
     return {
       ...dataAttrs(),
       class: twMerge(
-        clsx(slots().endIcon(), classNames()?.endIcon, params.className),
+        clsx(slots().endIcon(), classNames()?.endIcon, params.class),
       ),
     };
   };

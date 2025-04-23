@@ -34,7 +34,7 @@ const useIconButton = (inProps: IconButtonProps) => {
             colorPaletteClassName(),
             classNames()?.root,
             props.class,
-            params?.className,
+            params?.class,
           ),
         ),
       }),
@@ -44,16 +44,14 @@ const useIconButton = (inProps: IconButtonProps) => {
   const getLoadingIconProps = (params?: PropsGetterParams) => {
     return {
       class: twMerge(
-        clsx(slots().lodingIcon(), classNames()?.lodingIcon, params?.className),
+        clsx(slots().lodingIcon(), classNames()?.lodingIcon, params?.class),
       ),
     };
   };
 
   const getIconProps = (params?: PropsGetterParams) => {
     return {
-      class: twMerge(
-        clsx(slots().icon(), classNames()?.icon, params?.className),
-      ),
+      class: twMerge(clsx(slots().icon(), classNames()?.icon, params?.class)),
     };
   };
 
