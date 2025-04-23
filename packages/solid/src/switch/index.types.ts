@@ -1,16 +1,21 @@
 import type { TestableProps, WithFieldProps } from '../types';
 import type { ColorPalette, SwitchClassNames } from '@kedata-ui/slots';
 import type { ElementIds } from '@zag-js/switch';
-import type { JSX, Ref } from 'solid-js';
+import type { ComponentProps, JSX, Ref } from 'solid-js';
 
 export type SwitchBaseProps = TestableProps &
   WithFieldProps & {
     /**
      * @description
      * The id of the `<input type="checkbox">` element.
+     * Please use `rootId` to set root element id.
      */
     id?: string;
-    class?: string;
+    /**
+     * @description
+     * The id of the root element.
+     */
+    rootId?: string;
     ref?: Ref<SwitchRef>;
     title?: string;
     label?: JSX.Element;
@@ -26,7 +31,8 @@ export type SwitchBaseProps = TestableProps &
     value?: string;
   };
 
-export type SwitchProps = SwitchBaseProps;
+export type SwitchProps = Omit<ComponentProps<'label'>, 'ref'> &
+  SwitchBaseProps;
 
 export type SwitchRef = {
   focus: () => void;

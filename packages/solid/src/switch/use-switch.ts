@@ -10,6 +10,7 @@ import * as zagSwitch from '@zag-js/switch';
 import clsx from 'clsx';
 import {
   createMemo,
+  createUniqueId,
   mergeProps,
   splitProps,
   type ComponentProps,
@@ -30,6 +31,7 @@ const useSwitch = (inProps: SwitchProps) => {
   );
 
   let inputRef: HTMLInputElement | undefined;
+  const rootId = createMemo(() => props.rootId ?? createUniqueId());
 
   const service = useMachine(zagSwitch.machine, {
     id: props.id,
@@ -56,6 +58,9 @@ const useSwitch = (inProps: SwitchProps) => {
       get hiddenInput() {
         return props.id;
       },
+      get root() {
+        return rootId();
+      },
     },
     onCheckedChange: ({ checked }) => {
       setChecked(checked);
@@ -70,37 +75,28 @@ const useSwitch = (inProps: SwitchProps) => {
     }),
   );
 
-  const baseDataAttrs = createMemo(() => {
-    return {
-      get ['data-disabled']() {
-        return dataAttrBoolean(props.disabled);
-      },
-      get ['data-checked']() {
-        return dataAttrBoolean(checked());
-      },
-      get ['data-invalid']() {
-        return dataAttrBoolean(props.invalid);
-      },
-      get ['data-read-only']() {
-        return dataAttrBoolean(props.readOnly);
-      },
-    };
-  });
+  const dataAttrs = createMemo(() => ({
+    'data-disabled': dataAttrBoolean(props.disabled),
+    'data-checked': dataAttrBoolean(checked()),
+    'data-invalid': dataAttrBoolean(props.invalid),
+    'data-read-only': dataAttrBoolean(props.readOnly),
+  }));
 
-  const [, baseProps] = splitProps(props, omittedProps);
+  const [, rootProps] = splitProps(props, omittedProps);
 
-  const getRootProps = <T extends ValidComponent = 'root'>(
+  const getRootProps = <T extends ValidComponent = 'label'>(
     params: PropsGetterParams = {},
   ) => {
     return mergeProps(
-      () => baseDataAttrs(),
+      () => dataAttrs(),
       () => api().getRootProps(),
-      () => baseProps,
+      () => rootProps,
       () => ({
-        role: 'switch' as const,
-        get ['aria-checked']() {
-          return checked();
-        },
+        role: 'switch',
+        'aria-checked': checked(),
+        id: rootId(),
+      }),
+      () => ({
         class: twMerge(
           clsx(
             colorPaletteClassName(),
@@ -118,7 +114,7 @@ const useSwitch = (inProps: SwitchProps) => {
     params: PropsGetterParams = {},
   ) => {
     return mergeProps(
-      () => baseDataAttrs(),
+      () => dataAttrs(),
       () => api().getControlProps(),
       () => ({
         class: twMerge(
@@ -132,7 +128,7 @@ const useSwitch = (inProps: SwitchProps) => {
     params: PropsGetterParams = {},
   ) => {
     return mergeProps(
-      () => baseDataAttrs(),
+      () => dataAttrs(),
       () => api().getThumbProps(),
       () => ({
         class: twMerge(
@@ -146,7 +142,7 @@ const useSwitch = (inProps: SwitchProps) => {
     params: PropsGetterParams = {},
   ) => {
     return mergeProps(
-      () => baseDataAttrs(),
+      () => dataAttrs(),
       () => api().getLabelProps(),
       () => ({
         class: twMerge(
@@ -161,7 +157,7 @@ const useSwitch = (inProps: SwitchProps) => {
     params: PropsGetterParams = {},
   ) => {
     return mergeProps(
-      () => baseDataAttrs(),
+      () => dataAttrs(),
       () => api().getHiddenInputProps(),
       () => ({
         class: twMerge(
@@ -218,4 +214,5 @@ const omittedProps: Array<keyof SwitchProps> = [
   'name',
   'value',
   'ref',
+  'rootId',
 ];
