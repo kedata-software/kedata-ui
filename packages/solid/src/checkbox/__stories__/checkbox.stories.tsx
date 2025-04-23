@@ -27,7 +27,6 @@ const meta: Meta<typeof Checkbox> = {
         type: {
           summary: 'boolean',
         },
-        defaultValue: { summary: 'false' },
       },
     },
     checked: {
@@ -36,7 +35,6 @@ const meta: Meta<typeof Checkbox> = {
         type: {
           summary: 'boolean',
         },
-        defaultValue: { summary: 'false' },
       },
     },
     children: {
@@ -44,6 +42,15 @@ const meta: Meta<typeof Checkbox> = {
       table: {
         type: {
           summary: 'React.ReactNode',
+        },
+      },
+    },
+    indeterminate: {
+      description: 'If true, the checkbox will be indeterminate',
+      control: { type: 'boolean' },
+      table: {
+        type: {
+          summary: 'boolean',
         },
       },
     },
