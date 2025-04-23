@@ -1,3 +1,21 @@
+## 0.0.14 (2025-04-23)
+
+### 🚀 Features
+
+- **solid:** slicing DatePicker ([d0bb1a3](https://github.com/kedata-software/kedata-ui/commit/d0bb1a3))
+- **solid:** extend props div for badge ([9bb9f6e](https://github.com/kedata-software/kedata-ui/commit/9bb9f6e))
+- **solid:** update props merger ([febdae0](https://github.com/kedata-software/kedata-ui/commit/febdae0))
+- **solid:** support indeterminate checkbox ([0442042](https://github.com/kedata-software/kedata-ui/commit/0442042))
+- **solid:** add `rootId` for Switch ([3785bc7](https://github.com/kedata-software/kedata-ui/commit/3785bc7))
+
+### 🩹 Fixes
+
+- **solid:** fix docs ([d8f05d1](https://github.com/kedata-software/kedata-ui/commit/d8f05d1))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.0.13 (2025-04-17)
 
 ### 🚀 Features
