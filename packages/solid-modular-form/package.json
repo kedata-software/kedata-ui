@@ -1,0 +1,28 @@
+{
+  "name": "@kedata-ui/solid-modular-form",
+  "version": "0.0.14",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:pre": "rm -rf ./dist",
+    "build:tsup": "tsup",
+    "build": "yarn build:pre && yarn build:tsup"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.jsx"
+    }
+  },
+  "dependencies": {
+    "solid-js": "^1.9.5"
+  },
+  "resolutions": {
+    "@modular-forms/solid": "^0.25.1"
+  }
+}

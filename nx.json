@@ -46,7 +46,14 @@
   "targetDefaults": {},
   "generators": {},
   "release": {
-    "projects": ["tailwind", "slots", "svg-icons", "solid", "solid-icons"],
+    "projects": [
+      "tailwind",
+      "slots",
+      "svg-icons",
+      "solid",
+      "solid-icons",
+      "solid-modular-form"
+    ],
     "releaseTagPattern": "v{version}",
     "changelog": {
       "workspaceChangelog": {

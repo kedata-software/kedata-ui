@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "moduleResolution": "Bundler",
+    "module": "ES2020",
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
+  },
+  "files": ["../../packages/slots/src/index.ts"],
+  "include": ["src/**/*.types.ts", "src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["vite.config.ts", "src/**/*.test.tsx", "src/**/*.stories.tsx"]
+}
