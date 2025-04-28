@@ -2,6 +2,7 @@
   "name": "@kedata-ui/svg-icons",
   "version": "0.0.14",
   "type": "module",
+  "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
