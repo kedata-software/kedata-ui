@@ -4,6 +4,8 @@ import {
   type FieldPathValue,
   type Maybe,
   type FieldType,
+  type PartialValues,
+  type ValidateForm,
 } from '@modular-forms/solid';
 import type { JSX } from 'solid-js';
 
@@ -40,4 +42,21 @@ export type ExtFieldProps<
       name: string;
     },
   ) => JSX.Element;
+};
+
+export type CreateModularFormParams<TFieldValues extends FieldValues> = {
+  /**
+   * The initial values of the form.
+   */
+  initialValues?: PartialValues<TFieldValues>;
+  /**
+   * The validation function for the form. You can use Valibot or Zod for schema validation.
+   * @link https://modularforms.dev/solid/guides/validate-your-fields
+   */
+  validate?: ValidateForm<TFieldValues>;
+  /**
+   * If true, the form will focus on the first invalid field when the form is submitted.
+   * @default true
+   */
+  focusOnError?: boolean;
 };

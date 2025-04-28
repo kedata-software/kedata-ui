@@ -17,23 +17,22 @@ import {
   Field,
   FieldArray,
   getValues,
-  type PartialValues,
   getErrors,
   type FieldArrayPath,
   type FieldArrayStore,
   type MaybeValue,
   type PartialKey,
-  type ValidateForm,
 } from '@modular-forms/solid';
-import type { ExtFieldProps, FieldRefItem } from './index.types';
+import type {
+  CreateModularFormParams,
+  ExtFieldProps,
+  FieldRefItem,
+} from './index.types';
 
 function createModularForm<
   TFieldValues extends FieldValues,
   TResponseData extends ResponseData = undefined,
->(params?: {
-  initialValues?: PartialValues<TFieldValues>;
-  validate?: ValidateForm<TFieldValues>;
-}) {
+>(params?: CreateModularFormParams<TFieldValues>) {
   // Holds the references of the fields for focus and blur management
   const [refs, setRefs] = createSignal<FieldRefItem[]>([]);
 
@@ -41,6 +40,8 @@ function createModularForm<
     initialValues: params?.initialValues,
     validate: params?.validate,
   });
+
+  const focusOnError = () => params?.focusOnError ?? true;
 
   return [
     {
@@ -75,13 +76,15 @@ function createModularForm<
             if (isValid) {
               await fn(getValues(formStore) as TFieldValues);
             } else {
-              const errors = getErrors(formStore);
-              const names = Object.keys(errors);
-              for (const name of names) {
-                const activeRef = refs().find((item) => item.name === name);
-                if (activeRef) {
-                  activeRef.ref.focus?.();
-                  break;
+              if (focusOnError()) {
+                const errors = getErrors(formStore);
+                const names = Object.keys(errors);
+                for (const name of names) {
+                  const activeRef = refs().find((item) => item.name === name);
+                  if (activeRef) {
+                    activeRef.ref.focus?.();
+                    break;
+                  }
                 }
               }
             }
