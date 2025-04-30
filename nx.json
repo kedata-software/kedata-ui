@@ -49,6 +49,7 @@
     "projects": [
       "tailwind",
       "slots",
+      "react-icons",
       "svg-icons",
       "solid",
       "solid-icons",

@@ -1,0 +1,24 @@
+import React, { type FC, type ComponentProps } from 'react';
+
+const KiRefreshOutline: FC<ComponentProps<'svg'>> = (props) => {
+  return (
+    <svg
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M3.99997 3.99998V8.99998H4.58149M19.9381 11C19.446 7.05367 16.0796 3.99998 12 3.99998C8.64259 3.99998 5.76826 6.06815 4.58149 8.99998M4.58149 8.99998H8.99997M20 20V15H19.4185M19.4185 15C18.2317 17.9318 15.3573 20 12 20C7.92035 20 4.55396 16.9463 4.06186 13M19.4185 15H15"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+
+export default KiRefreshOutline;

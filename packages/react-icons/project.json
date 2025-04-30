@@ -1,0 +1,16 @@
+{
+  "name": "solid-icons",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/solid-icons/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/solid-icons",
+        "command": "yarn build"
+      }
+    }
+  }
+}

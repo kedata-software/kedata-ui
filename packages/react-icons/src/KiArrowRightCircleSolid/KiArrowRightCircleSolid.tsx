@@ -1,0 +1,23 @@
+import React, { type FC, type ComponentProps } from 'react';
+
+const KiArrowRightCircleSolid: FC<ComponentProps<'svg'>> = (props) => {
+  return (
+    <svg
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M12 21.6C17.302 21.6 21.6 17.302 21.6 12C21.6 6.69809 17.302 2.40002 12 2.40002C6.69809 2.40002 2.40002 6.69809 2.40002 12C2.40002 17.302 6.69809 21.6 12 21.6ZM16.4486 11.1515L12.8486 7.5515C12.3799 7.08287 11.6201 7.08287 11.1515 7.5515C10.6829 8.02013 10.6829 8.77992 11.1515 9.24855L12.703 10.8L8.40002 10.8C7.73728 10.8 7.20002 11.3373 7.20002 12C7.20002 12.6628 7.73728 13.2 8.40002 13.2H12.703L11.1515 14.7515C10.6829 15.2201 10.6829 15.9799 11.1515 16.4486C11.6201 16.9172 12.3799 16.9172 12.8486 16.4486L16.4486 12.8486C16.9172 12.3799 16.9172 11.6201 16.4486 11.1515Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
+
+export default KiArrowRightCircleSolid;
