@@ -4,7 +4,8 @@
     "declaration": true,
     "outDir": "",
     "composite": true,
-    "jsx": "react"
+    "jsx": "react",
+    "moduleResolution": "bundler"
   },
   "files": [],
   "exclude": [
