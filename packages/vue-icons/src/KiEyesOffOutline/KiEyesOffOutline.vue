@@ -1,0 +1,24 @@
+<script setup lang="ts">
+import type { SVGAttributes } from 'vue';
+
+interface Props extends /* @vue-ignore */ SVGAttributes {}
+const props = defineProps<Props>();
+</script>
+<template>
+  <svg
+    v-bind="props"
+    width="1em"
+    height="1em"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M2.99998 3L6.58914 6.58916M21 21L17.4112 17.4112M13.8749 18.8246C13.2677 18.9398 12.6411 19 12.0004 19C7.52279 19 3.73249 16.0571 2.45824 12C2.80513 10.8955 3.33849 9.87361 4.02142 8.97118M9.87866 9.87868C10.4216 9.33579 11.1716 9 12 9C13.6568 9 15 10.3431 15 12C15 12.8284 14.6642 13.5784 14.1213 14.1213M9.87866 9.87868L14.1213 14.1213M9.87866 9.87868L6.58914 6.58916M14.1213 14.1213L6.58914 6.58916M14.1213 14.1213L17.4112 17.4112M6.58914 6.58916C8.14897 5.58354 10.0065 5 12.0004 5C16.4781 5 20.2684 7.94291 21.5426 12C20.8357 14.2507 19.3545 16.1585 17.4112 17.4112"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</template>
