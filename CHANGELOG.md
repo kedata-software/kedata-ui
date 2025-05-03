@@ -1,3 +1,22 @@
+## 0.0.15 (2025-05-03)
+
+### 🚀 Features
+
+- **react-icons:** add react-icons package ([eada3c7](https://github.com/kedata-software/kedata-ui/commit/eada3c7))
+- **solid-modular-form:** add packages solid-modular-form ([e9a73c8](https://github.com/kedata-software/kedata-ui/commit/e9a73c8))
+- **solid-modular-form:** split type for createModularForm params ([d5f38f6](https://github.com/kedata-software/kedata-ui/commit/d5f38f6))
+- **solid-modular-form:** add project.json ([868214f](https://github.com/kedata-software/kedata-ui/commit/868214f))
+- **vue-icons:** add packages vue-icons ([3f7ff70](https://github.com/kedata-software/kedata-ui/commit/3f7ff70))
+
+### 🩹 Fixes
+
+- **react-icons:** fix project name in project.json ([f18813e](https://github.com/kedata-software/kedata-ui/commit/f18813e))
+- **vue-icons:** fix import entrypoint ([b7bf9a2](https://github.com/kedata-software/kedata-ui/commit/b7bf9a2))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.0.14 (2025-04-23)
 
 ### 🚀 Features
