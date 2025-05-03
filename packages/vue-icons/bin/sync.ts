@@ -15,7 +15,7 @@ async function main() {
   const entryPoints = listIcons.map((icon: any) => {
     const iconName = icon.replace('.svg', '');
 
-    return `export { default as ${iconName} } from './${iconName}/index.js';`;
+    return `export { default as ${iconName} } from './${iconName}';`;
   });
 
   await fs.writeFile('./src/index.js', entryPoints.join('\n'));
