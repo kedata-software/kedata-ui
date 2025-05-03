@@ -1,14 +1,14 @@
 {
-  "name": "solid-icons",
+  "name": "react-icons",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/solid-icons/src",
+  "sourceRoot": "packages/react-icons/src",
   "projectType": "library",
   "tags": [],
   "targets": {
     "build": {
       "executor": "nx:run-commands",
       "options": {
-        "cwd": "packages/solid-icons",
+        "cwd": "packages/react-icons",
         "command": "yarn build"
       }
     }
