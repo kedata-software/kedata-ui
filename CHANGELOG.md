@@ -1,3 +1,13 @@
+## 0.0.16 (2025-05-03)
+
+### 🚀 Features
+
+- **vue-icons:** using vite and vue-tsc to bundle vue-icons ([c749703](https://github.com/kedata-software/kedata-ui/commit/c749703))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.0.15 (2025-05-03)
 
 ### 🚀 Features
