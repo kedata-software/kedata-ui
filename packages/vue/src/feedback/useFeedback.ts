@@ -1,8 +1,11 @@
-import { computed, type HTMLAttributes } from "vue";
-import type { FeedbackProps } from "./index.types";
-import { feedbackSlots, tw } from "@kedata-ui/slots";
+import { computed, type HTMLAttributes } from 'vue';
+import type { FeedbackProps } from './index.types';
+import { feedbackSlots, tw } from '@kedata-ui/slots';
+import { useColorPalette } from '../use-color-palette';
 
 const useFeedback = (props: FeedbackProps) => {
+  const colorPaletteClass = useColorPalette(() => props.colorPalette);
+
   const slots = computed(() => {
     return feedbackSlots({
       withParts: props.withParts,
@@ -11,7 +14,7 @@ const useFeedback = (props: FeedbackProps) => {
 
   const getRootProps = () => {
     return {
-      class: tw(slots.value.root(), props.class),
+      class: tw(colorPaletteClass.value, slots.value.root(), props.class),
     } as HTMLAttributes;
   };
 
