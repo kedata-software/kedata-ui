@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import useBadge from "./useBadge";
-import type { BadgeProps } from "./index.types";
+import useBadge from './useBadge';
+import type { BadgeProps } from './index.types';
 
 const props = defineProps<BadgeProps>();
 
