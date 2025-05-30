@@ -7,7 +7,8 @@
     "access": "public"
   },
   "scripts": {
-    "build": "vite build && vue-tsc --emitDeclarationOnly --project tsconfig.build.json && mv dist/packages/vue/src/* dist"
+    "build": "vite build && vue-tsc --emitDeclarationOnly --project tsconfig.build.json && mv dist/packages/vue/src/* dist",
+    "storybook": "storybook dev -p 6006"
   },
   "exports": {
     ".": {
@@ -38,7 +39,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.3",
-    "vue-tsc": "^2.2.10"
+    "vue-tsc": "^2.2.10",
+    "@storybook/vue3-vite": "8.6.7",
+    "@storybook/vue3": "8.6.7"
   },
   "resolutions": {
     "@storybook/builder-vite": "8.6.7"
