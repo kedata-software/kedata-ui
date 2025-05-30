@@ -1,7 +1,7 @@
-import { iconButtonSlots, tw } from "@kedata-ui/slots";
-import { computed } from "vue";
-import type { IconButtonProps } from "./index.types";
-import { useColorPalette } from "../use-color-palette";
+import { iconButtonSlots, tw } from '@kedata-ui/slots';
+import { computed } from 'vue';
+import type { IconButtonProps } from './index.types';
+import { useColorPalette } from '../use-color-palette';
 
 const useIconButton = (props: IconButtonProps) => {
   const colorPaletteClass = useColorPalette(() => props.colorPalette);
@@ -19,10 +19,11 @@ const useIconButton = (props: IconButtonProps) => {
         slots.value.root(),
         colorPaletteClass.value,
         props.classes?.root,
-        props.class
+        props.class,
       ),
-      type: props.type ?? "button",
+      type: props.type ?? 'button',
       disabled: props.disabled,
+      'aria-label': props['aria-label'],
     };
   };
 

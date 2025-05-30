@@ -1,10 +1,15 @@
-import { dataAttrBoolean } from "@kedata-software/toolkit-js";
-import { textInputSlots, tw } from "@kedata-ui/slots";
-import { computed, type InputHTMLAttributes } from "vue";
-import type { TextInputModels, TextInputProps } from "./index.types";
-import { useColorPalette } from "../use-color-palette";
+import { dataAttrBoolean } from '@kedata-software/toolkit-js';
+import { textInputSlots, tw } from '@kedata-ui/slots';
+import { computed, type InputHTMLAttributes, type SetupContext } from 'vue';
+import type { TextInputModels, TextInputProps } from './index.types';
+import { useColorPalette } from '../use-color-palette';
 
-const useTextInput = (props: TextInputProps, models: TextInputModels) => {
+const useTextInput = (params: {
+  props: TextInputProps;
+  models: TextInputModels;
+  compSlots: SetupContext['slots'];
+}) => {
+  const { props, models, compSlots } = params;
   const colorPaletteClass = useColorPalette(() => props.colorPalette);
 
   const slots = computed(() => {
@@ -15,11 +20,15 @@ const useTextInput = (props: TextInputProps, models: TextInputModels) => {
 
   const dataAttrs = computed(() => {
     return {
-      "data-invalid": dataAttrBoolean(props.invalid),
-      "data-disabled": dataAttrBoolean(props.disabled),
-      "data-read-only": dataAttrBoolean(props.readOnly),
-      "data-required": dataAttrBoolean(props.required),
-      "data-filled": dataAttrBoolean(models.value.value),
+      'data-invalid': dataAttrBoolean(props.invalid),
+      'data-disabled': dataAttrBoolean(props.disabled),
+      'data-read-only': dataAttrBoolean(props.readOnly),
+      'data-required': dataAttrBoolean(props.required),
+      'data-filled': dataAttrBoolean(models.value.value),
+      'data-has-start-icon': dataAttrBoolean(compSlots['start-icon']),
+      'data-has-end-icon': dataAttrBoolean(compSlots['end-icon']),
+      'data-has-start-addon': dataAttrBoolean(compSlots['start-addon']),
+      'data-has-end-addon': dataAttrBoolean(compSlots['end-addon']),
     };
   });
 
@@ -38,9 +47,9 @@ const useTextInput = (props: TextInputProps, models: TextInputModels) => {
       disabled: props.disabled,
       readonly: props.readOnly,
       placeholder: props.placeholder,
-      type: props.type ?? "text",
+      type: props.type ?? 'text',
       name: props.name,
-      "aria-describedby": props.invalid
+      'aria-describedby': props.invalid
         ? `${props.id}__error-message`
         : undefined,
       class: tw(slots.value.input(), props.classes?.input),

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import useTooltip from "./useTooltip";
-import animateStatePreset from "../animate-state-preset";
-import type { TooltipProps } from "./index.types";
+import useTooltip from './useTooltip';
+import animateStatePreset from '../animate-state-preset';
+import type { TooltipProps } from './index.types';
 
 const props = defineProps<TooltipProps>();
-const open = defineModel<boolean>("open", {
+const open = defineModel<boolean>('open', {
   default: false,
 });
 
