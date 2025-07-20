@@ -65,7 +65,7 @@ jobs:
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NX_BRANCH: ${{ github.ref_name }}
           NX_DRY_RUN: ${{ github.event.inputs.dry-run }}
           NX_CI: true
