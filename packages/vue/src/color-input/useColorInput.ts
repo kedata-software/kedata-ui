@@ -30,7 +30,7 @@ const useColorInput = (props: ColorInputProps, models: ColorInputModels) => {
         models.isOpen.value = details.open;
       },
       positioning: {
-        placement: 'bottom-start',
+        placement: 'bottom-start' as const,
       },
       closeOnInteractOutside: true,
       closeOnEscape: true,

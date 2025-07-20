@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import animateStatePreset from '../animate-state-preset';
 import { ColorPicker } from '../color-picker';
-import { ColorInputProps } from './index.types';
+import type { ColorInputProps } from './index.types';
 import useColorInput from './useColorInput';
 
 const props = defineProps<ColorInputProps>();
