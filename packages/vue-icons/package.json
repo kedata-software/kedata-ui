@@ -6,6 +6,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "url": "https://github.com/kedata-software/kedata-ui"
+  },
   "scripts": {
     "build": "vite build && vue-tsc --emitDeclarationOnly --project tsconfig.build.json && mv dist/packages/vue-icons/src/* dist",
     "sync": "tsx ./bin/sync.ts"

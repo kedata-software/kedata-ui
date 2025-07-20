@@ -11,6 +11,9 @@
     "build:tsup": "tsup",
     "build": "yarn build:pre && yarn build:tsup"
   },
+  "repository": {
+    "url": "https://github.com/kedata-software/kedata-ui"
+  },
   "files": [
     "dist"
   ],
