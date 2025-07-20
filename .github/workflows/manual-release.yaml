@@ -59,9 +59,9 @@ jobs:
       - name: Release with NX Release
         run: |
           if [ "${{ github.event.inputs.dry-run }}" == "true" ]; then
-            yarn nx release ${{ github.event.inputs.increment }} --yes --dry-run
+            npx nx release ${{ github.event.inputs.increment }} --yes --dry-run
           else
-            yarn nx release ${{ github.event.inputs.increment }} --yes
+            npx nx release ${{ github.event.inputs.increment }} --yes
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
