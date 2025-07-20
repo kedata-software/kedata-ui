@@ -1,5 +1,5 @@
-import type { ColorPalette } from "@kedata-ui/slots";
-import type { Component, ModelRef, VNode } from "vue";
+import type { ColorPalette } from '@kedata-ui/slots';
+import type { Component, ModelRef, VNode } from 'vue';
 
 export type MenuProps = {
   withParts?: boolean;
@@ -12,14 +12,14 @@ export type MenuModels = {
 };
 
 export type MenuSeparatorOption = {
-  type: "separator";
+  type: 'separator';
   className?: string;
 };
 
 export type MenuOption = MenuItemOption | MenuSeparatorOption;
 
 export type MenuItemOption = {
-  type?: "item";
+  type?: 'item';
   label: string;
   value: string;
   startIcon?: Component;
