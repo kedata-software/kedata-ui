@@ -58,13 +58,13 @@ jobs:
       - name: Build all packages
         run: yarn build --output-style static
 
-      - name: Create GitHub Release
+      - name: Release to registry
         run: |
           if [ "${{ github.event.inputs.dry-run }}" == "true" ]; then
-            npx nx release ${{ github.event.inputs.increment }} --yes --dry-run --skip-publish
+            npx nx release ${{ github.event.inputs.increment }} --dry-run --skip-publish
             npx nx release publish --dry-run
           else
-            npx nx release ${{ github.event.inputs.increment }} --yes --skip-publish
+            npx nx release ${{ github.event.inputs.increment }} --skip-publish
             npx nx release publish
           fi
         env:
