@@ -19,6 +19,7 @@
       "@kedata-ui/slots/*": ["packages/slots/src/*"],
       "@kedata-ui/solid-icons": ["packages/solid-icons/src/index.ts"],
       "@kedata-ui/tailwind": ["packages/tailwind/src/index.ts"],
+      "@kedata-ui/vue-icons": ["packages/vue-icons/src/index.ts"],
       "@slots/*": ["packages/slots/src/*"],
       "@tailwind/*": ["packages/tailwind/src/*"]
     }

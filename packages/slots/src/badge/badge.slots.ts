@@ -18,6 +18,7 @@ const badgeSlots = tv(
     },
     defaultVariants: {
       withParts: true,
+      variant: 'subtle',
     },
   },
   { twMerge: false },

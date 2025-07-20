@@ -18,8 +18,8 @@ async function main() {
     return `export { default as ${iconName} } from './${iconName}';`;
   });
 
-  await fs.writeFile('./src/index.js', entryPoints.join('\n'));
-  await $`prettier --write ./src/index.js`;
+  await fs.writeFile('./src/index.ts', entryPoints.join('\n'));
+  await $`prettier --write ./src/index.ts`;
 }
 
 const generateIcon = async (icon: string) => {
