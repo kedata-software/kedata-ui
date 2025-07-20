@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import useMenu from "./useMenu";
-import type { MenuProps } from "./index.types";
-import MenuTriggerItem from "./MenuTriggerItem.vue";
-import animateStatePreset from "../animate-state-preset";
-import { Teleport } from "vue";
+import useMenu from './useMenu';
+import type { MenuProps } from './index.types';
+import MenuTriggerItem from './MenuTriggerItem.vue';
+import animateStatePreset from '../animate-state-preset';
+import { Teleport } from 'vue';
 
 const props = defineProps<MenuProps>();
 
-const isOpen = defineModel<boolean>("isOpen", {
+const isOpen = defineModel<boolean>('isOpen', {
   default: false,
 });
 
@@ -62,29 +62,53 @@ const { options, ...api } = useMenu(props, { isOpen });
                     </div>
 
                     <Teleport to="body">
-                      <div v-bind="childApi.getPositionerProps()">
-                        <div v-bind="childApi.getContentProps()">
-                          <template v-for="item in option.options">
-                            <template v-if="item.type === 'separator'">
-                              <div v-bind="childApi.getSeparatorProps()"></div>
-                            </template>
-                            <template v-if="item.type === 'item'">
-                              <div v-bind="childApi.getItemProps(item)">
-                                <template v-if="item.startIcon">
-                                  <component
-                                    :is="item.startIcon"
-                                    v-bind="
-                                      childApi.getItemStartIconProps(item)
-                                    "
-                                  />
-                                </template>
+                      <Transition
+                        :duration="150"
+                        :class="animateStatePreset.fadeUp.base"
+                        :enter-from-class="
+                          animateStatePreset.fadeUp['enter-from']
+                        "
+                        :enter-active-class="
+                          animateStatePreset.fadeUp['enter-active']
+                        "
+                        :enter-to-class="animateStatePreset.fadeUp['enter-to']"
+                        :leave-from-class="
+                          animateStatePreset.fadeUp['leave-from']
+                        "
+                        :leave-active-class="
+                          animateStatePreset.fadeUp['leave-active']
+                        "
+                        :leave-to-class="animateStatePreset.fadeUp['leave-to']"
+                      >
+                        <div
+                          v-bind="childApi.getPositionerProps()"
+                          v-if="childApi.open"
+                        >
+                          <div v-bind="childApi.getContentProps()">
+                            <template v-for="item in option.options">
+                              <template v-if="item.type === 'separator'">
+                                <div
+                                  v-bind="childApi.getSeparatorProps()"
+                                ></div>
+                              </template>
+                              <template v-if="item.type === 'item'">
+                                <div v-bind="childApi.getItemProps(item)">
+                                  <template v-if="item.startIcon">
+                                    <component
+                                      :is="item.startIcon"
+                                      v-bind="
+                                        childApi.getItemStartIconProps(item)
+                                      "
+                                    />
+                                  </template>
 
-                                {{ item.label }}
-                              </div>
+                                  {{ item.label }}
+                                </div>
+                              </template>
                             </template>
-                          </template>
+                          </div>
                         </div>
-                      </div>
+                      </Transition>
                     </Teleport>
                   </template>
                 </MenuTriggerItem>
