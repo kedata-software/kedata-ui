@@ -1,3 +1,33 @@
+## 0.0.17 (2025-07-20)
+
+### 🚀 Features
+
+- **github:** add manual release workflow with version increment options ([2b02b01](https://github.com/kedata-software/kedata-ui/commit/2b02b01))
+- **slots:** add text-left on select input value ([cfbc115](https://github.com/kedata-software/kedata-ui/commit/cfbc115))
+- **tsconfig.base.json:** add path @kedata-ui/vue-icons ([61ad383](https://github.com/kedata-software/kedata-ui/commit/61ad383))
+- **vue:** add vue components ([b420479](https://github.com/kedata-software/kedata-ui/commit/b420479))
+- **vue:** setup storybook ([b88c0fe](https://github.com/kedata-software/kedata-ui/commit/b88c0fe))
+- **vue:** add docs ([3b1f64b](https://github.com/kedata-software/kedata-ui/commit/3b1f64b))
+- **vue:** support colorPalette in ErrorMessage ([adf5b6e](https://github.com/kedata-software/kedata-ui/commit/adf5b6e))
+- **vue:** update docs ([1f1da70](https://github.com/kedata-software/kedata-ui/commit/1f1da70))
+- **vue:** Add ColorInput component with associated types and stories ([ecacdca](https://github.com/kedata-software/kedata-ui/commit/ecacdca))
+
+### 🩹 Fixes
+
+- **nx:** add 'vue' to release projects list ([aabbbf3](https://github.com/kedata-software/kedata-ui/commit/aabbbf3))
+- **vue:** fix colorPalette ([c6382f9](https://github.com/kedata-software/kedata-ui/commit/c6382f9))
+- **vue:** update flow props ([4ce01a2](https://github.com/kedata-software/kedata-ui/commit/4ce01a2))
+- **vue:** set default variant to 'subtle' in badgeSlots ([6021d93](https://github.com/kedata-software/kedata-ui/commit/6021d93))
+- **vue:** add type annotation for event in keydown and click handlers ([569d75b](https://github.com/kedata-software/kedata-ui/commit/569d75b))
+- **vue:** standardize quote style in type imports and definitions ([906a28f](https://github.com/kedata-software/kedata-ui/commit/906a28f))
+- **vue:** Fix animation in sub menu ([75eb659](https://github.com/kedata-software/kedata-ui/commit/75eb659))
+- **vue:** add type annotation for placement in useColorInput ([f222f15](https://github.com/kedata-software/kedata-ui/commit/f222f15))
+- **vue-icons:** change entrypoint to ts ([e17b3cd](https://github.com/kedata-software/kedata-ui/commit/e17b3cd))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.0.16 (2025-05-03)
 
 ### 🚀 Features
