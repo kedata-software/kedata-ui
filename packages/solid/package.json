@@ -16,6 +16,9 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "url": "https://github.com/kedata-software/kedata-ui"
+  },
   "resolutions": {
     "@storybook/builder-vite": "8.6.7"
   },
