@@ -42,12 +42,12 @@ const { isPlaceholderShown, selectedOptions, valueModel, ...api } =
               :closeable="true"
               :key="option.value"
               @keydown="
-                (e) => {
+                (e: any) => {
                   e.stopPropagation();
                 }
               "
               @click="
-                (e) => {
+                (e: any) => {
                   e.stopPropagation();
                   api.removeValue(option.value);
                 }
