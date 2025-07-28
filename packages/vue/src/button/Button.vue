@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { ButtonProps } from "./index.types";
-import useButton from "./useButton";
+import type { ButtonProps } from './index.types';
+import useButton from './useButton';
 
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: true,
 });
-const emits = defineEmits(["click"]);
+const emits = defineEmits(['click']);
 const props = defineProps<ButtonProps>();
 
 const api = useButton(props);
