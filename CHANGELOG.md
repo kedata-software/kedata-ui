@@ -1,3 +1,13 @@
+## 0.1.7 (2025-07-28)
+
+### 🩹 Fixes
+
+- **vue:** enable inheritAttrs for better attribute handling ([df95456](https://github.com/kedata-software/kedata-ui/commit/df95456))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.1.6 (2025-07-20)
 
 This was a version bump only, there were no code changes.

@@ -1,6 +1,6 @@
 {
   "name": "@kedata-ui/solid",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "type": "module",
   "license": "MIT",
   "publishConfig": {
@@ -31,9 +31,9 @@
   "dependencies": {
     "@kedata-software/toolkit-js": "^0.1.0",
     "@internationalized/date": "^3.8.0",
-    "@kedata-ui/slots": "0.1.6",
-    "@kedata-ui/solid-icons": "0.1.6",
-    "@kedata-ui/tailwind": "0.1.6",
+    "@kedata-ui/slots": "0.1.7",
+    "@kedata-ui/solid-icons": "0.1.7",
+    "@kedata-ui/tailwind": "0.1.7",
     "@solid-primitives/media": "^2.3.0",
     "@zag-js/accordion": "1.3.2",
     "@zag-js/avatar": "1.3.2",
