@@ -1,10 +1,13 @@
 {
   "name": "@kedata-ui/vue-icons",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "type": "module",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "url": "https://github.com/kedata-software/kedata-ui"
   },
   "scripts": {
     "build": "vite build && vue-tsc --emitDeclarationOnly --project tsconfig.build.json && mv dist/packages/vue-icons/src/* dist",

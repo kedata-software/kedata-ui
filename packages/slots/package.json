@@ -1,6 +1,6 @@
 {
   "name": "@kedata-ui/slots",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "type": "module",
   "license": "MIT",
   "publishConfig": {
@@ -10,6 +10,9 @@
     "build:pre": "rm -rf ./dist",
     "build:tsup": "tsup",
     "build": "yarn build:pre && yarn build:tsup"
+  },
+  "repository": {
+    "url": "https://github.com/kedata-software/kedata-ui"
   },
   "files": [
     "dist"
@@ -222,7 +225,7 @@
     }
   },
   "dependencies": {
-    "@kedata-ui/tailwind": "0.1.5",
+    "@kedata-ui/tailwind": "0.1.6",
     "tailwind-variants": "^0.2.1",
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.3.0"
