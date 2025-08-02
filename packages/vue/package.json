@@ -45,8 +45,5 @@
     "vue-tsc": "^2.2.10",
     "@storybook/vue3-vite": "8.6.7",
     "@storybook/vue3": "8.6.7"
-  },
-  "resolutions": {
-    "@storybook/builder-vite": "8.6.7"
   }
 }

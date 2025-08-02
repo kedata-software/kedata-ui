@@ -12,7 +12,7 @@
   "scripts": {
     "build:pre": "rm -rf ./dist",
     "build:tsdown": "tsdown",
-    "build": "yarn build:pre && yarn build:tsdown",
+    "build": "pnpm build:pre && pnpm build:tsdown",
     "sync": "tsx bin/sync.ts"
   },
   "exports": {
@@ -26,8 +26,5 @@
   },
   "devDependencies": {
     "@types/react": "^18.3.1"
-  },
-  "resolutions": {
-    "@storybook/builder-vite": "8.6.7"
   }
 }

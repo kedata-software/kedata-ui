@@ -12,7 +12,7 @@
   "scripts": {
     "build:pre": "rm -rf ./dist",
     "build:tsdown": "tsdown",
-    "build": "yarn build:pre && yarn build:tsdown"
+    "build": "pnpm build:pre && pnpm build:tsdown"
   },
   "exports": {
     ".": {
@@ -22,8 +22,5 @@
   },
   "dependencies": {
     "solid-js": "^1.9.5"
-  },
-  "resolutions": {
-    "@storybook/builder-vite": "8.6.7"
   }
 }
