@@ -1,6 +1,6 @@
 {
   "name": "@kedata-ui/slots",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "type": "module",
   "license": "MIT",
   "publishConfig": {
@@ -225,7 +225,7 @@
     }
   },
   "dependencies": {
-    "@kedata-ui/tailwind": "0.1.8",
+    "@kedata-ui/tailwind": "0.1.9",
     "tailwind-variants": "^0.2.1",
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.3.0"
