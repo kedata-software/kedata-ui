@@ -10,7 +10,7 @@
     "url": "https://github.com/kedata-software/kedata-ui"
   },
   "scripts": {
-    "build": "tsup"
+    "build": "tsdown"
   },
   "files": [
     "dist"
