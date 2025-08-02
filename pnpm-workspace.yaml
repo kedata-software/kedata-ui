@@ -6,3 +6,4 @@ nodeLinker: hoisted
 overrides:
   '@storybook/builder-vite': 8.6.7
   '@modular-forms/solid': ^0.25.1
+  'esbuild': 0.25.0
