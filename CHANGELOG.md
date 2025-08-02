@@ -1,3 +1,13 @@
+## 0.1.8 (2025-08-02)
+
+### 🚀 Features
+
+- **vue:** add mapValueSelect support for value selection in menu component ([7a547d7](https://github.com/kedata-software/kedata-ui/commit/7a547d7))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.1.7 (2025-07-28)
 
 ### 🩹 Fixes
