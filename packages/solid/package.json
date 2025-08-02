@@ -11,16 +11,13 @@
     "build:pre": "rm -rf ./dist",
     "build:tsdown": "tsdown",
     "test": "vitest --run",
-    "build": "yarn build:pre && yarn test && yarn build:tsdown"
+    "build": "pnpm build:pre && yarn test && pnpm build:tsdown"
   },
   "files": [
     "dist"
   ],
   "repository": {
     "url": "https://github.com/kedata-software/kedata-ui"
-  },
-  "resolutions": {
-    "@storybook/builder-vite": "8.6.7"
   },
   "exports": {
     ".": {

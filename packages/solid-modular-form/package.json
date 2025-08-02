@@ -15,7 +15,7 @@
   "scripts": {
     "build:pre": "rm -rf ./dist",
     "build:tsdown": "tsdown",
-    "build": "yarn build:pre && yarn build:tsdown"
+    "build": "pnpm build:pre && pnpm build:tsdown"
   },
   "exports": {
     ".": {
@@ -25,8 +25,5 @@
   },
   "dependencies": {
     "solid-js": "^1.9.5"
-  },
-  "resolutions": {
-    "@modular-forms/solid": "^0.25.1"
   }
 }

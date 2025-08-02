@@ -53,19 +53,19 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build all packages
-        run: yarn build --output-style static
+        run: pnpm build --output-style static
 
       - name: Release to registry
         run: |
           if [ "${{ github.event.inputs.dry-run }}" == "true" ]; then
-            npx nx release ${{ github.event.inputs.increment }} --dry-run --skip-publish
-            npx nx release publish --dry-run
+            pnpm nx release ${{ github.event.inputs.increment }} --dry-run --skip-publish
+            pnpm nx release publish --dry-run
           else
-            npx nx release ${{ github.event.inputs.increment }} --skip-publish
-            npx nx release publish
+            pnpm nx release ${{ github.event.inputs.increment }} --skip-publish
+            pnpm nx release publish
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

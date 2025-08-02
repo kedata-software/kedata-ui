@@ -9,7 +9,7 @@
       "executor": "nx:run-commands",
       "options": {
         "cwd": "packages/slots",
-        "command": "yarn build"
+        "command": "pnpm build"
       }
     }
   }
