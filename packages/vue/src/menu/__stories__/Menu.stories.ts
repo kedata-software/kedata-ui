@@ -5,6 +5,12 @@ import { h } from 'vue';
 
 const Base: StoryObj<typeof Menu> = {
   args: {
+    mapValueSelect: {
+      '1': (value) => console.log('Selected value 1:', value),
+      '2': (value) => console.log('Selected value 2:', value),
+      '1-1': (value) => console.log('Selected value 1-1:', value),
+      '2-1': (value) => console.log('Selected value 2-1:', value),
+    },
     options: [
       {
         value: '1',

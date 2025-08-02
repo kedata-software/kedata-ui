@@ -19,11 +19,15 @@ const context = inject<{
   menuApi: ComputedRef<menu.Api<PropTypes>>;
   service: menu.Service;
   slots: ComputedRef<ReturnType<typeof menuSlots>>;
+  mapValueSelect?: Record<string, (value: string) => void>;
 }>(MenuContextKey);
 const id = useId();
 
 const service = useMachine(menu.machine, {
   id: id,
+  onSelect: (details) => {
+    context!.mapValueSelect?.[details.value]?.(details.value);
+  },
 });
 const menuApi = computed(() => menu.connect(service, normalizeProps));
 

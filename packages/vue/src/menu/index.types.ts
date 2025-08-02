@@ -5,6 +5,7 @@ export type MenuProps = {
   withParts?: boolean;
   darkable?: boolean;
   options?: MenuOption[];
+  mapValueSelect?: Record<string, (value: string) => void>;
 };
 
 export type MenuModels = {

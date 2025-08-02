@@ -20,6 +20,7 @@ const useMenu = (props: MenuProps, models: MenuModels) => {
         },
         onSelect: (details) => {
           models.isOpen.value = false;
+          props.mapValueSelect?.[details.value]?.(details.value);
         },
         positioning: {
           placement: 'bottom-start' as const,
@@ -43,6 +44,10 @@ const useMenu = (props: MenuProps, models: MenuModels) => {
 
         return useMachine(menu.machine, {
           id: option.value,
+          onSelect: (details) => {
+            models.isOpen.value = false;
+            props.mapValueSelect?.[details.value]?.(details.value);
+          },
         });
       })
       .filter((item) => !!item);
@@ -74,6 +79,7 @@ const useMenu = (props: MenuProps, models: MenuModels) => {
     menuApi,
     service,
     slots,
+    mapValueSelect: props.mapValueSelect,
   });
 
   const getTriggerProps = () => {
