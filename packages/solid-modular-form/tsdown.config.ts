@@ -1,17 +1,17 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsdown';
 
 export default defineConfig({
   entry: {
     index: 'src/index.ts',
   },
   format: ['esm'],
-  outExtension: ({ format }) => ({
-    js: `.${format}.jsx`,
+  outExtensions: () => ({
+    js: '.esm.jsx',
+    dts: '.d.ts',
   }),
   dts: true,
   minify: false,
   clean: true,
-  splitting: true,
   external: ['@modular-forms/solid'],
   treeshake: false,
   target: 'es2021',

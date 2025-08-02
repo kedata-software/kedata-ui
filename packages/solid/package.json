@@ -9,9 +9,9 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build:pre": "rm -rf ./dist",
-    "build:tsup": "tsup",
+    "build:tsdown": "tsdown",
     "test": "vitest --run",
-    "build": "yarn build:pre && yarn test && yarn build:tsup"
+    "build": "yarn build:pre && yarn test && yarn build:tsdown"
   },
   "files": [
     "dist"

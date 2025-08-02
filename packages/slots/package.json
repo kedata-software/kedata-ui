@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build:pre": "rm -rf ./dist",
-    "build:tsup": "tsup",
-    "build": "yarn build:pre && yarn build:tsup"
+    "build:tsdown": "tsdown",
+    "build": "yarn build:pre && yarn build:tsdown"
   },
   "repository": {
     "url": "https://github.com/kedata-software/kedata-ui"

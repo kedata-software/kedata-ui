@@ -1,15 +1,15 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsdown';
 
 export default defineConfig({
   entry: ['src/index.ts'],
-  outExtension: ({ format }) => ({
-    js: `.${format}.js`,
+  outExtensions: () => ({
+    js: '.esm.jsx',
+    dts: '.d.ts',
   }),
   format: ['esm'],
   dts: true,
   minify: false,
   clean: true,
-  splitting: true,
   external: ['hex-rgb', 'clsx', '@zag-js'],
   treeshake: false,
   target: 'es2021',

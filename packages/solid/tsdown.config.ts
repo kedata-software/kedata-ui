@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsdown';
 
 export default defineConfig({
   entry: {
@@ -14,12 +14,14 @@ export default defineConfig({
       },
     },
   },
-  outExtension: ({ format }) => ({
-    js: `.${format}.jsx`,
-  }),
+  outExtensions: (ctx) => {
+    return {
+      js: '.esm.jsx',
+      dts: '.d.ts',
+    };
+  },
   minify: false,
   clean: true,
-  splitting: true,
   external: ['hex-rgb', 'clsx', '@zag-js', '@kedata-software'],
   treeshake: false,
   target: 'es2021',
