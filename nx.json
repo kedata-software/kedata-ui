@@ -46,6 +46,11 @@
   "targetDefaults": {},
   "generators": {},
   "release": {
+    "version": {
+      "generatorOptions": {
+        "skipLockFileUpdate": true
+      }
+    },
     "projects": [
       "tailwind",
       "slots",
