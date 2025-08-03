@@ -1,3 +1,25 @@
+## 0.2.0 (2025-08-03)
+
+### 🚀 Features
+
+- migrate to pnpm ([0b25b86](https://github.com/kedata-software/kedata-ui/commit/0b25b86))
+- add pnpm setup to manual release workflow and enable caching for faster installs ([a7ce71b](https://github.com/kedata-software/kedata-ui/commit/a7ce71b))
+- enable pnpm caching in manual release workflow for improved performance during setup ([69998f2](https://github.com/kedata-software/kedata-ui/commit/69998f2))
+- streamline manual release workflow by updating pnpm setup and removing redundant configurations for efficiency ([b447d6b](https://github.com/kedata-software/kedata-ui/commit/b447d6b))
+- **npm:** add skipLockFileUpdate option for version generator in nx.json ([2aa2997](https://github.com/kedata-software/kedata-ui/commit/2aa2997))
+- **vue:** add useDialogContext for enhanced dialog management and inject functionality in the dialog module ([68fad83](https://github.com/kedata-software/kedata-ui/commit/68fad83))
+
+### 🩹 Fixes
+
+- update package versions and remove deprecated postcss-prettify dependency ([de3f596](https://github.com/kedata-software/kedata-ui/commit/de3f596))
+- **deps:** fix lock file ([0716715](https://github.com/kedata-software/kedata-ui/commit/0716715))
+- **vue:** unify quotation style in dialog exports for consistency across the module ([35be242](https://github.com/kedata-software/kedata-ui/commit/35be242))
+- **vue:** unify quotation style in withDialog component for consistency across the dialog module ([83655c1](https://github.com/kedata-software/kedata-ui/commit/83655c1))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.1.9 (2025-08-02)
 
 This was a version bump only, there were no code changes.
