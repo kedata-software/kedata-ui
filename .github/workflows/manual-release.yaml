@@ -67,11 +67,11 @@ jobs:
       - name: Release to registry
         run: |
           if [ "${{ github.event.inputs.dry-run }}" == "true" ]; then
-            pnpm nx release ${{ github.event.inputs.increment }} --dry-run --skip-publish
-            pnpm nx release publish --dry-run
+            npx nx release ${{ github.event.inputs.increment }} --dry-run --skip-publish
+            npx nx release publish --dry-run
           else
-            pnpm nx release ${{ github.event.inputs.increment }} --skip-publish
-            pnpm nx release publish
+            npx nx release ${{ github.event.inputs.increment }} --skip-publish
+            npx nx release publish
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
