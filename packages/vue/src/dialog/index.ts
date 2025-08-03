@@ -10,4 +10,6 @@ export { default as withDialog } from './withDialog';
 
 export { default as useDialogStore } from './useDialogStore';
 
+export { default as useDialogContext } from './useDialogContext';
+
 export type * from './index.types';

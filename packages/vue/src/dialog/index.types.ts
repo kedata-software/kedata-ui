@@ -4,8 +4,8 @@ import type {
   DialogFooterClassNames,
   DialogHeaderClassNames,
   DialogPosition,
-} from "@kedata-ui/slots";
-import type { CreateDialogStoreReturn } from "./useDialogStore";
+} from '@kedata-ui/slots';
+import type { CreateDialogStoreReturn } from './useDialogStore';
 
 export type DialogContextValue = CreateDialogStoreReturn & {
   position: DialogPosition;
@@ -43,6 +43,10 @@ export type DialogHeaderProps = {
   onClose?: () => void;
   withParts?: boolean;
   darkable?: boolean;
+};
+
+export type DialogContext = {
+  close: () => void;
 };
 
 export type CreateDialogStoreParams = {
