@@ -18,7 +18,7 @@ importers:
         version: 3.8.2
       '@kedata-software/toolkit-js':
         specifier: ^0.1.0
-        version: 0.1.0
+        version: 0.1.2(typescript@5.9.2)(vue-tsc@2.2.10(typescript@5.9.2))
       '@modular-forms/solid':
         specifier: ^0.25.1
         version: 0.25.1(solid-js@1.9.7)(typescript@5.9.2)
@@ -230,7 +230,7 @@ importers:
         version: 3.8.2
       '@kedata-software/toolkit-js':
         specifier: ^0.1.0
-        version: 0.1.0
+        version: 0.1.2(typescript@5.9.2)(vue-tsc@2.2.10(typescript@5.9.2))
       '@kedata-ui/slots':
         specifier: 0.1.9
         version: 0.1.9(tailwindcss@3.4.17)
@@ -1207,8 +1207,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.29':
     resolution: {integrity: sha512-uw6guiW/gcAGPDhLmd77/6lW8QLeiV5RUTsAX46Db6oLhGaVj4lhnPwb184s1bkc8kdVg/+h988dro8GRDpmYQ==}
 
-  '@kedata-software/toolkit-js@0.1.0':
-    resolution: {integrity: sha512-h4M42awrHqFV5JtR+fduxeublf+PQKgjnzwZAQ4VdIMJGwupyXgSqp062ibGlEbBwZSKPpYUXbmysbg/V11FRw==}
+  '@kedata-software/toolkit-js@0.1.2':
+    resolution: {integrity: sha512-IWTZ91KlR1KDXsAXSaBQSGBFkE055VlphDvMp2ghJq1YYDpQSNMO+A1zCmx7Oo1qDhwod8U15gzKgxfvTninOA==}
 
   '@kedata-ui/slots@0.1.9':
     resolution: {integrity: sha512-2iIvFecFOVPM+2sHULL99XSuTVwEc87Ue6mjQEGAjG+lB9ULbMaLazoI8QbgiheLewh+VO2YYuM5gljZDuQkTg==}
@@ -5570,7 +5570,19 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.4
 
-  '@kedata-software/toolkit-js@0.1.0': {}
+  '@kedata-software/toolkit-js@0.1.2(typescript@5.9.2)(vue-tsc@2.2.10(typescript@5.9.2))':
+    dependencies:
+      tsdown: 0.13.2(typescript@5.9.2)(vue-tsc@2.2.10(typescript@5.9.2))
+    transitivePeerDependencies:
+      - '@arethetypeswrong/core'
+      - '@typescript/native-preview'
+      - oxc-resolver
+      - publint
+      - supports-color
+      - typescript
+      - unplugin-lightningcss
+      - unplugin-unused
+      - vue-tsc
 
   '@kedata-ui/slots@0.1.9(tailwindcss@3.4.17)':
     dependencies:
