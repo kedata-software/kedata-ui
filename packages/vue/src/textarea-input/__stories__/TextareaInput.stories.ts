@@ -18,6 +18,7 @@ const Default: StoryObj<typeof TextareaInput> = {
 
 const meta: Meta<typeof TextareaInput> = {
   title: 'Form/TextareaInput',
+  tags: ['autodocs'],
   argTypes: {
     invalid: {
       control: { type: 'boolean' },

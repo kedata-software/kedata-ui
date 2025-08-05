@@ -1,8 +1,11 @@
 <script setup lang="ts">
-import type { LabelProps } from "./index.types";
-import useLabel from "./useLabel";
+import type { LabelProps } from './index.types';
+import useLabel from './useLabel';
 
-const props = defineProps<LabelProps>();
+const props = withDefaults(defineProps<LabelProps>(), {
+  required: undefined,
+  showAsterisk: true,
+});
 const api = useLabel(props);
 </script>
 

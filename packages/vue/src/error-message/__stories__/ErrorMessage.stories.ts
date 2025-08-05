@@ -7,17 +7,22 @@ const Default: StoryObj<typeof ErrorMessage> = {
     colorPalette: 'danger',
   },
   render: (props) => ({
-    setup: () => () => {
-      return h(ErrorMessage, props, {
-        default: () => 'This is an error message',
-      });
+    components: { ErrorMessage },
+    setup() {
+      return { props };
     },
+    template: `
+      <ErrorMessage v-bind="props">
+        This is an error message
+      </ErrorMessage>
+    `,
   }),
 };
 
 const meta: Meta<typeof ErrorMessage> = {
   title: 'Display/ErrorMessage',
   component: ErrorMessage,
+  tags: ['autodocs'],
   argTypes: {
     colorPalette: {
       options: ['primary', 'success', 'danger'],

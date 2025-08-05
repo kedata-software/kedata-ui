@@ -8,7 +8,7 @@ const useLabel = (props: LabelProps) => {
   });
 
   const required = computed(() => props.required);
-  const showAsterisk = computed(() => props.showAsterisk);
+  const showAsterisk = computed(() => props.showAsterisk ?? true);
 
   const getRootProps = () => {
     return {

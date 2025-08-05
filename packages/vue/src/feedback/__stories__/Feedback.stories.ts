@@ -10,18 +10,29 @@ const Base: StoryObj<typeof Feedback> = {
     colorPalette: 'danger',
   },
   render: (props) => ({
-    setup: () => () => {
-      return h(Feedback, props, {
-        icon: ($props: object) => h(KiExclamationSolid, $props),
-        title: () => props.title,
-        message: () => props.message,
-      });
+    components: { Feedback, KiExclamationSolid },
+    setup() {
+      return { props };
     },
+    template: `
+      <Feedback v-bind="props">
+        <template #icon="props">
+          <KiExclamationSolid v-bind="props" />
+        </template>
+        <template #title>
+          {{ props.title }}
+        </template>
+        <template #message>
+          {{ props.message }}
+        </template>
+      </Feedback>
+    `,
   }),
 };
 
 const meta: Meta<typeof Feedback> = {
   title: 'Display/Feedback',
+  tags: ['autodocs'],
   argTypes: {
     title: {
       control: { type: 'text' },

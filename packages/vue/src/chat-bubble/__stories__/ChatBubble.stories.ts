@@ -5,11 +5,17 @@ import { h } from 'vue';
 const meta: Meta<typeof ChatBubble> = {
   title: 'Display/ChatBubble',
   component: ChatBubble,
+  tags: ['autodocs'],
   argTypes: {
     variant: {
       options: ['question', 'answer'],
       control: {
         type: 'radio',
+      },
+      table: {
+        defaultValue: {
+          summary: 'question',
+        },
       },
     },
   },

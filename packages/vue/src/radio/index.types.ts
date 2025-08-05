@@ -1,6 +1,6 @@
-import type { ColorPalette } from "@kedata-ui/slots";
-import type { WithFieldProps } from "../types";
-import type { ModelRef } from "vue";
+import type { ColorPalette } from '@kedata-ui/slots';
+import type { WithFieldProps } from '../types';
+import type { ModelRef } from 'vue';
 
 export type RadioProps = WithFieldProps & {
   colorPalette?: ColorPalette;

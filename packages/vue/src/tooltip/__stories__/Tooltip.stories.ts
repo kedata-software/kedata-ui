@@ -24,6 +24,7 @@ const Base: StoryObj = {
 const meta: Meta = {
   title: 'Overlay/Tooltip',
   component: Tooltip,
+  tags: ['autodocs'],
 };
 
 export default meta;

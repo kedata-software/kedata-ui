@@ -11,16 +11,21 @@ const Base: StoryObj<typeof IconButton> = {
     'aria-label': 'Search',
   },
   render: (props) => ({
-    setup: () => () => {
-      return h(IconButton, props, {
-        icon: () => h(KiSearchSolid),
-      });
+    setup() {
+      return { props };
     },
+    template: `
+      <IconButton v-bind="props">
+        <KiSearchSolid />
+      </IconButton>
+    `,
+    components: { IconButton, KiSearchSolid },
   }),
 };
 
 const meta: Meta<typeof IconButton> = {
   title: 'Action/IconButton',
+  tags: ['autodocs'],
   argTypes: {
     'aria-label': {
       control: { type: 'text' },

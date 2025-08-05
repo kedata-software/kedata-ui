@@ -19,6 +19,7 @@ const Base: StoryObj<typeof Checkbox> = {
 
 const meta: Meta<typeof Checkbox> = {
   title: 'Form/Checkbox',
+  tags: ['autodocs'],
   argTypes: {
     colorPalette: {
       options: ['primary', 'success', 'danger'],

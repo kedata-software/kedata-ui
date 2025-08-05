@@ -6,9 +6,17 @@ import { Tag } from '../tag';
 import { SelectPicker } from '../select-picker';
 import animateStatePreset from '../animate-state-preset';
 
-const props = defineProps<SelectInputProps>();
+const props = withDefaults(defineProps<SelectInputProps>(), {
+  mode: 'single',
+});
 const value = defineModel<string | string[]>({
   default: '',
+  set: (value: string | string[]) => {
+    if (props.mode === 'single') {
+      isOpen.value = false;
+    }
+    return value;
+  },
 });
 const isOpen = defineModel<boolean>('is-open', {
   default: false,

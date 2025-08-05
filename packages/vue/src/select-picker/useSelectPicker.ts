@@ -1,13 +1,13 @@
-import { computed, useId, type HTMLAttributes } from "vue";
-import type { SelectPickerModels, SelectPickerProps } from "./index.types";
-import { selectPickerSlots, tw } from "@kedata-ui/slots";
-import * as select from "@zag-js/select";
-import { normalizeProps, useMachine } from "@zag-js/vue";
-import { dataAttrBoolean, defaultArray } from "@kedata-software/toolkit-js";
+import { computed, useId, type HTMLAttributes } from 'vue';
+import type { SelectPickerModels, SelectPickerProps } from './index.types';
+import { selectPickerSlots, tw } from '@kedata-ui/slots';
+import * as select from '@zag-js/select';
+import { normalizeProps, useMachine } from '@zag-js/vue';
+import { dataAttrBoolean, defaultArray } from '@kedata-software/toolkit-js';
 
 const useSelectPicker = (
   props: SelectPickerProps,
-  models: SelectPickerModels
+  models: SelectPickerModels,
 ) => {
   const id = useId();
 
@@ -38,7 +38,7 @@ const useSelectPicker = (
           models.value.value = details.value;
         },
       };
-    })
+    }),
   );
 
   const api = computed(() => select.connect(service, normalizeProps));
@@ -52,12 +52,12 @@ const useSelectPicker = (
 
     return {
       ...api.value.getContentProps(),
-      "data-with-search": dataAttrBoolean(props.withSearch),
-      "data-part": undefined,
+      'data-with-search': dataAttrBoolean(props.withSearch),
+      'data-part': undefined,
       class: tw(slots.value.root(), props.class),
       onKeydown: (e: any) => {
         // Make sure search input can type space since the space code used for select an item
-        if (e.code === "Space") {
+        if (e.code === 'Space') {
           return;
         }
         // @ts-ignore
@@ -70,7 +70,7 @@ const useSelectPicker = (
     const itemApi = api.value.getItemProps(params);
     return {
       ...itemApi,
-      "data-checked": dataAttrBoolean(itemApi["aria-selected"]),
+      'data-checked': dataAttrBoolean(itemApi['aria-selected']),
       class: tw(slots.value.item()),
     } as HTMLAttributes;
   };
@@ -98,10 +98,10 @@ const useSelectPicker = (
 
   const getSearchInputProps = () => {
     return {
-      placeholder: props.searchPlaceholder ?? "Search here",
+      placeholder: props.searchPlaceholder ?? 'Search here',
       class: tw(slots.value.SearchInput()),
       classes: {
-        inputWrapper: "border-0 border-b rounded-b-none",
+        inputWrapper: 'border-0 border-b rounded-b-none',
       },
     };
   };

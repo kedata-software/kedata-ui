@@ -1,19 +1,19 @@
 <script setup lang="ts" generic="D">
-import { swalAlertSlots } from "@kedata-ui/slots";
-import { computed, ref } from "vue";
-import { Button } from "../button";
-import type { SwalAlertProps } from "./index.types";
-import { useColorPalette } from "../use-color-palette";
-import clsx from "clsx";
+import { swalAlertSlots } from '@kedata-ui/slots';
+import { computed, ref } from 'vue';
+import { Button } from '../button';
+import type { SwalAlertProps } from './index.types';
+import { useColorPalette } from '../use-color-palette';
+import clsx from 'clsx';
 
 defineOptions({
   inheritAttrs: false,
 });
 
 const props = defineProps<SwalAlertProps<D>>();
-const emits = defineEmits(["confirm", "deny"]);
+const emits = defineEmits(['confirm', 'deny']);
 const slots = computed(() => {
-  return swalAlertSlots();
+  return swalAlertSlots({ withParts: true });
 });
 
 const colorPaletteClass = useColorPalette(() => props.colorPalette);
@@ -23,7 +23,7 @@ const isDenyLoading = ref(false);
 </script>
 <template>
   <div :class="clsx(slots.root(), colorPaletteClass)">
-    <slot name="icon" class="hello" />
+    <slot name="icon" v-bind="{ class: slots.icon() }" />
 
     <div :class="slots.content()">
       <div :class="slots.title()">
@@ -43,6 +43,7 @@ const isDenyLoading = ref(false);
         variant="outline"
         :disabled="isConfirmLoading"
         :loading="isDenyLoading"
+        :color-palette="props.colorPalette"
         @click="
           async () => {
             try {

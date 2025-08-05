@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import type { ChatBubbleProps } from "./index.types";
-import useChatBubble from "./useChatBubble";
+import type { ChatBubbleProps } from './index.types';
+import useChatBubble from './useChatBubble';
 
-const props = defineProps<ChatBubbleProps>();
+const props = withDefaults(defineProps<ChatBubbleProps>(), {
+  variant: 'question',
+});
 
 const api = useChatBubble(props);
 </script>

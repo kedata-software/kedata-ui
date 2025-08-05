@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/vue3';
 
 const meta: Meta<typeof Badge> = {
   title: 'Display/Badge',
+  tags: ['autodocs'],
   args: {
     variant: 'subtle',
   },

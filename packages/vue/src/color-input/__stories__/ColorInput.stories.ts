@@ -17,6 +17,7 @@ const Base: StoryObj<typeof ColorInput> = {
 
 const meta: Meta<typeof ColorInput> = {
   title: 'Form/ColorInput',
+  tags: ['autodocs'],
   argTypes: {
     colorPalette: {
       options: ['primary', 'success', 'danger'],
