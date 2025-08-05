@@ -6,9 +6,10 @@ const swalAlertSlots = tv(
     slots: {
       root: 'p-12',
       footer: 'mt-6 flex items-center justify-center gap-2',
-      title: 'text-palette-500 text-2xl font-bold',
+      title: 'text-palette-500 text-2xl font-bold text-center',
       content: 'flex flex-col gap-2',
-      text: '',
+      text: 'text-center',
+      icon: 'size-20 text-palette-500 mx-auto mb-5',
     },
     variants: {
       withParts: {
