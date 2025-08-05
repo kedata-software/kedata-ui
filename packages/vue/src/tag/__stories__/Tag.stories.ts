@@ -34,6 +34,7 @@ const Closeable: StoryObj<typeof Tag> = {
 
 const meta: Meta<typeof Tag> = {
   title: 'Action/Tag',
+  tags: ['autodocs'],
   argTypes: {
     colorPalette: {
       options: ['primary', 'success', 'danger'],

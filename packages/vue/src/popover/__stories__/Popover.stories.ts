@@ -5,6 +5,7 @@ import { h } from 'vue';
 const meta: Meta<typeof Popover> = {
   title: 'Overlay/Popover',
   component: Popover,
+  tags: ['autodocs'],
 };
 
 const Base: StoryObj<typeof Popover> = {

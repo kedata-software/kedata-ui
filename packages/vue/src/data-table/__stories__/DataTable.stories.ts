@@ -8,6 +8,7 @@ import { h } from 'vue';
 const meta: Meta<typeof DataTable> = {
   component: DataTable,
   title: 'Display/DataTable',
+  tags: ['autodocs'],
 };
 
 const Base: StoryObj<typeof DataTable> = {

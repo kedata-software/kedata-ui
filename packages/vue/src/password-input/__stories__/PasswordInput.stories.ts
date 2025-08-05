@@ -3,6 +3,9 @@ import PasswordInput from '../PasswordInput.vue';
 import { h } from 'vue';
 
 const Base: StoryObj<typeof PasswordInput> = {
+  args: {
+    placeholder: 'Enter your password',
+  },
   render: (props) => ({
     setup: () => () => {
       return h(PasswordInput, props);
@@ -12,7 +15,17 @@ const Base: StoryObj<typeof PasswordInput> = {
 
 const meta: Meta<typeof PasswordInput> = {
   title: 'Form/PasswordInput',
-  argTypes: {},
+  tags: ['autodocs'],
+  argTypes: {
+    placeholder: {
+      control: { type: 'text' },
+      table: {
+        type: {
+          summary: 'string',
+        },
+      },
+    },
+  },
 };
 
 export { Base };

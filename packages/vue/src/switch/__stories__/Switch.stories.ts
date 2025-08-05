@@ -5,16 +5,19 @@ import type { Meta, StoryObj } from '@storybook/vue3';
 const Base: StoryObj<typeof Switch> = {
   args: {},
   render: (props) => ({
-    setup: () => () => {
-      return h(Switch, props, {
-        default: () => 'Switch',
-      });
-    },
+    setup: () => ({ props }),
+    template: `
+      <Switch v-bind="props">
+        <template #default>Switch</template>
+      </Switch>
+    `,
+    components: { Switch },
   }),
 };
 
 const meta: Meta<typeof Switch> = {
   title: 'Form/Switch',
+  tags: ['autodocs'],
   argTypes: {
     disabled: {
       control: { type: 'boolean' },

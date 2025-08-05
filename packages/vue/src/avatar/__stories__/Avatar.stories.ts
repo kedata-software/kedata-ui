@@ -8,9 +8,13 @@ const Base: StoryObj<typeof Avatar> = {
     src: 'https://i.pravatar.cc/300',
   },
   render: (props) => ({
+    components: { Avatar },
     setup() {
-      return () => h(Avatar, props);
+      return { props };
     },
+    template: `
+      <Avatar v-bind="props" />
+    `,
   }),
 };
 
@@ -19,14 +23,19 @@ const Fallback: StoryObj<typeof Avatar> = {
     fallback: 'KD',
   },
   render: (props) => ({
+    components: { Avatar },
     setup() {
-      return () => h(Avatar, props);
+      return { props };
     },
+    template: `
+      <Avatar v-bind="props" />
+    `,
   }),
 };
 
 const meta: Meta<typeof Avatar> = {
   title: 'Display/Avatar',
+  tags: ['autodocs'],
   argTypes: {
     src: {
       control: { type: 'text' },

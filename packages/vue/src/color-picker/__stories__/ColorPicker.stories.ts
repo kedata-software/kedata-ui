@@ -5,6 +5,7 @@ import { h } from 'vue';
 const meta: Meta<typeof ColorPicker> = {
   title: 'Picker/ColorPicker',
   component: ColorPicker,
+  tags: ['autodocs'],
   argTypes: {
     modelValue: {
       description: 'The selected color',

@@ -74,6 +74,7 @@ const EndAddon: StoryObj<typeof TextField> = {
 
 const meta: Meta<typeof TextField> = {
   title: 'Form/TextInput',
+  tags: ['autodocs'],
   argTypes: {
     invalid: {
       control: { type: 'boolean' },

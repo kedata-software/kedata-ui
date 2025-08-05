@@ -53,6 +53,7 @@ const Base: StoryObj<typeof Menu> = {
 
 const meta: Meta<typeof Menu> = {
   title: 'Overlay/Menu',
+  tags: ['autodocs'],
 };
 
 export { Base };

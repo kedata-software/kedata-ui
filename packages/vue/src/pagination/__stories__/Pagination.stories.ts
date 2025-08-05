@@ -17,6 +17,7 @@ const Base: StoryObj<typeof Pagination> = {
 
 const meta: Meta<typeof Pagination> = {
   title: 'Navigation/Pagination',
+  tags: ['autodocs'],
   argTypes: {
     colorPalette: {
       options: ['primary', 'success', 'danger'],
