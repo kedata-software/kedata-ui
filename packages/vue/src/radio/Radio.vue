@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import useRadio from "./useRadio";
-import type { RadioProps } from "./index.types";
+import useRadio from './useRadio';
+import type { RadioProps } from './index.types';
+import { useSlots } from 'vue';
 
 const checked = defineModel<boolean | string>({
   default: false,
 });
+const compSlots = useSlots();
 const props = defineProps<RadioProps>();
 
 const api = useRadio(props, { checked });
@@ -21,7 +23,7 @@ const api = useRadio(props, { checked });
         <slot name="label" />
       </span>
 
-      <span v-bind="api.getDescriptionProps()">
+      <span v-bind="api.getDescriptionProps()" v-if="!!compSlots.description">
         <slot name="description" />
       </span>
     </div>
