@@ -1,6 +1,9 @@
 export type LabelProps = {
   class?: string;
   required?: boolean;
+  /**
+   * @default true
+   */
   showAsterisk?: boolean;
   withParts?: boolean;
 };
