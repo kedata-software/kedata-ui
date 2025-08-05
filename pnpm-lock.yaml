@@ -211,8 +211,8 @@ importers:
   packages/slots:
     dependencies:
       '@kedata-ui/tailwind':
-        specifier: 0.1.9
-        version: 0.1.9
+        specifier: 0.2.0
+        version: 0.2.0
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -232,14 +232,14 @@ importers:
         specifier: ^0.1.0
         version: 0.1.2(typescript@5.9.2)(vue-tsc@2.2.10(typescript@5.9.2))
       '@kedata-ui/slots':
-        specifier: 0.1.9
-        version: 0.1.9(tailwindcss@3.4.17)
+        specifier: 0.2.0
+        version: 0.2.0(tailwindcss@3.4.17)
       '@kedata-ui/solid-icons':
-        specifier: 0.1.9
-        version: 0.1.9
+        specifier: 0.2.0
+        version: 0.2.0
       '@kedata-ui/tailwind':
-        specifier: 0.1.9
-        version: 0.1.9
+        specifier: 0.2.0
+        version: 0.2.0
       '@solid-primitives/media':
         specifier: ^2.3.0
         version: 2.3.3(solid-js@1.9.7)
@@ -348,11 +348,11 @@ importers:
   packages/vue:
     dependencies:
       '@kedata-ui/tailwind':
-        specifier: 0.1.9
-        version: 0.1.9
+        specifier: 0.2.0
+        version: 0.2.0
       '@kedata-ui/vue-icons':
-        specifier: 0.1.9
-        version: 0.1.9(typescript@5.9.2)
+        specifier: 0.2.0
+        version: 0.2.0(typescript@5.9.2)
       '@zag-js/avatar':
         specifier: 1.3.2
         version: 1.3.2
@@ -1210,17 +1210,17 @@ packages:
   '@kedata-software/toolkit-js@0.1.2':
     resolution: {integrity: sha512-IWTZ91KlR1KDXsAXSaBQSGBFkE055VlphDvMp2ghJq1YYDpQSNMO+A1zCmx7Oo1qDhwod8U15gzKgxfvTninOA==}
 
-  '@kedata-ui/slots@0.1.9':
-    resolution: {integrity: sha512-2iIvFecFOVPM+2sHULL99XSuTVwEc87Ue6mjQEGAjG+lB9ULbMaLazoI8QbgiheLewh+VO2YYuM5gljZDuQkTg==}
+  '@kedata-ui/slots@0.2.0':
+    resolution: {integrity: sha512-AV9CWKK6Nu3MVvXGSvq2gsW0M9B96d726llj5NDKRaAutH3YHDdpvtXJRn2QiJMgpp/RqvH9SnjHOfnu708dkw==}
 
-  '@kedata-ui/solid-icons@0.1.9':
-    resolution: {integrity: sha512-uRV4m15OAEIO3epIHVSVLlqYlQE2HwBRu1mIfZz9FZbnPcOeEnG2zkvf2fO8crUr1AgjE0szosrf90aEDZgofg==}
+  '@kedata-ui/solid-icons@0.2.0':
+    resolution: {integrity: sha512-FX2vrjJsdeha/TU2A97X5eJV92nd9zv65xep+nmYLm4pW82O7tkRtpya7rTxwW0xziS4rSJqwU+jduKc5EYa6g==}
 
-  '@kedata-ui/tailwind@0.1.9':
-    resolution: {integrity: sha512-8o6ToHzBtadMHssSdlto9fGhUil04bgjnOgZNdywiuM85iPMYrUvdgz+SeDdaIJfF7jUUPnGHCP3EhmehEJ2lA==}
+  '@kedata-ui/tailwind@0.2.0':
+    resolution: {integrity: sha512-yeguLdTHpKreff1Ttue+JjIhgMmwtCgTJVykl70CoWFr1HZMgahB89vxvmS839NoNXBTiL4qY+2n142WpduGuQ==}
 
-  '@kedata-ui/vue-icons@0.1.9':
-    resolution: {integrity: sha512-FyV8maEmral5D+5ti0GQJW/f2+kp+dIPj0JnBl54rk8Bpw4IM/ZdckhXDB6MX+XhFRZNBdQhbyfVnU5dPFo7lw==}
+  '@kedata-ui/vue-icons@0.2.0':
+    resolution: {integrity: sha512-GoJkMG8icLaXfyQms0XnJaiaMP/m3SsvxA+ZxB5gXqnsCigKMOC/NT4713YclA31opDJRY5n4hoi2ubiR53d1w==}
 
   '@mdx-js/react@3.1.0':
     resolution: {integrity: sha512-QjHtSaoameoalGnKDT3FoIl4+9RwyTmo9ZJGBdLOks/YOiWHoRDI3PUwEzOE7kEmGcV3AFcp9K6dYu9rEuKLAQ==}
@@ -5584,24 +5584,24 @@ snapshots:
       - unplugin-unused
       - vue-tsc
 
-  '@kedata-ui/slots@0.1.9(tailwindcss@3.4.17)':
+  '@kedata-ui/slots@0.2.0(tailwindcss@3.4.17)':
     dependencies:
-      '@kedata-ui/tailwind': 0.1.9
+      '@kedata-ui/tailwind': 0.2.0
       clsx: 2.1.1
       tailwind-merge: 2.6.0
       tailwind-variants: 0.2.1(tailwindcss@3.4.17)
     transitivePeerDependencies:
       - tailwindcss
 
-  '@kedata-ui/solid-icons@0.1.9':
+  '@kedata-ui/solid-icons@0.2.0':
     dependencies:
       solid-js: 1.9.7
 
-  '@kedata-ui/tailwind@0.1.9':
+  '@kedata-ui/tailwind@0.2.0':
     dependencies:
       hex-rgb: 5.0.0
 
-  '@kedata-ui/vue-icons@0.1.9(typescript@5.9.2)':
+  '@kedata-ui/vue-icons@0.2.0(typescript@5.9.2)':
     dependencies:
       vue: 3.5.18(typescript@5.9.2)
     transitivePeerDependencies:
