@@ -1,5 +1,4 @@
-import type { ButtonSize, ButtonVariant, ColorPalette } from "@kedata-ui/slots";
-import type { ButtonHTMLAttributes } from "vue";
+import type { ButtonSize, ButtonVariant, ColorPalette } from '@kedata-ui/slots';
 
 export type ButtonProps = {
   class?: string;
@@ -9,5 +8,8 @@ export type ButtonProps = {
   colorPalette?: ColorPalette;
   withParts?: boolean;
   size?: ButtonSize;
-  type?: ButtonHTMLAttributes["type"];
+  /**
+   * @default 'button'
+   */
+  type?: 'button' | 'submit' | 'reset';
 };
