@@ -3,6 +3,8 @@ packages:
 
 nodeLinker: hoisted
 
+linkWorkspacePackages: true
+
 overrides:
   '@storybook/builder-vite': 8.6.7
   '@modular-forms/solid': ^0.25.1
