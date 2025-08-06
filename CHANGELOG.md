@@ -1,3 +1,21 @@
+## 0.2.1 (2025-08-06)
+
+### 🚀 Features
+
+- **button:** update ButtonProps type with default value for 'type' and refactor imports for consistency ([a6f40c7](https://github.com/kedata-software/kedata-ui/commit/a6f40c7))
+- **chat-bubble:** standardize import quotes and set default variant for props in ChatBubble component ([63e95cd](https://github.com/kedata-software/kedata-ui/commit/63e95cd))
+- **label:** add default value for showAsterisk prop and update its type definition for clarity ([9a734b4](https://github.com/kedata-software/kedata-ui/commit/9a734b4))
+- **radio:** standardize import quotes and add conditional rendering for description slot ([1a343fa](https://github.com/kedata-software/kedata-ui/commit/1a343fa))
+- **select-input:** set default mode for SelectInput props and add conditional logic for value setter ([0d00701](https://github.com/kedata-software/kedata-ui/commit/0d00701))
+- **select-picker:** standardize import quotes and improve consistency in useSelectPicker component ([6d874a6](https://github.com/kedata-software/kedata-ui/commit/6d874a6))
+- **swal-alert:** add 'icon' part to swalAlertParts for improved customization options ([04f284c](https://github.com/kedata-software/kedata-ui/commit/04f284c))
+- **swal-alert:** enhance swalAlertSlots with centralized text alignment and icon styling for better UI consistency ([078d7f4](https://github.com/kedata-software/kedata-ui/commit/078d7f4))
+- **swal-alert:** refactor SwalAlert.vue for consistency in imports and enhance icon slot binding with color palette prop ([a02e879](https://github.com/kedata-software/kedata-ui/commit/a02e879))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.2.0 (2025-08-03)
 
 ### 🚀 Features
