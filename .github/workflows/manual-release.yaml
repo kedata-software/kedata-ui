@@ -61,11 +61,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build all packages
-        run: pnpm build --output-style static
-
       - name: Running Syncpack
         run: pnpm syncpack list-mismatches
+
+      - name: Build all packages
+        run: pnpm build --output-style static
 
       - name: Release to registry
         run: |
