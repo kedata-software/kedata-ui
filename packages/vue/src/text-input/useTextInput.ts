@@ -1,6 +1,6 @@
 import { dataAttrBoolean } from '@kedata-software/toolkit-js';
 import { textInputSlots, tw } from '@kedata-ui/slots';
-import { computed, type InputHTMLAttributes, type SetupContext } from 'vue';
+import { computed, type HTMLAttributes, type InputHTMLAttributes, type SetupContext } from 'vue';
 import type { TextInputModels, TextInputProps } from './index.types';
 import { useColorPalette } from '../use-color-palette';
 
@@ -37,7 +37,7 @@ const useTextInput = (params: {
       ...dataAttrs.value,
       id: props.rootId,
       class: tw(colorPaletteClass.value, slots.value.root(), props.class),
-    };
+    } as HTMLAttributes;
   };
 
   const getInputProps = () => {
@@ -60,35 +60,35 @@ const useTextInput = (params: {
     return {
       ...dataAttrs.value,
       class: tw(slots.value.inputWrapper(), props.classes?.inputWrapper),
-    };
+    } as HTMLAttributes;
   };
 
   const getStartAddonProps = () => {
     return {
       ...dataAttrs.value,
       class: tw(slots.value.startAddon()),
-    };
+    } as HTMLAttributes;
   };
 
   const getEndAddonProps = () => {
     return {
       ...dataAttrs.value,
       class: tw(slots.value.endAddon()),
-    };
+    } as HTMLAttributes;
   };
 
   const getStartIconProps = () => {
     return {
       ...dataAttrs.value,
       class: tw(slots.value.startIcon()),
-    };
+    } as HTMLAttributes;
   };
 
   const getEndIconProps = () => {
     return {
       ...dataAttrs.value,
       class: tw(slots.value.endIcon()),
-    };
+    } as HTMLAttributes;
   };
 
   return {

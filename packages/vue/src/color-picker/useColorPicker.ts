@@ -52,47 +52,47 @@ const useColorPicker = (props: ColorPickerProps, models: ColorPickerModels) => {
     return {
       ...api.value.getAreaProps(),
       class: tw(slots.value.area()),
-    };
+    } as HTMLAttributes;
   };
 
   const getAreaBackgroundProps = () => {
     return {
       ...api.value.getAreaBackgroundProps(),
       class: tw(slots.value.areaBackground()),
-    };
+    } as HTMLAttributes;
   };
 
   const getAreaThumbProps = () => {
     return {
       ...api.value.getAreaThumbProps(),
       class: tw(slots.value.areaThumb()),
-    };
+    } as HTMLAttributes;
   };
 
   const getEyeDropperTriggerProps = () => {
     return {
       ...api.value.getEyeDropperTriggerProps(),
       class: tw(slots.value.eyeDropTrigger()),
-    };
+    } as HTMLAttributes;
   };
 
   const getChannelSliderContainerProps = () => {
     return {
       class: tw(slots.value.channelSliderContainer()),
-    };
+    } as HTMLAttributes;
   };
 
   const getChannelSliderGroupProps = () => {
     return {
       class: tw(slots.value.channelSliderGroup()),
-    };
+    } as HTMLAttributes;
   };
 
   const getChannelSliderProps = (params: colorPicker.ChannelSliderProps) => {
     return {
       ...api.value.getChannelSliderProps(params),
       class: tw(slots.value.channelSlider()),
-    };
+    } as HTMLAttributes;
   };
 
   const getChannelSliderTrackProps = (
@@ -101,7 +101,7 @@ const useColorPicker = (props: ColorPickerProps, models: ColorPickerModels) => {
     return {
       ...api.value.getChannelSliderTrackProps(params),
       class: tw(slots.value.channelSliderTrack()),
-    };
+    } as HTMLAttributes;
   };
 
   const getChannelSliderThumbProps = (
@@ -110,13 +110,13 @@ const useColorPicker = (props: ColorPickerProps, models: ColorPickerModels) => {
     return {
       ...api.value.getChannelSliderThumbProps(params),
       class: tw(slots.value.channelSliderThumb()),
-    };
+    } as HTMLAttributes;
   };
 
   const getChannelInputContainerProps = () => {
     return {
       class: tw(slots.value.channelInputContainer()),
-    };
+    } as HTMLAttributes;
   };
 
   const getChannelInputProps = (
@@ -125,41 +125,41 @@ const useColorPicker = (props: ColorPickerProps, models: ColorPickerModels) => {
     return {
       ...api.value.getChannelInputProps(params),
       class: tw(slots.value.channelInput(), params.class),
-    };
+    } as HTMLAttributes;
   };
 
   const getSwatchContainerProps = () => {
     return {
       class: tw(slots.value.swatchContainer()),
-    };
+    } as HTMLAttributes;
   };
 
   const getSwatchLabelProps = () => {
     return {
       children: "Recent colors",
       class: tw(slots.value.swatchLabel()),
-    };
+    } as HTMLAttributes;
   };
 
   const getSwatchGroupProps = () => {
     return {
       ...api.value.getSwatchGroupProps(),
       class: tw(slots.value.swatchGroup()),
-    };
+    } as HTMLAttributes;
   };
 
   const getSwatchTriggerProps = (params: colorPicker.SwatchTriggerProps) => {
     return {
       ...api.value.getSwatchTriggerProps(params),
       class: tw(slots.value.swatchTrigger()),
-    };
+    } as HTMLAttributes;
   };
 
   const getSwatchProps = (params: colorPicker.SwatchProps) => {
     return {
       ...api.value.getSwatchProps(params),
       class: tw(slots.value.swatch()),
-    };
+    } as HTMLAttributes;
   };
 
   return {

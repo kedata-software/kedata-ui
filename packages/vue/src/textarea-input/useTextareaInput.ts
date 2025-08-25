@@ -1,4 +1,4 @@
-import { computed } from "vue";
+import { computed, type HTMLAttributes, type TextareaHTMLAttributes } from "vue";
 import type { TextareaInputModels, TextareaInputProps } from "./index.types";
 import { useColorPalette } from "../use-color-palette";
 import { textareaInputSlots, tw } from "@kedata-ui/slots";
@@ -34,7 +34,7 @@ const useTextareaInput = (
       ...dataAttrs.value,
       id: props.rootId,
       class: tw(clsx(colorPaletteClass.value, slots.value.root(), props.class)),
-    };
+    } as HTMLAttributes;
   };
 
   const getTextareaProps = () => {
@@ -48,14 +48,14 @@ const useTextareaInput = (
       disabled: props.disabled,
       readOnly: props.readOnly,
       class: tw(clsx(colorPaletteClass.value, slots.value.input())),
-    };
+    } as TextareaHTMLAttributes
   };
 
   const getCounterProps = () => {
     return {
       ...dataAttrs.value,
       class: tw(clsx(colorPaletteClass.value, slots.value.counter())),
-    };
+    } as HTMLAttributes;
   };
 
   return {
