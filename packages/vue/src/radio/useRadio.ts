@@ -1,4 +1,4 @@
-import { computed, type InputHTMLAttributes } from "vue";
+import { computed, type HTMLAttributes, type InputHTMLAttributes } from "vue";
 import type { RadioModels, RadioProps } from "./index.types";
 import { radioSlots, tw } from "@kedata-ui/slots";
 import { dataAttrBoolean } from "@kedata-software/toolkit-js";
@@ -34,42 +34,42 @@ const useRadio = (props: RadioProps, models: RadioModels) => {
     return {
       ...dataAttrs.value,
       class: tw(colorPaletteClass.value, slots.value.root(), props.class),
-    };
+    } as HTMLAttributes;
   };
 
   const getControlProps = () => {
     return {
       ...dataAttrs.value,
       class: tw(slots.value.control(), "flex-shrink-0"),
-    };
+    } as HTMLAttributes;
   };
 
   const getContentProps = () => {
     return {
       ...dataAttrs.value,
       class: slots.value.content(),
-    };
+    } as HTMLAttributes;
   };
 
   const getLabelProps = () => {
     return {
       ...dataAttrs.value,
       class: tw(slots.value.label()),
-    };
+    } as HTMLAttributes;
   };
 
   const getDescriptionProps = () => {
     return {
       ...dataAttrs.value,
       class: tw(slots.value.description()),
-    };
+    } as HTMLAttributes;
   };
 
   const getIndicatorProps = () => {
     return {
       ...dataAttrs.value,
       class: tw(slots.value.indicator()),
-    };
+    } as HTMLAttributes;
   };
 
   const getHiddenInputProps = () => {

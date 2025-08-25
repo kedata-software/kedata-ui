@@ -6,7 +6,7 @@ import type { PropsGetterParams } from '../types';
 import type { ColorPickerProps } from '../color-picker';
 import type { ColorInputModels } from './index.types';
 import { useColorPalette } from '../use-color-palette';
-import { computed, useId } from 'vue';
+import { computed, useId, type HTMLAttributes } from 'vue';
 import { tw } from '@kedata-ui/slots';
 
 const useColorInput = (props: ColorInputProps, models: ColorInputModels) => {
@@ -56,7 +56,7 @@ const useColorInput = (props: ColorInputProps, models: ColorInputModels) => {
         props.class,
         params?.class,
       ),
-    };
+    } as HTMLAttributes;
   };
 
   const getInputWrapperProps = (params?: PropsGetterParams) => {
@@ -67,13 +67,13 @@ const useColorInput = (props: ColorInputProps, models: ColorInputModels) => {
         props.classNames?.inputWrapper,
         params?.class,
       ),
-    };
+    } as HTMLAttributes;
   };
 
   const getValueProps = (params?: PropsGetterParams) => {
     return {
       class: tw(slots.value.value(), props.classNames?.value, params?.class),
-    };
+    } as HTMLAttributes;
   };
 
   const getHiddenInputProps = (params?: PropsGetterParams) => {
@@ -85,7 +85,7 @@ const useColorInput = (props: ColorInputProps, models: ColorInputModels) => {
         props.classNames?.hiddenInput,
         params?.class,
       ),
-    };
+    } as HTMLAttributes;
   };
 
   const getIndicatorProps = (params?: PropsGetterParams) => {
@@ -95,7 +95,7 @@ const useColorInput = (props: ColorInputProps, models: ColorInputModels) => {
         props.classNames?.indicator,
         params?.class,
       ),
-    };
+    } as HTMLAttributes;
   };
 
   const getColorPickerProps = (params?: ColorPickerProps) => {
@@ -128,7 +128,7 @@ const useColorInput = (props: ColorInputProps, models: ColorInputModels) => {
     return {
       ...api.value.getContentProps(),
       hidden: undefined,
-    };
+    } as HTMLAttributes;
   };
 
   return {

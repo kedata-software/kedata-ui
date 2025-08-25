@@ -1,7 +1,7 @@
 import { useMachine, normalizeProps, type PropTypes } from '@zag-js/vue';
 import * as menu from '@zag-js/menu';
 import type { MenuItemOption, MenuModels, MenuProps } from './index.types';
-import { computed, effect, onMounted, provide, useId } from 'vue';
+import { computed, effect, onMounted, provide, useId, type HTMLAttributes } from 'vue';
 import { menuSlots, tw } from '@kedata-ui/slots';
 import clsx from 'clsx';
 import MenuContextKey from './MenuContext';
@@ -86,7 +86,7 @@ const useMenu = (props: MenuProps, models: MenuModels) => {
     return {
       ...menuApi.value.getTriggerProps(),
       'data-expanded': models.isOpen.value,
-    };
+    } as HTMLAttributes;
   };
 
   const getContentProps = () => {
@@ -94,42 +94,42 @@ const useMenu = (props: MenuProps, models: MenuModels) => {
       ...menuApi.value.getContentProps(),
       hidden: false,
       class: tw(slots.value.content()),
-    };
+    } as HTMLAttributes;
   };
 
   const getPositionerProps = () => {
     return {
       ...menuApi.value.getPositionerProps(),
       class: tw(slots.value.positioner(), '!z-10'),
-    };
+    }  as HTMLAttributes;
   };
 
   const getSeparatorProps = () => {
     return {
       ...menuApi.value.getSeparatorProps(),
       class: tw(slots.value.separator()),
-    };
+    }  as HTMLAttributes;
   };
 
   const getTriggerItemProps = (api: any) => {
     return {
       ...menuApi.value.getTriggerItemProps(api),
       class: tw(slots.value.item()),
-    };
+  }  as HTMLAttributes;
   };
 
   const getItemProps = (params: menu.ItemProps) => {
     return {
       ...menuApi.value.getItemProps(params),
       class: tw(clsx(slots.value.item())),
-    };
+    } as HTMLAttributes;
   };
 
   const getItemStartIconProps = (params: MenuItemOption) => {
     return {
       'data-color-palette': params.colorPalette,
       class: tw(clsx(slots.value.itemStartIcon(), params?.className)),
-    };
+    } as HTMLAttributes;
   };
 
   return {

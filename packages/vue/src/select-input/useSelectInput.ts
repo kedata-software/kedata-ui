@@ -130,7 +130,7 @@ const useSelectInput = (props: SelectInputProps, models: SelectInputModels) => {
   const getValueProps = () => {
     return {
       class: tw(slots.value.value()),
-    };
+    } as HTMLAttributes;
   };
 
   const getPositionerProps = () => {

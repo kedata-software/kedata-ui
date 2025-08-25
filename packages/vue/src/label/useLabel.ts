@@ -1,5 +1,5 @@
 import { labelSlots, tw } from '@kedata-ui/slots';
-import { computed } from 'vue';
+import { computed, type HTMLAttributes } from 'vue';
 import type { LabelProps } from './index.types';
 
 const useLabel = (props: LabelProps) => {
@@ -13,13 +13,13 @@ const useLabel = (props: LabelProps) => {
   const getRootProps = () => {
     return {
       class: tw(slots.value.root(), props.class),
-    };
+    } as HTMLAttributes;
   };
 
   const getAsteriskProps = () => {
     return {
       class: slots.value.asterisk(),
-    };
+    } as HTMLAttributes;
   };
 
   return {

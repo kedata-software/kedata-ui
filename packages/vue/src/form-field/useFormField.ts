@@ -1,4 +1,4 @@
-import { computed, inject } from "vue";
+import { computed, inject, type HTMLAttributes } from "vue";
 import type { FormFieldProps } from "./index.types";
 import { formFieldSlots, tw } from "@kedata-ui/slots";
 import { FormContextKey } from "../form";
@@ -30,25 +30,25 @@ const useFormField = (props: FormFieldProps) => {
     return {
       ...dataAttrs.value,
       class: tw(slots.value.root()),
-    };
+    } as HTMLAttributes;
   };
 
   const getLabelProps = () => {
     return {
       class: tw(slots.value.label(), formContext?.labelClass),
-    };
+    } as HTMLAttributes;
   };
 
   const getBodyProps = () => {
     return {
       class: tw(slots.value.body()),
-    };
+    } as HTMLAttributes;
   };
 
   const getFooterProps = () => {
     return {
       class: tw(slots.value.footer()),
-    };
+    } as HTMLAttributes;
   };
 
   return {

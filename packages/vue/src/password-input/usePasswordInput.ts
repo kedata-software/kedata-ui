@@ -3,6 +3,7 @@ import type { PasswordInputModels, PasswordInputProps } from './index.types';
 import {
   computed,
   type ButtonHTMLAttributes,
+  type HTMLAttributes,
   type InputHTMLAttributes,
 } from 'vue';
 import { passwordInputSlots, tw } from '@kedata-ui/slots';
@@ -33,7 +34,7 @@ const usePasswordInput = (
       ...dataAttrs.value,
       id: props.rootId,
       class: tw(colorPaletteClass.value, slots.value.root(), props.class),
-    };
+    } as HTMLAttributes;
   };
 
   const getInputProps = () => {
@@ -56,28 +57,28 @@ const usePasswordInput = (
     return {
       ...dataAttrs.value,
       class: tw(slots.value.inputWrapper()),
-    };
+    } as HTMLAttributes;
   };
 
   const getStartAddonProps = () => {
     return {
       ...dataAttrs.value,
       class: tw(slots.value.startAddon()),
-    };
+    } as HTMLAttributes;
   };
 
   const getEndAddonProps = () => {
     return {
       ...dataAttrs.value,
       class: tw(slots.value.endAddon()),
-    };
+    } as HTMLAttributes;
   };
 
   const getStartIconProps = () => {
     return {
       ...dataAttrs.value,
       class: tw(slots.value.startIcon()),
-    };
+    } as HTMLAttributes;
   };
 
   const getToggleProps = () => {
