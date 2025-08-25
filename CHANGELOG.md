@@ -1,3 +1,14 @@
+## 0.2.2 (2025-08-25)
+
+### 🩹 Fixes
+
+- update lockfile ([e281064](https://github.com/kedata-software/kedata-ui/commit/e281064))
+- **vue:** fix props getter types ([6d8afcd](https://github.com/kedata-software/kedata-ui/commit/6d8afcd))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.2.1 (2025-08-06)
 
 ### 🚀 Features
