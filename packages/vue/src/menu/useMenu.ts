@@ -1,12 +1,13 @@
-import { useMachine, normalizeProps, type PropTypes } from '@zag-js/vue';
+import { useMachine, normalizeProps } from '@zag-js/vue';
 import * as menu from '@zag-js/menu';
-import type { MenuItemOption, MenuModels, MenuProps } from './index.types';
-import { computed, effect, onMounted, provide, useId, type HTMLAttributes } from 'vue';
+import type { MenuItemOption, UseMenuParams } from './index.types';
+import { computed, onMounted, provide, useId, type HTMLAttributes } from 'vue';
 import { menuSlots, tw } from '@kedata-ui/slots';
 import clsx from 'clsx';
 import MenuContextKey from './MenuContext';
 
-const useMenu = (props: MenuProps, models: MenuModels) => {
+const useMenu = (params: UseMenuParams) => {
+  const { props, models, emits } = params;
   const id = useId();
 
   const service = useMachine(
@@ -21,6 +22,7 @@ const useMenu = (props: MenuProps, models: MenuModels) => {
         onSelect: (details) => {
           models.isOpen.value = false;
           props.mapValueSelect?.[details.value]?.(details.value);
+          emits('select', details.value);
         },
         positioning: {
           placement: 'bottom-start' as const,
@@ -80,6 +82,7 @@ const useMenu = (props: MenuProps, models: MenuModels) => {
     service,
     slots,
     mapValueSelect: props.mapValueSelect,
+    emits,
   });
 
   const getTriggerProps = () => {
@@ -101,21 +104,21 @@ const useMenu = (props: MenuProps, models: MenuModels) => {
     return {
       ...menuApi.value.getPositionerProps(),
       class: tw(slots.value.positioner(), '!z-10'),
-    }  as HTMLAttributes;
+    } as HTMLAttributes;
   };
 
   const getSeparatorProps = () => {
     return {
       ...menuApi.value.getSeparatorProps(),
       class: tw(slots.value.separator()),
-    }  as HTMLAttributes;
+    } as HTMLAttributes;
   };
 
   const getTriggerItemProps = (api: any) => {
     return {
       ...menuApi.value.getTriggerItemProps(api),
       class: tw(slots.value.item()),
-  }  as HTMLAttributes;
+    } as HTMLAttributes;
   };
 
   const getItemProps = (params: menu.ItemProps) => {

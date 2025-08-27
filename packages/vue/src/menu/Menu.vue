@@ -1,17 +1,21 @@
 <script setup lang="ts">
 import useMenu from './useMenu';
-import type { MenuProps } from './index.types';
+import type { MenuEmits, MenuProps } from './index.types';
 import MenuTriggerItem from './MenuTriggerItem.vue';
 import animateStatePreset from '../animate-state-preset';
 import { Teleport } from 'vue';
 
 const props = defineProps<MenuProps>();
-
+const emits = defineEmits<MenuEmits>();
 const isOpen = defineModel<boolean>('isOpen', {
   default: false,
 });
 
-const { options, ...api } = useMenu(props, { isOpen });
+const { options, ...api } = useMenu({
+  props,
+  models: { isOpen },
+  emits
+});
 </script>
 
 <template>

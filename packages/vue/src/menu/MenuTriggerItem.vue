@@ -1,15 +1,8 @@
 <script setup lang="ts">
 import * as menu from '@zag-js/menu';
 import { normalizeProps, useMachine, type PropTypes } from '@zag-js/vue';
-import {
-  computed,
-  inject,
-  onMounted,
-  useId,
-  type ComputedRef,
-  type HTMLAttributes,
-} from 'vue';
-import type { MenuItemOption } from './index.types';
+import { computed, inject, onMounted, useId, type ComputedRef } from 'vue';
+import type { MenuEmits, MenuItemOption } from './index.types';
 import MenuContextKey from './MenuContext';
 import { tw, type menuSlots } from '@kedata-ui/slots';
 import clsx from 'clsx';
@@ -20,6 +13,7 @@ const context = inject<{
   service: menu.Service;
   slots: ComputedRef<ReturnType<typeof menuSlots>>;
   mapValueSelect?: Record<string, (value: string) => void>;
+  emits: MenuEmits;
 }>(MenuContextKey);
 const id = useId();
 
@@ -27,6 +21,7 @@ const service = useMachine(menu.machine, {
   id: id,
   onSelect: (details) => {
     context!.mapValueSelect?.[details.value]?.(details.value);
+    context!.emits('select', details.value);
   },
 });
 const menuApi = computed(() => menu.connect(service, normalizeProps));
