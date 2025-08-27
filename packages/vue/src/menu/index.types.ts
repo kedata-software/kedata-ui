@@ -12,6 +12,16 @@ export type MenuModels = {
   isOpen: ModelRef<boolean>;
 };
 
+export type MenuEmits = {
+  (e: 'select', value: string): void;
+};
+
+export type UseMenuParams = {
+  props: MenuProps;
+  models: MenuModels;
+  emits: MenuEmits;
+};
+
 export type MenuSeparatorOption = {
   type: 'separator';
   className?: string;

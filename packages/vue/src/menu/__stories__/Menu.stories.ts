@@ -44,9 +44,18 @@ const Base: StoryObj<typeof Menu> = {
   },
   render: (props) => ({
     setup: () => () => {
-      return h(Menu, props, {
-        trigger: (props: any) => h('button', props, 'Open Menu'),
-      });
+      return h(
+        Menu,
+        {
+          ...props,
+          onSelect: (value: string) => {
+            console.log('Selected value from onSelect:', value);
+          },
+        },
+        {
+          trigger: (props: any) => h('button', props, 'Open Menu'),
+        },
+      );
     },
   }),
 };
