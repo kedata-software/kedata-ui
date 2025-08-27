@@ -1,3 +1,17 @@
+## 0.2.3 (2025-08-27)
+
+### 🚀 Features
+
+- **vue:** add support @select on Menu ([259ba2b](https://github.com/kedata-software/kedata-ui/commit/259ba2b))
+
+### 🩹 Fixes
+
+- **pnpm-lock.yaml:** fix lock file ([c37db3f](https://github.com/kedata-software/kedata-ui/commit/c37db3f))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.2.2 (2025-08-25)
 
 ### 🩹 Fixes
