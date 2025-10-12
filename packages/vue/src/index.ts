@@ -1,49 +1,51 @@
-export * from "./button";
+export * from './button';
 
-export * from "./avatar";
+export * from './avatar';
 
-export * from "./radio";
+export * from './radio';
 
-export * from "./badge";
+export * from './badge';
 
-export * from "./checkbox";
+export * from './checkbox';
 
-export * from "./tooltip";
+export * from './tooltip';
 
-export * from "./color-picker";
+export * from './color-picker';
 
-export * from "./switch";
+export * from './switch';
 
-export * from "./popover";
+export * from './popover';
 
-export * from "./swal-alert";
+export * from './swal-alert';
 
-export * from "./swal-confirmation";
+export * from './swal-confirmation';
 
-export * from "./swal-toast";
+export * from './swal-toast';
 
-export * from "./pagination";
+export * from './pagination';
 
-export * from "./password-input";
+export * from './password-input';
 
-export * from "./data-table";
+export * from './data-table';
 
-export * from "./dialog";
+export * from './dialog';
 
-export * from "./text-input";
+export * from './text-input';
 
-export * from "./select-picker";
+export * from './select-picker';
 
-export * from "./select-input";
+export * from './select-input';
 
-export * from "./form";
+export * from './form';
 
-export * from "./form-field";
+export * from './form-field';
 
-export * from "./chat-bubble";
+export * from './chat-bubble';
 
-export * from "./icon-button";
+export * from './icon-button';
 
-export * from "./textarea-input";
+export * from './textarea-input';
 
-export * from "./menu";
+export * from './menu';
+
+export * from './pin-input';
