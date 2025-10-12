@@ -1,3 +1,17 @@
+## 0.3.0 (2025-10-12)
+
+### 🚀 Features
+
+- **vue:** add PinInput component and related types, hooks, and stories ([e20abaa](https://github.com/kedata-software/kedata-ui/commit/e20abaa))
+
+### 🩹 Fixes
+
+- **pnpm-lock.yaml:** update package specifiers to version 0.2.3 and bump vue-component-type-helpers to 3.1.1 ([4608075](https://github.com/kedata-software/kedata-ui/commit/4608075))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.2.3 (2025-08-27)
 
 ### 🚀 Features
