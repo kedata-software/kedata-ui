@@ -1,3 +1,13 @@
+## 0.3.1 (2025-10-18)
+
+### 🚀 Features
+
+- **dependencies:** update @zag-js/pin-input to version 1.3.2 and bump related package specifiers to 0.3.0 ([7ed475b](https://github.com/kedata-software/kedata-ui/commit/7ed475b))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.3.0 (2025-10-12)
 
 ### 🚀 Features
