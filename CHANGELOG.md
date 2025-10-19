@@ -1,3 +1,15 @@
+## 0.3.2 (2025-10-19)
+
+### 🩹 Fixes
+
+- **dependencies:** update @kedata-ui packages to version 0.3.1 ([f2b7b2a](https://github.com/kedata-software/kedata-ui/commit/f2b7b2a))
+- **vue/icon-button:** standardize import quotes and enable inheritAttrs ([2aa0c0d](https://github.com/kedata-software/kedata-ui/commit/2aa0c0d))
+- **vue/popover:** standardize import quotes and update type assertion for getTriggerProps ([c5557d0](https://github.com/kedata-software/kedata-ui/commit/c5557d0))
+
+### ❤️ Thank You
+
+- Alfian Andi Nugraha @alfianandinugraha
+
 ## 0.3.1 (2025-10-18)
 
 ### 🚀 Features
