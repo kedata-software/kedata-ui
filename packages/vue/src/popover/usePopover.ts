@@ -1,14 +1,14 @@
-import { popoverSlots, tw } from "@kedata-ui/slots";
-import * as popover from "@zag-js/popover";
-import { normalizeProps, useMachine } from "@zag-js/vue";
-import type { PopoverModels, PopoverProps } from "./index.types";
+import { popoverSlots, tw } from '@kedata-ui/slots';
+import * as popover from '@zag-js/popover';
+import { normalizeProps, useMachine } from '@zag-js/vue';
+import type { PopoverModels, PopoverProps } from './index.types';
 import {
   computed,
   effect,
   useId,
   type ButtonHTMLAttributes,
   type HTMLAttributes,
-} from "vue";
+} from 'vue';
 
 const usePopover = (props: PopoverProps, models: PopoverModels) => {
   const id = useId();
@@ -23,7 +23,7 @@ const usePopover = (props: PopoverProps, models: PopoverModels) => {
           models.open.value = details.open;
         },
       };
-    })
+    }),
   );
 
   const api = computed(() => popover.connect(service, normalizeProps));
@@ -38,7 +38,7 @@ const usePopover = (props: PopoverProps, models: PopoverModels) => {
     return {
       ...api.value.getTriggerProps(),
       class: tw(slots.value.trigger()),
-    } as ButtonHTMLAttributes;
+    } as HTMLAttributes;
   };
 
   const getPositionerProps = () => {
