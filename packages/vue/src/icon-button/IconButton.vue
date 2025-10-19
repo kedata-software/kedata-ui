@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { IconButtonProps } from "./index.types";
-import useIconButton from "./useIconButton";
+import type { IconButtonProps } from './index.types';
+import useIconButton from './useIconButton';
 
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: true,
 });
 
-const emits = defineEmits(["click"]);
+const emits = defineEmits(['click']);
 const props = defineProps<IconButtonProps>();
 const api = useIconButton(props);
 </script>
